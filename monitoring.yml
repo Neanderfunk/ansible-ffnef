@@ -1,0 +1,7 @@
+---
+ - hosts: gateways
+   remote_user: root
+   roles:
+    - { role: check_mk_agent, tags: "check_mk_agent"}
+
+

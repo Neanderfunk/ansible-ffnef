@@ -1,0 +1,57 @@
+server_id: 1
+vm_id: 1
+
+server_besitzer: "plaste"
+hoster: "OVH"
+
+ffrl_nat_ip: 185.66.195.78/31
+#ffrl_nat_ip: 185.66.193.110/31 185.66.195.78/31
+
+ffrl_tun:
+- name: ber1
+  gre_target: 185.66.195.0
+  #  v4_remote: 100.64.3.94/31
+  v4_remote: 100.64.3.94/31
+  v6_remote: 2a03:2260:0:1b9::1/64
+- name: ber2
+  gre_target: 185.66.195.1
+  v4_remote: 100.64.3.98/31
+  v6_remote: 2a03:2260:0:1bb::1/64
+  bgp_local_pref: 201
+- name: fra1
+  gre_target: 185.66.194.0
+  v4_remote: 100.64.10.118/31
+  v6_remote: 2a03:2260:0:544::1/64
+- name: fra2
+  gre_target: 185.66.194.1
+  v4_remote: 100.64.10.120/31
+  v6_remote: 2a03:2260:0:545::1/64
+- name: dus1
+  gre_target: 185.66.193.0
+  v4_remote: 100.64.3.96/31
+  v6_remote: 2a03:2260:0:1ba::1/64
+- name: dus2
+  gre_target:  185.66.193.1
+  v4_remote: 100.64.3.101/31
+  v6_remote: 2a03:2260:0:1bc::1/64
+  bgp_local_pref: 201
+
+is_external_nameserver: false
+
+domaenenliste:
+   "01":
+      dhcp_start: 10.1.0.0  
+      dhcp_ende: 10.1.255.255
+      server_id: 2
+   "02":
+      dhcp_start: 10.2.0.0  
+      dhcp_ende: 10.2.255.255
+      server_id: 2
+
+dhcp_type: "kea"
+
+additionaladmins:
+  - "plaste"
+  - "adorfer"
+
+batman_version: "2019.4"

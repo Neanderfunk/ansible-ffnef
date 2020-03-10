@@ -1,0 +1,78 @@
+# Globale Variablen für alle Server
+build_tunnels_over_ipv6_if_available: true
+
+domaenen:
+  "01":
+    name: FFNEF-TEST-1
+    community: Velbert
+    ffv4_network: 10.1.0.0/16
+    ffv6_network: 2a03:2260:300e:1303::/64
+    map_scale: 0.9
+    map_show_contact: false
+    map_max_age: 14
+    firmware: vel/
+  "02":
+    name: FFNEF-TEST-2
+    community: Mettmann
+    ffv4_network: 10.2.0.0/16
+    ffv6_network: 2a03:2260:300e:1101::/64
+    map_scale: 0.9
+    map_show_contact: false
+    map_max_age: 14
+    firmware: met/
+
+ 
+# Nummer der Routing Tabelle, die auf den Servern verwendet wird
+routing_table: 42
+
+# Batman Einstellungen
+batman:
+  version: 2019.4
+  # Bandbreite, die Batman annoncieren soll
+  downstream: 1024Mbit
+  # Bandbreite, die Batman annoncieren soll
+  upstream: 1024Mbit
+
+# Parameter für das eigene Freifunk-Netzwerk
+ff_network:
+  # Eindeutige AS-Nummer des Netzwerk
+  as_number: 64863
+  # IPv4 Adressraum
+  v4_network: 10.43.0.0/16
+  # IPv6 adressraum
+  v6_network: 2a03:2260:300e::/48
+
+
+administratorenteam:
+  - "adorfer"
+  - "plaste"
+
+bind:
+  ffnet_zone_type: slave
+  ffnet_zone_masters:
+     - 10.45.67.123
+bind_zonemaster:
+  server: service.ffnef.de
+  email: kontakt@neanderfunk.de
+
+logrotate:
+  cycle: daily
+  count: 3
+
+freifunk:
+  name: "Freifunk im Neanderland"
+  kurzname: "FFNEF"
+  search_domain: "ffnef.de"
+  email: kontakt@neanderfunk.de
+  domain: ffnef.de
+  
+domains:
+  "ffnef.de":
+    extern_dns:
+      - adorfer
+      - plaste
+    email: kontakt@neanderfunk.de
+
+check_mk:
+  deb: https://monitoring.eulenfunk.de/eulenfunk/check_mk/agents/check-mk-agent_1.6.0p8-1_all.deb
+

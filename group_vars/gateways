@@ -1,0 +1,64 @@
+use_wlan_slovenija_tunneldigger : true
+
+collectd:
+  collect_dhcp: false
+  collect_fastd: false
+  collect_l2tp: false
+  collect_ipv4ipv6: false
+  collect_sysctl: false
+  collect_bind: false
+  collect_ping: false
+  graphite_target:
+    host: "stats.{{freifunk.domain}}"
+    port: 2003
+
+dhcp_type: "kea"
+
+kea:
+  database:
+    type: "postgresql"
+    db_host: "127.0.0.1"
+    db_name: "kea_leases"
+    db_user: "kea"
+    db_pass: "{{kea_postgres_pw}}"
+  global:
+    mtu: 1280
+    lease_default: 86400
+    search_domain: "{{freifunk.search_domain}}"
+  dns:
+    all_gateways: true
+    additional:
+      # FoeBud
+      - "85.214.20.141"
+      # dnscache.berlin.ccc.de
+      - "213.73.91.35"
+  routers:
+    all_gateways: false
+  loggers:
+    - name: "kea-dhcp4"
+      level: "WARN"
+      file: "/var/log/kea-dhcp4.log"
+  expired_leases:
+    - name: "reclaim-timer-wait-time"
+      value: 4
+    - name: "flush-reclaimed-timer-wait-time"
+      value: 10
+    - name: "hold-reclaimed-time"
+      value: 7200
+    - name: "max-reclaim-leases"
+      value: 1500
+    - name: "max-reclaim-time"
+      value: 300
+    - name: "unwarned-reclaim-cycles"
+      value: 5
+
+tunneldigger:
+  instance_per_domain: true
+  interface: "ens18"
+  max_tunnels: 1024
+  port_base: 20100
+  pmtu_discovery: false
+  tunnel_timeout: 60
+
+fastd:
+  port_base: 21100
