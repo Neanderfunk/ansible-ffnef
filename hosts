@@ -1,5 +1,7 @@
 [common]
-ansible	 dns=jump.ffnef.de	ansible_ssh_host={{dns}} ansible_ssh_port=62954
+#jump	 dns=jump.ffnef.de	ansible_ssh_host={{dns}} ansible_ssh_port=62954
+monitoring	dns=monitoring.ffnef.de	ansible_ssh_host={{dns}}	ansible_ssh_port=62954
+meet2 	 ipv4=51.83.29.21		ansible_ssh_host="{{ipv4}}"		ansible_ssh_port=62954
 
 # Multidomänen-L2TP Gateways mit oder ohne Direktanbindung FFRL
 # 'capacity' im Kommentar gibt die erwünschte relative Auslastung mit Traffic und L2TP-Verbindungen an

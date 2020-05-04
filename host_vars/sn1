@@ -2,7 +2,7 @@ server_id: 1
 vm_id: 1
 
 server_besitzer: "plaste"
-hoster: "OVH"
+hoster: "soyoustart"
 
 ffrl_nat_ip: 185.66.195.78/31
 #ffrl_nat_ip: 185.66.193.110/31 185.66.195.78/31
@@ -47,6 +47,43 @@ domaenenliste:
       dhcp_start: 10.2.0.0  
       dhcp_ende: 10.2.255.255
       server_id: 2
+   "03":
+      dhcp_start: 10.3.0.0  
+      dhcp_ende: 10.4.255.255
+      server_id: 2
+   "04":
+      dhcp_start: 10.4.0.0  
+      dhcp_ende: 10.4.255.255
+      server_id: 2
+   "05":
+      dhcp_start: 10.5.0.0  
+      dhcp_ende: 10.5.255.255
+      server_id: 2
+   "06":
+      dhcp_start: 10.6.0.0  
+      dhcp_ende: 10.6.255.255
+      server_id: 2
+   "07":
+      dhcp_start: 10.7.0.0  
+      dhcp_ende: 10.7.255.255
+      server_id: 2
+   "08":
+      dhcp_start: 10.8.0.0  
+      dhcp_ende: 10.8.255.255
+      server_id: 2
+   "09":
+      dhcp_start: 10.9.0.0  
+      dhcp_ende: 10.9.255.255
+      server_id: 2
+   "10":
+      dhcp_start: 10.10.0.0  
+      dhcp_ende: 10.10.255.255
+      server_id: 2
+   "11":
+      dhcp_start: 10.11.0.0  
+      dhcp_ende: 10.11.255.255
+      server_id: 2
+
 
 dhcp_type: "kea"
 
