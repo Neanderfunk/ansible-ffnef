@@ -6,7 +6,7 @@ domaenen:
     name: Velbert
     community: Freifunk im Neanderland
     ffv4_network: 10.1.0.0/16
-    ffv6_network: 2a03:2260:300e:1303::/64
+    ffv6_network: 2a03:2260:300e:1000::/64
 #    map_scale: 0.9
 #    map_show_contact: false
 #    map_max_age: 14
@@ -15,7 +15,7 @@ domaenen:
     name: Mettmann
     community: Freifunk im Neanderland
     ffv4_network: 10.2.0.0/16
-    ffv6_network: 2a03:2260:300e:1101::/64
+    ffv6_network: 2a03:2260:300e:2000::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -24,7 +24,7 @@ domaenen:
     name: Ratingen
     community: Freifunk im Neanderland
     ffv4_network: 10.3.0.0/16
-    ffv6_network: 2a03:2260:300e:1808::/64
+    ffv6_network: 2a03:2260:300e:3000::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -33,7 +33,7 @@ domaenen:
     name: Hilden
     community: Freifunk im Neanderland
     ffv4_network: 10.4.0.0/16
-    ffv6_network: 2a03:2260:300e:1505::/64
+    ffv6_network: 2a03:2260:300e:4000::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -42,7 +42,7 @@ domaenen:
     name: Monheim
     community: Freifunk im Neanderland
     ffv4_network: 10.5.0.0/16
-    ffv6_network: 2a03:2260:300e:1404::/64
+    ffv6_network: 2a03:2260:300e:5000::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -51,7 +51,7 @@ domaenen:
     name: Haan
     community: Freifunk im Neanderland
     ffv4_network: 10.6.0.0/16
-    ffv6_network: 2a03:2260:300e:1909::/64
+    ffv6_network: 2a03:2260:300e:6000::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -60,7 +60,7 @@ domaenen:
     name: Erkrath
     community: Freifunk im Neanderland
     ffv4_network: 10.7.0.0/16
-    ffv6_network: 2a03:2260:300e:1707::/64
+    ffv6_network: 2a03:2260:300e:7000::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -69,7 +69,7 @@ domaenen:
     name: Heiligenhaus
     community: Freifunk im Neanderland
     ffv4_network: 10.8.0.0/16
-    ffv6_network: 2a03:2260:300e:1202::/64
+    ffv6_network: 2a03:2260:300e:8000::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -78,7 +78,7 @@ domaenen:
     name: Langenfeld
     community: Freifunk im Neanderland
     ffv4_network: 10.9.0.0/16
-    ffv6_network: 2a03:2260:300e:1a01::/64
+    ffv6_network: 2a03:2260:300e:9000::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -87,7 +87,7 @@ domaenen:
     name: Wülfrath
     community: Freifunk im Neanderland
     ffv4_network: 10.10.0.0/16
-    ffv6_network: 2a03:2260:300e:1b0b::/64
+    ffv6_network: 2a03:2260:300e:a000::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -96,7 +96,7 @@ domaenen:
     name: LVR-HPH
     community: Freifunk im Neanderland
     ffv4_network: 10.11.0.0/16
-    ffv6_network: 2a03:2260:300e:1c0c::/64
+    ffv6_network: 2a03:2260:300e:b000::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -121,6 +121,7 @@ ff_network:
   v4_network: 10.43.0.0/16
   # IPv6 adressraum
   v6_network: 2a03:2260:300e::/48
+
 
 
 administratorenteam:
@@ -153,6 +154,8 @@ domains:
       - plaste
     email: kontakt@neanderfunk.de
 
+ipv6backbone64prefixstr: "2a03:2260:300e:"
+
 check_mk:
-  deb: https://monitoring.eulenfunk.de/eulenfunk/check_mk/agents/check-mk-agent_1.6.0p8-1_all.deb
+  deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_1.6.0p11-1_all.deb
 

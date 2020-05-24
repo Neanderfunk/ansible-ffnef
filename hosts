@@ -2,12 +2,14 @@
 #jump	 dns=jump.ffnef.de	ansible_ssh_host={{dns}} ansible_ssh_port=62954
 monitoring	dns=monitoring.ffnef.de	ansible_ssh_host={{dns}}	ansible_ssh_port=62954
 meet2 	 ipv4=51.83.29.21		ansible_ssh_host="{{ipv4}}"		ansible_ssh_port=62954
+stun	dns=stun.ffnef.de ansible_ssh_host={{dns}}	ansible_ssh_port=62954 #ansible_user=<user> ansible_become=yes
 
 # Multidomänen-L2TP Gateways mit oder ohne Direktanbindung FFRL
 # 'capacity' im Kommentar gibt die erwünschte relative Auslastung mit Traffic und L2TP-Verbindungen an
 # 'server' im Kommentar muss angegeben werden, wenn mehrere L2TP-VM auf einem Blech laufen. Der Wert kann frei gewählt werden.
 [gateways]
 sn1		ipv4=51.83.29.17	ipv6=2001:41d0:c:6ea::5:246a	ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954	# IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00	server=sn1
+sn4		ipv4=51.178.251.46 ipv6=2001:41d0:404:200::50c0 ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954	# IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00	server=sn4
 
 
 # Server für Hoppglas Karten
