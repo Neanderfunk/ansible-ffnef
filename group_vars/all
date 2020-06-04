@@ -150,8 +150,8 @@ freifunk:
 domains:
   "ffnef.de":
     extern_dns:
-      - adorfer
-      - plaste
+      # - 
+      # - 
     email: kontakt@neanderfunk.de
 
 ipv6backbone64prefixstr: "2a03:2260:300e:"

@@ -34,21 +34,22 @@ is_external_nameserver: false
 
 domaenenliste:
    "01":
-      dhcp_start: 10.1.0.0  
+      dhcp_start: 10.1.64.0  
       dhcp_ende: 10.1.255.255
       server_id: 4
       partner: "sn1"
    "02":
-      dhcp_start: 10.2.0.0  
+      dhcp_start: 10.2.64.0  
       dhcp_ende: 10.2.255.255
       server_id: 4
+      partner: "sn1"
    "03":
-      dhcp_start: 10.3.0.0  
+      dhcp_start: 10.3.64.0  
       dhcp_ende: 10.3.255.255
       server_id: 4
       partner: "sn1"
    "04":
-      dhcp_start: 10.4.0.0  
+      dhcp_start: 10.4.64.0  
       dhcp_ende: 10.4.255.255
       server_id: 4
       partner: "sn1"
@@ -88,6 +89,17 @@ domaenenliste:
 
 
 dhcp_type: "kea"
+
+tunneldigger:
+  instance_per_domain: true
+  interface: "eth0"
+  max_tunnels: 1024
+  port_base: 20100
+  pmtu_discovery: false
+  tunnel_timeout: 60
+
+use_wlan_slovenija_tunneldigger: true
+
 
 
 batman_version: "2019.4"

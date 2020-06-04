@@ -15,3 +15,6 @@ sn4		ipv4=51.178.251.46 ipv6=2001:41d0:404:200::50c0 ansible_ssh_host="{{ipv4}}"
 # Server für Hoppglas Karten
 #[mapserver]
 #karte			ipv4=51.83.29.16	ipv6=2001:41d0:c:6ea::93:b9ee	ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=62954
+
+[jitsi-ffmuc]
+meet  	ipv4=85.10.205.83	ansible_ssh_host="{{ipv4}}"		ansible_ssh_port=22
