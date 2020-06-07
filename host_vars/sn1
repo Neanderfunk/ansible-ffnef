@@ -1,4 +1,4 @@
-server_id: 1
+server_id: 2
 vm_id: 1
 
 server_besitzer: "plaste"
@@ -43,7 +43,7 @@ domaenenliste:
    "01":
       dhcp_start: 10.1.0.0  
       dhcp_ende: 10.1.255.255
-      server_id: 1
+      server_id: 2
    "02":
       dhcp_start: 10.2.0.0  
       dhcp_ende: 10.2.255.255

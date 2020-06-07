@@ -1,33 +1,28 @@
-server_id: 4
-vm_id: 4
+server_id: 2
+vm_id: 2
 
 server_besitzer: "plaste"
 hoster: "hetzner"
+#ffnw Tunnel
 
-ffrl_nat_ip: 185.66.195.79
+#ffrl_nat_ip: 185.66.195.79
 #ffrl_nat_ip: 185.66.193.110/31
 
-#ffrl-tunnel neander-3
+#ffnw_v6: 2a0f:b507:ff02::/48 
+ffnw_nat_ip: 185.192.132.143/32
 
-ffrl_tun:
+ffnw_tun:
+
 - name: ber1
-  gre_target: 185.66.195.0
-  v4_remote: 100.64.3.102/31
-  v6_remote: 2a03:2260:0:1bd::1/64
+  gre_target: 185.197.132.7
+  v4_remote: 100.100.96.92/31
+  v6_remote: fe80::1/64
+  bgp_local_pref: 201
 - name: ber2
-  gre_target: 185.66.195.1
-  v4_remote: 100.64.3.106/31
-  v6_remote: 2a03:2260:0:1bf::1/64
-  bgp_local_pref: 201
-- name: dus1
-  gre_target: 185.66.193.0
-  v4_remote: 100.64.3.104/31
-  v6_remote: 2a03:2260:0:1be::1/64
-- name: dus2
-  gre_target:  185.66.193.1
-  v4_remote: 100.64.3.108/31
-  v6_remote: 2a03:2260:0:1c0::1/64
-  bgp_local_pref: 201
+  gre_target: 185.197.132.8
+  v4_remote: 100.100.112.92/31
+  v6_remote: fe80::1/64
+  bgp_local_pref: 210
 
 
 is_external_nameserver: false
@@ -36,8 +31,7 @@ domaenenliste:
    "01":
       dhcp_start: 10.1.64.0  
       dhcp_ende: 10.1.255.255
-      server_id: 4
-      partner: "sn1"
+      server_id: 2
    "02":
       dhcp_start: 10.2.64.0  
       dhcp_ende: 10.2.255.255
