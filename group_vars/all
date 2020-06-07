@@ -2,101 +2,178 @@
 build_tunnels_over_ipv6_if_available: true
 
 domaenen:
-  "01":
+  1:
     name: Velbert
+    shortname: vel
+    hostname_prefix: VEL-
     community: Freifunk im Neanderland
     ffv4_network: 10.1.0.0/16
-    ffv6_network: 2a03:2260:300e:1000::/64
+    ffv6_network: 2a03:2260:300e:0100::/64
+    fastdpeers:
+      1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
+      2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
+      3: 0c3131778981c318135e0f552d747c513f0589ac9a214ad75731c8455a442c20
+      4: dd43a7d1c3f893ec67f13aca90bb5be2d449e8a83e943869f240b1f99ca7297a
 #    map_scale: 0.9
 #    map_show_contact: false
 #    map_max_age: 14
 #    firmware: vel/
-  "02":
+  2:
     name: Mettmann
+    shortname: met
+    hostname_prefix: ME-
     community: Freifunk im Neanderland
     ffv4_network: 10.2.0.0/16
-    ffv6_network: 2a03:2260:300e:2000::/64
+    ffv6_network: 2a03:2260:300e:0200::/64
+    fastdpeers:
+      1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
+      2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
+      3: 0c3131778981c318135e0f552d747c513f0589ac9a214ad75731c8455a442c20
+      4: dd43a7d1c3f893ec67f13aca90bb5be2d449e8a83e943869f240b1f99ca7297a
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  "03":
+  3:
     name: Ratingen
+    shortname: rat
+    hostname_prefix: RAT-
     community: Freifunk im Neanderland
     ffv4_network: 10.3.0.0/16
-    ffv6_network: 2a03:2260:300e:3000::/64
+    ffv6_network: 2a03:2260:300e:0300::/64
+    fastdpeers:
+      1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
+      2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
+      3: 0c3131778981c318135e0f552d747c513f0589ac9a214ad75731c8455a442c20
+      4: dd43a7d1c3f893ec67f13aca90bb5be2d449e8a83e943869f240b1f99ca7297a
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  "04":
+  4:
     name: Hilden
+    shortname: hld
+    hostname_prefix: HLD-
     community: Freifunk im Neanderland
     ffv4_network: 10.4.0.0/16
-    ffv6_network: 2a03:2260:300e:4000::/64
+    ffv6_network: 2a03:2260:300e:0400::/64
+    fastdpeers:
+      1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
+      2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
+      3: 0c3131778981c318135e0f552d747c513f0589ac9a214ad75731c8455a442c20
+      4: dd43a7d1c3f893ec67f13aca90bb5be2d449e8a83e943869f240b1f99ca7297a
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  "05":
+  5:
     name: Monheim
+    shortname: mon
+    hostname_prefix: MON-
     community: Freifunk im Neanderland
     ffv4_network: 10.5.0.0/16
-    ffv6_network: 2a03:2260:300e:5000::/64
+    ffv6_network: 2a03:2260:300e:0500::/64
+    fastdpeers:
+      1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
+      2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
+      3: 0c3131778981c318135e0f552d747c513f0589ac9a214ad75731c8455a442c20
+      4: dd43a7d1c3f893ec67f13aca90bb5be2d449e8a83e943869f240b1f99ca7297a
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  "06":
+  6:
     name: Haan
+    shortname: han
+    hostname_prefix: HAAN-
     community: Freifunk im Neanderland
     ffv4_network: 10.6.0.0/16
-    ffv6_network: 2a03:2260:300e:6000::/64
+    ffv6_network: 2a03:2260:300e:0600::/64
+    fastdpeers:
+      1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
+      2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
+      3: 0c3131778981c318135e0f552d747c513f0589ac9a214ad75731c8455a442c20
+      4: dd43a7d1c3f893ec67f13aca90bb5be2d449e8a83e943869f240b1f99ca7297a
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  "07":
+  7:
     name: Erkrath
+    shortname: erk
+    hostname_prefix: ERK-
     community: Freifunk im Neanderland
     ffv4_network: 10.7.0.0/16
-    ffv6_network: 2a03:2260:300e:7000::/64
+    ffv6_network: 2a03:2260:300e:0700::/64
+    fastdpeers:
+      1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
+      2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
+      3: 0c3131778981c318135e0f552d747c513f0589ac9a214ad75731c8455a442c20
+      4: dd43a7d1c3f893ec67f13aca90bb5be2d449e8a83e943869f240b1f99ca7297a
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  "08":
+  8:
     name: Heiligenhaus
+    shortname: hlg
+    hostname_prefix: HLG-
     community: Freifunk im Neanderland
     ffv4_network: 10.8.0.0/16
-    ffv6_network: 2a03:2260:300e:8000::/64
+    ffv6_network: 2a03:2260:300e:0800::/64
+    fastdpeers:
+      1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
+      2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
+      3: 0c3131778981c318135e0f552d747c513f0589ac9a214ad75731c8455a442c20
+      4: dd43a7d1c3f893ec67f13aca90bb5be2d449e8a83e943869f240b1f99ca7297a
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  "09":
+  9:
     name: Langenfeld
+    shortname: lgf
+    hostname_prefix: LGF-
     community: Freifunk im Neanderland
     ffv4_network: 10.9.0.0/16
-    ffv6_network: 2a03:2260:300e:9000::/64
+    ffv6_network: 2a03:2260:300e:0900::/64
+    fastdpeers:
+      1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
+      2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
+      3: 0c3131778981c318135e0f552d747c513f0589ac9a214ad75731c8455a442c20
+      4: dd43a7d1c3f893ec67f13aca90bb5be2d449e8a83e943869f240b1f99ca7297a
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  "10":
+  10:
     name: Wülfrath
+    shortname: wlf
+    hostname_prefix: WLF-
     community: Freifunk im Neanderland
     ffv4_network: 10.10.0.0/16
-    ffv6_network: 2a03:2260:300e:a000::/64
+    ffv6_network: 2a03:2260:300e:1000::/64
+    fastdpeers:
+      1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
+      2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
+      3: 0c3131778981c318135e0f552d747c513f0589ac9a214ad75731c8455a442c20
+      4: dd43a7d1c3f893ec67f13aca90bb5be2d449e8a83e943869f240b1f99ca7297a
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  "11":
+  11:
     name: LVR-HPH
+    shortname: lvr
+    hostname_prefix: LVR-
     community: Freifunk im Neanderland
     ffv4_network: 10.11.0.0/16
-    ffv6_network: 2a03:2260:300e:b000::/64
+    ffv6_network: 2a03:2260:300e:1100::/64
+    fastdpeers:
+      1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
+      2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
+      3: 0c3131778981c318135e0f552d747c513f0589ac9a214ad75731c8455a442c20
+      4: dd43a7d1c3f893ec67f13aca90bb5be2d449e8a83e943869f240b1f99ca7297a
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -146,16 +223,15 @@ freifunk:
   search_domain: "ffnef.de"
   email: kontakt@neanderfunk.de
   domain: ffnef.de
-  
+
 domains:
   "ffnef.de":
     extern_dns:
-      # - 
-      # - 
+      # -
+      # -
     email: kontakt@neanderfunk.de
 
 ipv6backbone64prefixstr: "2a03:2260:300e:"
 
 check_mk:
   deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_1.6.0p11-1_all.deb
-
