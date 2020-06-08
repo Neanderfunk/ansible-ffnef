@@ -34,56 +34,56 @@ is_external_nameserver: false
 
 domaenenliste:
    "01":
-      dhcp_start: 10.1.128.0 
-      dhcp_ende: 10.1.255.255
+      dhcp_start: 10.1.96.0 
+      dhcp_ende: 10.1.127.255
       server_id: 2
       partner: "sn2"
    "02":
-      dhcp_start: 10.2.64.0  
-      dhcp_ende: 10.2.255.255
+      dhcp_start: 10.2.96.0  
+      dhcp_ende: 10.2.127.255
       server_id: 4
       partner: "sn1"
    "03":
-      dhcp_start: 10.3.64.0  
-      dhcp_ende: 10.3.255.255
+      dhcp_start: 10.3.96.0  
+      dhcp_ende: 10.3.127.255
       server_id: 4
       partner: "sn1"
    "04":
-      dhcp_start: 10.4.64.0  
-      dhcp_ende: 10.4.255.255
+      dhcp_start: 10.4.96.0  
+      dhcp_ende: 10.4.127.255
       server_id: 4
       partner: "sn1"
    "05":
-      dhcp_start: 10.5.0.0  
-      dhcp_ende: 10.5.255.255
+      dhcp_start: 10.5.96.0  
+      dhcp_ende: 10.5.127.255
       server_id: 4
    "06":
-      dhcp_start: 10.6.0.0  
-      dhcp_ende: 10.6.255.255
+      dhcp_start: 10.6.96.0  
+      dhcp_ende: 10.6.127.255
       server_id: 2
    "07":
-      dhcp_start: 10.7.0.0  
-      dhcp_ende: 10.7.255.255
+      dhcp_start: 10.7.96.0  
+      dhcp_ende: 10.7.127.255
       server_id: 4
       partner: "sn1"
    "08":
-      dhcp_start: 10.8.0.0  
-      dhcp_ende: 10.8.255.255
+      dhcp_start: 10.8.96.0  
+      dhcp_ende: 10.8.127.255
       server_id: 4
       partner: "sn1"
    "09":
-      dhcp_start: 10.9.0.0  
-      dhcp_ende: 10.9.255.255
+      dhcp_start: 10.9.96.0  
+      dhcp_ende: 10.9.127.255
       server_id: 4
       partner: "sn1"
    "10":
-      dhcp_start: 10.10.0.0  
-      dhcp_ende: 10.10.255.255
+      dhcp_start: 10.10.96.0  
+      dhcp_ende: 10.10.127.255
       server_id: 4
       partner: "sn1"
    "11":
-      dhcp_start: 10.11.0.0  
-      dhcp_ende: 10.11.255.255
+      dhcp_start: 10.11.96.0  
+      dhcp_ende: 10.11.127.255
       server_id: 4
       partner: "sn1"
 

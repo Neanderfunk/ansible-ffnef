@@ -41,48 +41,48 @@ is_external_nameserver: false
 
 domaenenliste:
    "01":
-      dhcp_start: 10.1.0.0  
-      dhcp_ende: 10.1.255.255
+      dhcp_start: 10.1.1.0  
+      dhcp_ende: 10.1.31.255
       server_id: 2
    "02":
-      dhcp_start: 10.2.0.0  
-      dhcp_ende: 10.2.255.255
+      dhcp_start: 10.2.1.0  
+      dhcp_ende: 10.2.31.255
       server_id: 2
    "03":
-      dhcp_start: 10.3.0.0  
-      dhcp_ende: 10.3.255.255
+      dhcp_start: 10.3.1.0  
+      dhcp_ende: 10.3.31.255
       server_id: 2
    "04":
-      dhcp_start: 10.4.0.0  
-      dhcp_ende: 10.4.255.255
+      dhcp_start: 10.4.1.0  
+      dhcp_ende: 10.4.31.255
       server_id: 2
    "05":
-      dhcp_start: 10.5.0.0  
-      dhcp_ende: 10.5.255.255
+      dhcp_start: 10.5.1.0  
+      dhcp_ende: 10.5.31.255
       server_id: 2
    "06":
-      dhcp_start: 10.6.0.0  
-      dhcp_ende: 10.6.255.255
+      dhcp_start: 10.6.1.0  
+      dhcp_ende: 10.6.31.255
       server_id: 2
    "07":
-      dhcp_start: 10.7.0.0  
-      dhcp_ende: 10.7.255.255
+      dhcp_start: 10.7.1.0  
+      dhcp_ende: 10.7.31.255
       server_id: 2
    "08":
-      dhcp_start: 10.8.0.0  
-      dhcp_ende: 10.8.255.255
+      dhcp_start: 10.8.1.0  
+      dhcp_ende: 10.8.31.255
       server_id: 2
    "09":
-      dhcp_start: 10.9.0.0  
-      dhcp_ende: 10.9.255.255
+      dhcp_start: 10.9.1.0  
+      dhcp_ende: 10.9.31.255
       server_id: 2
    "10":
-      dhcp_start: 10.10.0.0  
-      dhcp_ende: 10.10.255.255
+      dhcp_start: 10.10.1.0  
+      dhcp_ende: 10.10.31.255
       server_id: 2
    "11":
-      dhcp_start: 10.11.0.0  
-      dhcp_ende: 10.11.255.255
+      dhcp_start: 10.11.1.0  
+      dhcp_ende: 10.11.31.255
       server_id: 2
 
 
