@@ -34,10 +34,10 @@ is_external_nameserver: false
 
 domaenenliste:
    "01":
-      dhcp_start: 10.1.64.0  
+      dhcp_start: 10.1.128.0 
       dhcp_ende: 10.1.255.255
-      server_id: 4
-      partner: "sn1"
+      server_id: 2
+      partner: "sn2"
    "02":
       dhcp_start: 10.2.64.0  
       dhcp_ende: 10.2.255.255

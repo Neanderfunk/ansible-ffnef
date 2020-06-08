@@ -3,35 +3,15 @@ vm_id: 2
 
 server_besitzer: "plaste"
 hoster: "hetzner"
-#ffnw Tunnel
-
-#ffrl_nat_ip: 185.66.195.79
-#ffrl_nat_ip: 185.66.193.110/31
-
-#ffnw_v6: 2a0f:b507:ff02::/48 
-ffnw_nat_ip: 185.192.132.143/32
-
-ffnw_tun:
-
-- name: ber1
-  gre_target: 185.197.132.7
-  v4_remote: 100.100.96.92/31
-  v6_remote: fe80::1/64
-  bgp_local_pref: 201
-- name: ber2
-  gre_target: 185.197.132.8
-  v4_remote: 100.100.112.92/31
-  v6_remote: fe80::1/64
-  bgp_local_pref: 210
-
 
 is_external_nameserver: false
 
 domaenenliste:
    "01":
       dhcp_start: 10.1.64.0  
-      dhcp_ende: 10.1.255.255
-      server_id: 2
+      dhcp_ende: 10.1.127.255
+      server_id: 1
+      partner: "sn4"
    "02":
       dhcp_start: 10.2.64.0  
       dhcp_ende: 10.2.255.255
@@ -80,6 +60,25 @@ domaenenliste:
       dhcp_ende: 10.11.255.255
       server_id: 4
       partner: "sn1"
+
+#ffnw Tunnel
+
+
+#ffnw_v6: 2a0f:b507:ff02::/48 
+ffnw_nat_ip: 185.197.132.143
+
+ffnw_tun:
+
+- name: ber1
+  gre_target: 185.197.132.7
+  v4_remote: 100.100.96.92/31
+  v6_remote: fe80::1/64
+  bgp_local_pref: 201
+- name: ber2
+  gre_target: 185.197.132.8
+  v4_remote: 100.100.112.92/31
+  v6_remote: fe80::1/64
+  bgp_local_pref: 210
 
 
 dhcp_type: "kea"

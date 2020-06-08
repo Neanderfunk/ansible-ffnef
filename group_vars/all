@@ -2,13 +2,13 @@
 build_tunnels_over_ipv6_if_available: true
 
 domaenen:
-  1:
+  "01":
     name: Velbert
     shortname: vel
     hostname_prefix: VEL-
     community: Freifunk im Neanderland
     ffv4_network: 10.1.0.0/16
-    ffv6_network: 2a03:2260:300e:0100::/64
+    ffv6_network: 2a03:2260:300e:1000::/64
     fastdpeers:
       1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
@@ -18,7 +18,7 @@ domaenen:
 #    map_show_contact: false
 #    map_max_age: 14
 #    firmware: vel/
-  2:
+  "02":
     name: Mettmann
     shortname: met
     hostname_prefix: ME-
@@ -34,7 +34,7 @@ domaenen:
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  3:
+  "03":
     name: Ratingen
     shortname: rat
     hostname_prefix: RAT-
@@ -50,7 +50,7 @@ domaenen:
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  4:
+  "04":
     name: Hilden
     shortname: hld
     hostname_prefix: HLD-
@@ -66,7 +66,7 @@ domaenen:
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  5:
+  "05":
     name: Monheim
     shortname: mon
     hostname_prefix: MON-
@@ -82,7 +82,7 @@ domaenen:
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  6:
+  "06":
     name: Haan
     shortname: han
     hostname_prefix: HAAN-
@@ -98,7 +98,7 @@ domaenen:
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  7:
+  "07":
     name: Erkrath
     shortname: erk
     hostname_prefix: ERK-
@@ -114,7 +114,7 @@ domaenen:
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  8:
+  "08":
     name: Heiligenhaus
     shortname: hlg
     hostname_prefix: HLG-
@@ -130,7 +130,7 @@ domaenen:
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  9:
+  "09":
     name: Langenfeld
     shortname: lgf
     hostname_prefix: LGF-
@@ -146,13 +146,13 @@ domaenen:
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  10:
+  "10":
     name: Wülfrath
     shortname: wlf
     hostname_prefix: WLF-
     community: Freifunk im Neanderland
     ffv4_network: 10.10.0.0/16
-    ffv6_network: 2a03:2260:300e:1000::/64
+    ffv6_network: 2a03:2260:300e:1a00::/64
     fastdpeers:
       1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
@@ -162,13 +162,13 @@ domaenen:
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
-  11:
+  "11":
     name: LVR-HPH
     shortname: lvr
     hostname_prefix: LVR-
     community: Freifunk im Neanderland
     ffv4_network: 10.11.0.0/16
-    ffv6_network: 2a03:2260:300e:1100::/64
+    ffv6_network: 2a03:2260:300e:1b00::/64
     fastdpeers:
       1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
