@@ -36,7 +36,7 @@ domaenenliste:
    "01":
       dhcp_start: 10.1.128.0 
       dhcp_ende: 10.1.255.255
-      server_id: 2
+      server_id: 4
       partner: "sn2"
    "02":
       dhcp_start: 10.2.64.0  
@@ -60,7 +60,7 @@ domaenenliste:
    "06":
       dhcp_start: 10.6.0.0  
       dhcp_ende: 10.6.255.255
-      server_id: 2
+      server_id: 4
    "07":
       dhcp_start: 10.7.0.0  
       dhcp_ende: 10.7.255.255

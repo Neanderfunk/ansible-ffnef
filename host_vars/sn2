@@ -70,15 +70,17 @@ ffnw_nat_ip: 185.197.132.143
 ffnw_tun:
 
 - name: ber1
-  gre_target: 185.197.132.7
-  v4_remote: 100.100.96.92/31
-  v6_remote: fe80::1/64
-  bgp_local_pref: 201
-- name: ber2
   gre_target: 185.197.132.8
   v4_remote: 100.100.112.92/31
   v6_remote: fe80::1/64
+  bgp_local_pref: 500
+
+- name: ber2
+  gre_target: 185.197.132.7
+  v4_remote: 100.100.96.92/31
+  v6_remote: fe80::1/64
   bgp_local_pref: 210
+
 
 
 dhcp_type: "kea"

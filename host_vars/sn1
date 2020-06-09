@@ -1,4 +1,4 @@
-server_id: 2
+server_id: 1
 vm_id: 1
 
 server_besitzer: "plaste"
@@ -43,23 +43,23 @@ domaenenliste:
    "01":
       dhcp_start: 10.1.0.0  
       dhcp_ende: 10.1.255.255
-      server_id: 2
+      server_id: 1
    "02":
       dhcp_start: 10.2.0.0  
       dhcp_ende: 10.2.255.255
-      server_id: 2
+      server_id: 1
    "03":
       dhcp_start: 10.3.0.0  
       dhcp_ende: 10.3.255.255
-      server_id: 2
+      server_id: 1
    "04":
       dhcp_start: 10.4.0.0  
       dhcp_ende: 10.4.255.255
-      server_id: 2
+      server_id: 1
    "05":
       dhcp_start: 10.5.0.0  
       dhcp_ende: 10.5.255.255
-      server_id: 2
+      server_id: 1
    "06":
       dhcp_start: 10.6.0.0  
       dhcp_ende: 10.6.255.255
@@ -75,15 +75,15 @@ domaenenliste:
    "09":
       dhcp_start: 10.9.0.0  
       dhcp_ende: 10.9.255.255
-      server_id: 2
+      server_id: 1
    "10":
       dhcp_start: 10.10.0.0  
       dhcp_ende: 10.10.255.255
-      server_id: 2
+      server_id: 1
    "11":
       dhcp_start: 10.11.0.0  
       dhcp_ende: 10.11.255.255
-      server_id: 2
+      server_id: 1
 
 
 dhcp_type: "kea"
