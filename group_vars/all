@@ -15,16 +15,16 @@ domaenen:
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
       3: 0c3131778981c318135e0f552d747c513f0589ac9a214ad75731c8455a442c20
       4: dd43a7d1c3f893ec67f13aca90bb5be2d449e8a83e943869f240b1f99ca7297a
-#    map_scale: 0.9
-#    map_show_contact: false
-#    map_max_age: 14
-#    firmware: vel/
-     geo_lat:'51.330611638'
-     geo_lon: '7.084465027'
-     geo_zoom: 12
-     wifi_24_ch: 9
-     wifi_5_ch: 44
-     url_website: 
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: vel/
+    geo_lat: 51.330611638
+    geo_lon: 7.084465027
+    geo_zoom: 12
+    wifi_24_ch: 9
+    wifi_5_ch: 44
+    url_website: 
   "02":
     name: Mettmann
     shortname: met
