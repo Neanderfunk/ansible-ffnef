@@ -1,7 +1,7 @@
 server_id: 4
 vm_id: 4
 
-server_besitzer: "plaste"
+server_besitzer: "FFNEF"
 hoster: "hetzner"
 
 ffrl_nat_ip: 185.66.195.79
@@ -37,7 +37,7 @@ domaenenliste:
       dhcp_start: 10.1.96.0 
       dhcp_ende: 10.1.127.255
       server_id: 4
-      partner: "sn2"
+      partner: "sn1"
    "02":
       dhcp_start: 10.2.96.0  
       dhcp_ende: 10.2.127.255

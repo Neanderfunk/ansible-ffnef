@@ -1,8 +1,8 @@
-server_id: 1
-vm_id: 1
+server_id: 2
+vm_id: 2
 
-server_besitzer: "plaste"
-hoster: "soyoustart"
+server_besitzer: "FFNEF"
+hoster: "soyoustart VM / mapserver"
 
 ffrl_nat_ip: 185.66.195.78/31
 #ffrl_nat_ip: 185.66.193.110/31 185.66.195.78/31
