@@ -11,22 +11,18 @@ domaenenliste:
       dhcp_start: 10.1.32.0  
       dhcp_ende: 10.1.63.255
       server_id: 3
-      partner: "sn4"
    "02":
       dhcp_start: 10.2.32.0  
       dhcp_ende: 10.2.63.255
       server_id: 3
-      partner: "sn4"
    "03":
       dhcp_start: 10.3.32.0  
       dhcp_ende: 10.3.63.255
       server_id: 3
-      partner: "sn4"
    "04":
       dhcp_start: 10.4.32.0  
       dhcp_ende: 10.4.63.255
       server_id: 3
-      partner: "sn4"
    "05":
       dhcp_start: 10.5.32.0  
       dhcp_ende: 10.5.63.255
@@ -49,17 +45,14 @@ domaenenliste:
       dhcp_start: 10.9.32.0  
       dhcp_ende: 10.9.63.255
       server_id: 3
-      partner: "sn4"
    "10":
       dhcp_start: 10.10.32.0  
       dhcp_ende: 10.10.63.255
       server_id: 3
-      partner: "sn4"
    "11":
       dhcp_start: 10.11.32.0  
       dhcp_ende: 10.11.63.255
       server_id: 3
-      partner: "sn4"
 
 #ffnw Tunnel
 
@@ -69,13 +62,13 @@ ffnw_nat_ip: 185.197.132.143
 
 ffnw_tun:
 
-- name: ber1
+- name: ber-b
   gre_target: 185.197.132.8
   v4_remote: 100.100.112.92/31
   v6_remote: fe80::1/64
-  bgp_local_pref: 500
+  bgp_local_pref: 200
 
-- name: ber2
+- name: ber-a
   gre_target: 185.197.132.7
   v4_remote: 100.100.96.92/31
   v6_remote: fe80::1/64
