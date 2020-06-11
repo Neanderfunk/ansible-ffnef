@@ -44,10 +44,12 @@ domaenenliste:
       dhcp_start: 10.1.1.0  
       dhcp_ende: 10.1.31.255
       server_id: 2
+      partner: "sn4"
    "02":
       dhcp_start: 10.2.1.0  
       dhcp_ende: 10.2.31.255
       server_id: 2
+      partner: "sn4"
    "03":
       dhcp_start: 10.3.1.0  
       dhcp_ende: 10.3.31.255
