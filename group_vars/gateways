@@ -23,15 +23,15 @@ kea:
     db_pass: "{{kea_postgres_pw}}"
   global:
     mtu: 1364
-    lease_default: 86400
+    lease_default: 1800
     search_domain: "{{freifunk.search_domain}}"
   dns:
     all_gateways: true
     additional:
-      # FoeBud
-      - "85.214.20.141"
-      # dnscache.berlin.ccc.de
-      - "213.73.91.35"
+      # opendns
+      - "208.67.222.222"
+      # google
+      - "8.8.8.8"
       
   routers:
     all_gateways: false

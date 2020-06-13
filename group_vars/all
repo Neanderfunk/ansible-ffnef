@@ -159,7 +159,7 @@ domaenen:
     hostname_prefix: WLF-
     community: Freifunk im Neanderland
     ffv4_network: 10.10.0.0/16
-    ffv6_network: 2a03:2260:300e:1a00::/64
+    ffv6_network: 2a03:2260:300e:0a00::/64
     fastdpeers:
       1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
@@ -175,7 +175,7 @@ domaenen:
     hostname_prefix: LVR-
     community: Freifunk im Neanderland
     ffv4_network: 10.11.0.0/16
-    ffv6_network: 2a03:2260:300e:1b00::/64
+    ffv6_network: 2a03:2260:300e:0b00::/64
     fastdpeers:
       1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
