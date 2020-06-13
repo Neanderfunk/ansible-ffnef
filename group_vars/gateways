@@ -23,7 +23,7 @@ kea:
     db_pass: "{{kea_postgres_pw}}"
   global:
     mtu: 1364
-    lease_default: 86400
+    lease_default: 1800
     search_domain: "{{freifunk.search_domain}}"
   dns:
     all_gateways: true
@@ -52,8 +52,6 @@ kea:
       value: 300
     - name: "unwarned-reclaim-cycles"
       value: 5
-    - name: "valid-lifetime"
-      value: 1800
 
 tunneldigger:
   instance_per_domain: true
