@@ -31,7 +31,7 @@ domaenen:
     hostname_prefix: ME-
     community: Freifunk im Neanderland
     ffv4_network: 10.2.0.0/16
-    ffv6_network: 2a03:2260:300e:0102::/64
+    ffv6_network: 2a03:2260:300e:0200::/64
     fastdpeers:
       1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
@@ -47,7 +47,7 @@ domaenen:
     hostname_prefix: RAT-
     community: Freifunk im Neanderland
     ffv4_network: 10.3.0.0/16
-    ffv6_network: 2a03:2260:300e:0104::/64
+    ffv6_network: 2a03:2260:300e:0300::/64
     fastdpeers:
       1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
@@ -63,7 +63,7 @@ domaenen:
     hostname_prefix: HLD-
     community: Freifunk im Neanderland
     ffv4_network: 10.4.0.0/16
-    ffv6_network: 2a03:2260:300e:0106::/64
+    ffv6_network: 2a03:2260:300e:0400::/64
     fastdpeers:
       1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
@@ -79,7 +79,7 @@ domaenen:
     hostname_prefix: MON-
     community: Freifunk im Neanderland
     ffv4_network: 10.5.0.0/16
-    ffv6_network: 2a03:2260:300e:0108::/64
+    ffv6_network: 2a03:2260:300e:0500::/64
     fastdpeers:
       1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
@@ -95,7 +95,7 @@ domaenen:
     hostname_prefix: HAAN-
     community: Freifunk im Neanderland
     ffv4_network: 10.6.0.0/16
-    ffv6_network: 2a03:2260:300e:010a::/64
+    ffv6_network: 2a03:2260:300e:0600::/64
     fastdpeers:
       1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
@@ -111,7 +111,7 @@ domaenen:
     hostname_prefix: ERK-
     community: Freifunk im Neanderland
     ffv4_network: 10.7.0.0/16
-    ffv6_network: 2a03:2260:300e:010c::/64
+    ffv6_network: 2a03:2260:300e:0700::/64
     fastdpeers:
       1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
@@ -127,7 +127,7 @@ domaenen:
     hostname_prefix: HLG-
     community: Freifunk im Neanderland
     ffv4_network: 10.8.0.0/16
-    ffv6_network: 2a03:2260:300e:010e::/64
+    ffv6_network: 2a03:2260:300e:0800::/64
     fastdpeers:
       1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
@@ -143,7 +143,7 @@ domaenen:
     hostname_prefix: LGF-
     community: Freifunk im Neanderland
     ffv4_network: 10.9.0.0/16
-    ffv6_network: 2a03:2260:300e:0110::/64
+    ffv6_network: 2a03:2260:300e:0900::/64
     fastdpeers:
       1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
@@ -159,7 +159,7 @@ domaenen:
     hostname_prefix: WLF-
     community: Freifunk im Neanderland
     ffv4_network: 10.10.0.0/16
-    ffv6_network: 2a03:2260:300e:0112::/64
+    ffv6_network: 2a03:2260:300e:0a00::/64
     fastdpeers:
       1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
@@ -175,7 +175,7 @@ domaenen:
     hostname_prefix: LVR-
     community: Freifunk im Neanderland
     ffv4_network: 10.11.0.0/16
-    ffv6_network: 2a03:2260:300e:0114::/64
+    ffv6_network: 2a03:2260:300e:0b00::/64
     fastdpeers:
       1: efd2155bf25585788ae333bd228ec960c4ce6d100dd3c0ad5f08e88adf516059
       2: 65071e80af35865830c5e5014c1279bf7b7bd2bcc06b9f721137ee1f624ce4d4
