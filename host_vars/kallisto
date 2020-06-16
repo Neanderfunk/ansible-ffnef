@@ -6,9 +6,12 @@ hoster: "hetzner"
 
 
 ########### warning override group_vars ########
-
 ff_network:
-  # v6 prefix for FFNW
+  # Eindeutige AS-Nummer des Netzwerk
+  as_number: 64863
+  # IPv4 Adressraum
+  v4_network: 10.43.0.0/16
+  ##### IPv6 prefix for FFNW #####
   v6_network: 2a0f:b507:ff02::/48
 ################################################
 
@@ -22,10 +25,10 @@ domaenenliste:
    "13":
       dhcp_start: 10.155.1.0
       dhcp_ende: 10.155.127.255
-      server_id 3   
+      server_id: 3   
    "14":
       dhcp_start: 10.156.1.0
-      dhcp_ende: 10.155.255.255
+      dhcp_ende: 10.156.255.255
       server_id: 3
    "15":
       dhcp_start: 10.157.1.0
