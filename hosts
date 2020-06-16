@@ -18,3 +18,6 @@ amalthea		ipv4=46.4.113.218 ipv6=2a01:4f8:141:11e2::2 ansible_ssh_host="{{ipv4}}
 
 [jitsiffmuc]
 meet  	ipv4=85.10.205.83	ansible_ssh_host="{{ipv4}}"		ansible_ssh_port=22
+
+[statistics]
+stats		ansible_ssh_host=stats.ffnef.de	ansible_ssh_port=62954

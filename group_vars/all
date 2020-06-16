@@ -185,6 +185,73 @@ domaenen:
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
+  "12":
+    name: Düsseldorf-Unterkünfte
+    shortname: dusuk
+    hostname_prefix: dusuk-
+    community: flingern
+    ffv4_network: 10.155.128.0/17
+    ffv6_network: 
+ #   map_scale: 0.9
+ #   map_show_contact: false
+ #   map_max_age: 14
+ #   firmware: met/
+  "13":
+    name: Düsseldorf-Flingern
+    shortname: dusfl
+    hostname_prefix: dusfl-
+    community: flingern
+    ffv4_network: 10.155.0.0/17
+    ffv6_network: 
+ #   map_scale: 0.9
+ #   map_show_contact: false
+ #   map_max_age: 14
+ #   firmware: met/
+  "14":
+    name: Wuppertal-Barmen
+    shortname: bar
+    hostname_prefix: bar-
+    community: Wuppertal-Hilfsdomain
+    ffv4_network: 10.156.0.0/16
+    ffv6_network: 
+ #   map_scale: 0.9
+ #   map_show_contact: false
+ #   map_max_age: 14
+ #   firmware: met/
+  "15":
+    name: Marienheide
+    shortname: mrh
+    hostname_prefix: mrh-
+    community: ffnrw
+    ffv4_network: 10.157.0.0/16
+    ffv6_network: 
+ #   map_scale: 0.9
+ #   map_show_contact: false
+ #   map_max_age: 14
+ #   firmware: met/
+  "16":
+    name: Gummersbach
+    shortname: gmb
+    hostname_prefix: gmb-
+    community: ffnrw
+    ffv4_network: 10.158.0.0/16
+    ffv6_network: 
+ #   map_scale: 0.9
+ #   map_show_contact: false
+ #   map_max_age: 14
+ #   firmware: met/
+  "17":
+    name: Wipperfürth
+    shortname: wip
+    hostname_prefix: wip-
+    community: ffnrw
+    ffv4_network: 10.159.0.0/16
+    ffv6_network: 
+ #   map_scale: 0.9
+ #   map_show_contact: false
+ #   map_max_age: 14
+ #   firmware: met/
+ 
 
 # Nummer der Routing Tabelle, die auf den Servern verwendet wird
 routing_table: 42
@@ -211,7 +278,7 @@ bind:
   ffnet_zone_masters:
      - 10.45.67.123
 bind_zonemaster:
-  server: service.ffnef.de
+  server: ns1.nadeshda.net
   email: kontakt@neanderfunk.de
 
 logrotate:

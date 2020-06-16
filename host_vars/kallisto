@@ -4,55 +4,42 @@ vm_id: 3
 server_besitzer: "FFNEF"
 hoster: "hetzner"
 
+
+########### warning override group_vars ########
+
+ff_network:
+  # v6 prefix for FFNW
+  v6_network: 2a0f:b507:ff02::/48
+################################################
+
 is_external_nameserver: false
 
 domaenenliste:
-   "01":
-      dhcp_start: 10.1.32.0  
-      dhcp_ende: 10.1.63.255
+   "12":
+      dhcp_start: 10.155.129.0
+      dhcp_ende: 10.155.255.255
       server_id: 3
-   "02":
-      dhcp_start: 10.2.32.0  
-      dhcp_ende: 10.2.63.255
+   "13":
+      dhcp_start: 10.155.1.0
+      dhcp_ende: 10.155.127.255
+      server_id 3   
+   "14":
+      dhcp_start: 10.156.1.0
+      dhcp_ende: 10.155.255.255
       server_id: 3
-   "03":
-      dhcp_start: 10.3.32.0  
-      dhcp_ende: 10.3.63.255
+   "15":
+      dhcp_start: 10.157.1.0
+      dhcp_ende: 10.157.255.255
       server_id: 3
-   "04":
-      dhcp_start: 10.4.32.0  
-      dhcp_ende: 10.4.63.255
+   "16":
+      dhcp_start: 10.158.1.0
+      dhcp_ende: 10.158.255.255
       server_id: 3
-   "05":
-      dhcp_start: 10.5.32.0  
-      dhcp_ende: 10.5.63.255
+   "16":
+      dhcp_start: 10.159.1.0
+      dhcp_ende: 10.159.255.255
       server_id: 3
-   "06":
-      dhcp_start: 10.6.32.0  
-      dhcp_ende: 10.6.63.255
-      server_id: 3
-   "07":
-      dhcp_start: 10.7.32.0  
-      dhcp_ende: 10.7.63.255
-      server_id: 3
-      partner: "sn4"
-   "08":
-      dhcp_start: 10.8.32.0  
-      dhcp_ende: 10.8.63.255
-      server_id: 3
-      partner: "sn4"
-   "09":
-      dhcp_start: 10.9.32.0  
-      dhcp_ende: 10.9.63.255
-      server_id: 3
-   "10":
-      dhcp_start: 10.10.32.0  
-      dhcp_ende: 10.10.63.255
-      server_id: 3
-   "11":
-      dhcp_start: 10.11.32.0  
-      dhcp_ende: 10.11.63.255
-      server_id: 3
+
 
 #ffnw Tunnel
 
