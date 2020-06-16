@@ -191,7 +191,7 @@ domaenen:
     hostname_prefix: dusuk-
     community: flingern
     ffv4_network: 10.155.128.0/17
-    ffv6_network: 
+    ffv6_network: 2a0f:b507:ff02:0100::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -202,7 +202,7 @@ domaenen:
     hostname_prefix: dusfl-
     community: flingern
     ffv4_network: 10.155.0.0/17
-    ffv6_network: 
+    ffv6_network: 2a0f:b507:ff02:0200::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -213,7 +213,7 @@ domaenen:
     hostname_prefix: bar-
     community: Wuppertal-Hilfsdomain
     ffv4_network: 10.156.0.0/16
-    ffv6_network: 
+    ffv6_network: 2a0f:b507:ff02:0300::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -224,7 +224,7 @@ domaenen:
     hostname_prefix: mrh-
     community: ffnrw
     ffv4_network: 10.157.0.0/16
-    ffv6_network: 
+    ffv6_network: 2a0f:b507:ff02:0400::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -235,7 +235,7 @@ domaenen:
     hostname_prefix: gmb-
     community: ffnrw
     ffv4_network: 10.158.0.0/16
-    ffv6_network: 
+    ffv6_network: 2a0f:b507:ff02:0500::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
@@ -246,7 +246,7 @@ domaenen:
     hostname_prefix: wip-
     community: ffnrw
     ffv4_network: 10.159.0.0/16
-    ffv6_network: 
+    ffv6_network: 2a0f:b507:ff02:0600::/64
  #   map_scale: 0.9
  #   map_show_contact: false
  #   map_max_age: 14
