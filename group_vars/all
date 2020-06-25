@@ -26,6 +26,8 @@ domaenen:
     wifi5channel: 44
     htmode5:
     url_website:
+    authorized_keys:
+      - ""
   "02":
     name: Mettmann
     shortname: met
@@ -252,7 +254,7 @@ domaenen:
  #   map_show_contact: false
  #   map_max_age: 14
  #   firmware: met/
- 
+
 
 # Nummer der Routing Tabelle, die auf den Servern verwendet wird
 routing_table: 42
