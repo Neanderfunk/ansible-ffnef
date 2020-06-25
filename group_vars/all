@@ -296,6 +296,7 @@ domaenen:
     community: Wuppertal-Hilfsdomain
     ffv4_network: 10.156.0.0/16
     ffv6_network: 2a0f:b507:ff02:0300::/64
+    name_adj: "wuppertaler"
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
