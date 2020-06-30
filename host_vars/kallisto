@@ -4,17 +4,6 @@ vm_id: 3
 server_besitzer: "FFNEF"
 hoster: "hetzner"
 
-
-########### warning override group_vars ########
-ff_network:
-  # Eindeutige AS-Nummer des Netzwerk
-  as_number: 64863
-  # IPv4 Adressraum
-  v4_network: 10.43.0.0/16
-  ##### IPv6 prefix for FFNW #####
-  v6_network: 2a0f:b507:ff02::/48
-################################################
-
 is_external_nameserver: false
 
 domaenenliste:
