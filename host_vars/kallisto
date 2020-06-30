@@ -27,7 +27,7 @@ domaenenliste:
       dhcp_start: 10.158.1.0
       dhcp_ende: 10.158.255.255
       server_id: 3
-   "16":
+   "17":
       dhcp_start: 10.159.1.0
       dhcp_ende: 10.159.255.255
       server_id: 3
