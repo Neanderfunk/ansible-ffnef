@@ -192,7 +192,7 @@ domains:
       # -
     email: kontakt@neanderfunk.de
 
-ipv6backbone64prefixstr: "2a03:2260:300e:"
+ipv6backbone64prefixstr: "2a0f:b507:ff02:"
 
 check_mk:
   deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_1.6.0p11-1_all.deb
