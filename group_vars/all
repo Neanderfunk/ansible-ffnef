@@ -8,7 +8,7 @@ domaenen:
     hostname_prefix: VEL-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metaom: ffnef-
+    metacom: ffnef-
     ffv4_network: 10.1.0.0/16
     ffv6_network: 2a03:2260:300e:0100::/64
 #   fastdpeers:
@@ -42,7 +42,7 @@ domaenen:
     hostname_prefix: ME-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metaom: ffnef-
+    metacom: ffnef-
     ffv4_network: 10.2.0.0/16
     ffv6_network: 2a03:2260:300e:0200::/64
 #   map_scale: 0.9
@@ -68,7 +68,7 @@ domaenen:
     hostname_prefix: RAT-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metaom: ffnef-
+    metacom: ffnef-
     ffv4_network: 10.3.0.0/16
     ffv6_network: 2a03:2260:300e:0300::/64
 #   map_scale: 0.9
@@ -94,7 +94,7 @@ domaenen:
     hostname_prefix: HLD-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metaom: ffnef-
+    metacom: ffnef-
     ffv4_network: 10.4.0.0/16
     ffv6_network: 2a03:2260:300e:0400::/64
 #   map_scale: 0.9
@@ -120,7 +120,7 @@ domaenen:
     hostname_prefix: MON-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metaom: ffnef-
+    metacom: ffnef-
     ffv4_network: 10.5.0.0/16
     ffv6_network: 2a03:2260:300e:0500::/64
 #   map_scale: 0.9
@@ -146,7 +146,7 @@ domaenen:
     hostname_prefix: HAAN-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metaom: ffnef-
+    metacom: ffnef-
     ffv4_network: 10.6.0.0/16
     ffv6_network: 2a03:2260:300e:0600::/64
     #   map_scale: 0.9
@@ -172,7 +172,7 @@ domaenen:
     hostname_prefix: ERK-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metaom: ffnef-
+    metacom: ffnef-
     ffv4_network: 10.7.0.0/16
     ffv6_network: 2a03:2260:300e:0700::/64
     #   map_scale: 0.9
@@ -198,7 +198,7 @@ domaenen:
     hostname_prefix: HLG-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metaom: ffnef-
+    metacom: ffnef-
     ffv4_network: 10.8.0.0/16
     ffv6_network: 2a03:2260:300e:0800::/64
    #   map_scale: 0.9
@@ -224,7 +224,7 @@ domaenen:
     hostname_prefix: LGF-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metaom: ffnef-
+    metacom: ffnef-
     ffv4_network: 10.9.0.0/16
     ffv6_network: 2a03:2260:300e:0900::/64
 #   map_scale: 0.9
@@ -250,7 +250,7 @@ domaenen:
     hostname_prefix: WLF-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metaom: ffnef-
+    metacom: ffnef-
     ffv4_network: 10.10.0.0/16
     ffv6_network: 2a03:2260:300e:0a00::/64
 #   map_scale: 0.9
@@ -276,7 +276,7 @@ domaenen:
     hostname_prefix: LVR-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metaom: ffnef-
+    metacom: ffnef-
     ffv4_network: 10.11.0.0/16
     ffv6_network: 2a03:2260:300e:0b00::/64
 #   map_scale: 0.9
@@ -302,7 +302,7 @@ domaenen:
     hostname_prefix: dusuk-
     community: Düsseldorf Flingern
     metacommunity: Eulenfunk
-    metacom: 
+    metacom: ff- 
     ffv4_network: 10.155.128.0/17
     ffv6_network: 2a0f:b507:ff02:0100::/64
 #   map_scale: 0.9
@@ -330,7 +330,7 @@ domaenen:
     hostname_prefix: dusfl-
     community: Düsseldorf Flingern
     metacommunity: Eulenfunk
-    metacom: 
+    metacom: ff-
     ffv4_network: 10.155.0.0/17
     ffv6_network: 2a0f:b507:ff02:0200::/64
 #   map_scale: 0.9
@@ -358,7 +358,7 @@ domaenen:
     hostname_prefix: bar-
     community: Wuppertal Barmen
     metacommunity: Eulenfunk
-    metacom: 
+    metacom: ff-
     ffv4_network: 10.156.0.0/16
     ffv6_network: 2a0f:b507:ff02:0300::/64
 #   map_scale: 0.9
@@ -386,7 +386,7 @@ domaenen:
     hostname_prefix: mrh-
     community: Eulenfunk NRW
     metacommunity: Eulenfunk
-    metacom: 
+    metacom: ff-
     ffv4_network: 10.157.0.0/16
     ffv6_network: 2a0f:b507:ff02:0400::/64
 #   map_scale: 0.9
@@ -414,7 +414,7 @@ domaenen:
     hostname_prefix: gmb-
     community: Eulenfunk NRW
     metacommunity: Eulenfunk
-    metacom: 
+    metacom: ff-
     ffv4_network: 10.158.0.0/16
     ffv6_network: 2a0f:b507:ff02:0500::/64
 #   map_scale: 0.9
@@ -442,7 +442,7 @@ domaenen:
     hostname_prefix: wip-
     community: Eulenfunk NRW
     metacommunity: Eulenfunk
-    metacom: 
+    metacom: ff-
     ffv4_network: 10.159.0.0/16
     ffv6_network: 2a0f:b507:ff02:0600::/64
 #   map_scale: 0.9
