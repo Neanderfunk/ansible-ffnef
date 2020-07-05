@@ -8,7 +8,7 @@ domaenen:
     hostname_prefix: VEL-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metacom: ffnef-
+    metacom: ffnef
     ffv4_network: 10.1.0.0/16
     ffv6_network: 2a03:2260:300e:0100::/64
 #   fastdpeers:
@@ -20,7 +20,12 @@ domaenen:
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: vel/
-    firmwarepubfqdn : "firmware.ffnef.de/images/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
+    supernodes: " '2a03:2260:300e:{{ id }}00::3', '2620:fe::10', '2001:4860:4860::8844', '2001:4860:4860::8888',"
     maplink: "https://karte.neanderfunk.de"
     lat: 51.330611638
     lon: 7.084465027
@@ -42,14 +47,18 @@ domaenen:
     hostname_prefix: ME-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metacom: ffnef-
+    metacom: ffnef
     ffv4_network: 10.2.0.0/16
     ffv6_network: 2a03:2260:300e:0200::/64
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: met/
-    firmwarepubfqdn : "firmware.ffnef.de/images/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://karte.neanderfunk.de"
     lat: 51.2506
     lon: 6.9746
@@ -68,14 +77,18 @@ domaenen:
     hostname_prefix: RAT-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metacom: ffnef-
+    metacom: ffnef
     ffv4_network: 10.3.0.0/16
     ffv6_network: 2a03:2260:300e:0300::/64
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: met/
-    firmwarepubfqdn : "firmware.ffnef.de/images/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://karte.neanderfunk.de"
     lat: 51.2968
     lon: 6.8480
@@ -94,14 +107,18 @@ domaenen:
     hostname_prefix: HLD-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metacom: ffnef-
+    metacom: ffnef
     ffv4_network: 10.4.0.0/16
     ffv6_network: 2a03:2260:300e:0400::/64
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: hld/
-    firmwarepubfqdn : "firmware.ffnef.de/images/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://karte.neanderfunk.de"
     lat: 51.1687
     lon: 6.9331
@@ -120,14 +137,18 @@ domaenen:
     hostname_prefix: MON-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metacom: ffnef-
+    metacom: ffnef
     ffv4_network: 10.5.0.0/16
     ffv6_network: 2a03:2260:300e:0500::/64
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: mon/
-    firmwarepubfqdn : "firmware.ffnef.de/images/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://karte.neanderfunk.de"
     lat: 51.0893
     lon: 6.8900
@@ -146,14 +167,18 @@ domaenen:
     hostname_prefix: HAAN-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metacom: ffnef-
+    metacom: ffnef
     ffv4_network: 10.6.0.0/16
     ffv6_network: 2a03:2260:300e:0600::/64
     #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: han/
-    firmwarepubfqdn : "firmware.ffnef.de/images/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://karte.neanderfunk.de"
     lat: 51.2006
     lon: 7.0056
@@ -172,14 +197,18 @@ domaenen:
     hostname_prefix: ERK-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metacom: ffnef-
+    metacom: ffnef
     ffv4_network: 10.7.0.0/16
     ffv6_network: 2a03:2260:300e:0700::/64
     #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: erk/
-    firmwarepubfqdn : "firmware.ffnef.de/images/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://karte.neanderfunk.de"
     lat: 51.2145
     lon: 6.9318
@@ -198,14 +227,18 @@ domaenen:
     hostname_prefix: HLG-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metacom: ffnef-
+    metacom: ffnef
     ffv4_network: 10.8.0.0/16
     ffv6_network: 2a03:2260:300e:0800::/64
    #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: hlg/
-    firmwarepubfqdn : "firmware.ffnef.de/images/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://karte.neanderfunk.de"
     lat: 51.3250 
     lon: 6.9707
@@ -224,14 +257,18 @@ domaenen:
     hostname_prefix: LGF-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metacom: ffnef-
+    metacom: ffnef
     ffv4_network: 10.9.0.0/16
     ffv6_network: 2a03:2260:300e:0900::/64
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: lgf/
-    firmwarepubfqdn : "firmware.ffnef.de/images/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://karte.neanderfunk.de"
     lat: 51.1051
     lon: 6.9519
@@ -250,14 +287,18 @@ domaenen:
     hostname_prefix: WLF-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metacom: ffnef-
+    metacom: ffnef
     ffv4_network: 10.10.0.0/16
     ffv6_network: 2a03:2260:300e:0a00::/64
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: wlf/
-    firmwarepubfqdn : "firmware.ffnef.de/images/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://karte.neanderfunk.de"
     lat: 51.2863
     lon: 7.0367
@@ -276,14 +317,18 @@ domaenen:
     hostname_prefix: LVR-
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
-    metacom: ffnef-
+    metacom: ffnef
     ffv4_network: 10.11.0.0/16
     ffv6_network: 2a03:2260:300e:0b00::/64
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: lvr/
-    firmwarepubfqdn : "firmware.ffnef.de/images/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://karte.neanderfunk.de"
     lat: 51.1388
     lon: 7.2056
@@ -302,14 +347,18 @@ domaenen:
     hostname_prefix: dusuk-
     community: Düsseldorf Flingern
     metacommunity: Eulenfunk
-    metacom: ff- 
+    metacom: ff 
     ffv4_network: 10.155.128.0/17
     ffv6_network: 2a0f:b507:ff02:0100::/64
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: mon/
-    firmwarepubfqdn : "images.ffdus.de/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "images.ffdus.de/"
+    firmware_backup_fqdn: "ffdus.de"
+    firmware_int_fqdn: "ffdus"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://map.ffdus.de.de"
     lat: 51.2140
     lon: 6.8255
@@ -330,14 +379,18 @@ domaenen:
     hostname_prefix: dusfl-
     community: Düsseldorf Flingern
     metacommunity: Eulenfunk
-    metacom: ff-
+    metacom: ff
     ffv4_network: 10.155.0.0/17
     ffv6_network: 2a0f:b507:ff02:0200::/64
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: dusfl/
-    firmwarepubfqdn : "images.ffdus.de/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "images.ffdus.de/"
+    firmware_backup_fqdn: "ffdus.de"
+    firmware_int_fqdn: "ffdus"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://map.ffdus.de.de"
     lat: 51.2236
     lon: 6.8228
@@ -358,14 +411,18 @@ domaenen:
     hostname_prefix: bar-
     community: Wuppertal Barmen
     metacommunity: Eulenfunk
-    metacom: ff-
+    metacom: ff
     ffv4_network: 10.156.0.0/16
     ffv6_network: 2a0f:b507:ff02:0300::/64
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: bar/
-    firmwarepubfqdn : "firmware.freifunk.space/firmware/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.freifunk.space/firmware/"
+    firmware_backup_fqdn: "ffdus.de"
+    firmware_int_fqdn: "ffdus"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://bar.map.freifunk.space"
     lat: 51.2645
     lon: 7.1835
@@ -386,14 +443,18 @@ domaenen:
     hostname_prefix: mrh-
     community: Eulenfunk NRW
     metacommunity: Eulenfunk
-    metacom: ff-
+    metacom: ff
     ffv4_network: 10.157.0.0/16
     ffv6_network: 2a0f:b507:ff02:0400::/64
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: mrh/
-    firmwarepubfqdn : "firmware.freifunk.space/firmware/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.freifunk.space/firmware/"
+    firmware_backup_fqdn: "ffdus.de"
+    firmware_int_fqdn: "ffdus"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://mrh.map.freifunk.space"
     lat: 51.0832 
     lon: 7.5330
@@ -414,14 +475,18 @@ domaenen:
     hostname_prefix: gmb-
     community: Eulenfunk NRW
     metacommunity: Eulenfunk
-    metacom: ff-
+    metacom: ff
     ffv4_network: 10.158.0.0/16
     ffv6_network: 2a0f:b507:ff02:0500::/64
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: mon/
-    firmwarepubfqdn : "firmware.freifunk.space/firmware/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.freifunk.space/firmware/"
+    firmware_backup_fqdn: "ffdus.de"
+    firmware_int_fqdn: "ffdus"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://gmb.map.freifunk.space"
     lat: 51.0227
     lon: 7.5627
@@ -442,14 +507,18 @@ domaenen:
     hostname_prefix: wip-
     community: Eulenfunk NRW
     metacommunity: Eulenfunk
-    metacom: ff-
+    metacom: ff
     ffv4_network: 10.159.0.0/16
     ffv6_network: 2a0f:b507:ff02:0600::/64
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: mon/
-    firmwarepubfqdn : "firmware.freifunk.space/firmware/"
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.freifunk.space/firmware/"
+    firmware_backup_fqdn: "ffdus.de"
+    firmware_int_fqdn: "ffdus"
+    firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://wip.map.freifunk.space"
     lat: 51.1173
     lon: 7.3940
