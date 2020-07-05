@@ -6,3 +6,4 @@ domains.csv
 /.idea
 /*.iml 
 passwords.yml
+*~

@@ -7,6 +7,8 @@ domaenen:
     shortname: vel
     hostname_prefix: VEL-
     community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
     ffv4_network: 10.1.0.0/16
     ffv6_network: 2a03:2260:300e:0100::/64
 #   fastdpeers:
@@ -33,9 +35,12 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "02":
     name: Mettmann
+    name_adj: "mettmanner "
     shortname: met
     hostname_prefix: ME-
     community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
     ffv4_network: 10.2.0.0/16
     ffv6_network: 2a03:2260:300e:0200::/64
 #   map_scale: 0.9
@@ -54,9 +59,12 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "03":
     name: Ratingen
+    name_adj: "ratinger "
     shortname: rat
     hostname_prefix: RAT-
     community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
     ffv4_network: 10.3.0.0/16
     ffv6_network: 2a03:2260:300e:0300::/64
 #   map_scale: 0.9
@@ -75,9 +83,12 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "04":
     name: Hilden
+    name_adj: "hildener "
     shortname: hld
     hostname_prefix: HLD-
     community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
     ffv4_network: 10.4.0.0/16
     ffv6_network: 2a03:2260:300e:0400::/64
 #   map_scale: 0.9
@@ -96,9 +107,12 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "05":
     name: Monheim
+    name_adj: "monheimer "
     shortname: mon
     hostname_prefix: MON-
     community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
     ffv4_network: 10.5.0.0/16
     ffv6_network: 2a03:2260:300e:0500::/64
 #   map_scale: 0.9
@@ -117,9 +131,12 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "06":
     name: Haan
+    name_adj: "haaner "
     shortname: han
     hostname_prefix: HAAN-
     community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
     ffv4_network: 10.6.0.0/16
     ffv6_network: 2a03:2260:300e:0600::/64
     #   map_scale: 0.9
@@ -138,9 +155,12 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "07":
     name: Erkrath
+    name_adj: "erkrather "
     shortname: erk
     hostname_prefix: ERK-
     community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
     ffv4_network: 10.7.0.0/16
     ffv6_network: 2a03:2260:300e:0700::/64
     #   map_scale: 0.9
@@ -159,9 +179,12 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "08":
     name: Heiligenhaus
+    name_adj: "heiligenhauser "
     shortname: hlg
     hostname_prefix: HLG-
     community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
     ffv4_network: 10.8.0.0/16
     ffv6_network: 2a03:2260:300e:0800::/64
    #   map_scale: 0.9
@@ -180,9 +203,12 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "09":
     name: Langenfeld
+    name_adj: "langenfelder "
     shortname: lgf
     hostname_prefix: LGF-
     community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
     ffv4_network: 10.9.0.0/16
     ffv6_network: 2a03:2260:300e:0900::/64
 #   map_scale: 0.9
@@ -201,9 +227,12 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "10":
     name: Wülfrath
+    name_adj: "wülfrather "
     shortname: wlf
     hostname_prefix: WLF-
     community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
     ffv4_network: 10.10.0.0/16
     ffv6_network: 2a03:2260:300e:0a00::/64
 #   map_scale: 0.9
@@ -222,12 +251,14 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "11":
     name: LVR-HPH
+    name_adj: "LVR-Unterkunfts-"
     shortname: lvr
     hostname_prefix: LVR-
     community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
     ffv4_network: 10.11.0.0/16
     ffv6_network: 2a03:2260:300e:0b00::/64
-    name_adj: "LVR-Unterkunfts-"
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
@@ -244,12 +275,14 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "12":
     name: Düsseldorf-Unterkünfte
+    name_adj: "düsseldorfer Unterkunfts-"
     shortname: dusuk
     hostname_prefix: dusuk-
-    community: flingern
+    community: Düsseldorf Flingern
+    metacommunity: Eulenfunk
+    metacom: eul
     ffv4_network: 10.155.128.0/17
     ffv6_network: 2a0f:b507:ff02:0100::/64
-    name_adj: "düsseldorfer Unterkunfts-"
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
@@ -268,9 +301,12 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "13":
     name: Düsseldorf-Flingern
+    name_adj: "flingerner "
     shortname: dusfl
     hostname_prefix: dusfl-
-    community: flingern
+    community: Düsseldorf Flingern
+    metacommunity: Eulenfunk
+    metacom: eul
     ffv4_network: 10.155.0.0/17
     ffv6_network: 2a0f:b507:ff02:0200::/64
 #   map_scale: 0.9
@@ -291,12 +327,14 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "14":
     name: Wuppertal-Barmen
+    name_adj: "wuppertaler "
     shortname: bar
     hostname_prefix: bar-
-    community: Wuppertal-Hilfsdomain
+    community: Wuppertal Barmen
+    metacommunity: Eulenfunk
+    metacom: eul
     ffv4_network: 10.156.0.0/16
     ffv6_network: 2a0f:b507:ff02:0300::/64
-    name_adj: "wuppertaler"
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
@@ -315,12 +353,14 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "15":
     name: Marienheide
+    name_adj: "marienheider "
     shortname: mrh
     hostname_prefix: mrh-
-    community: ffnrw
+    community: Eulenfunk NRW
+    metacommunity: Eulenfunk
+    metacom: eul
     ffv4_network: 10.157.0.0/16
     ffv6_network: 2a0f:b507:ff02:0400::/64
-    name_adj: "marienheider"
 #   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
@@ -339,9 +379,12 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "16":
     name: Gummersbach
+    name_adj: "gummersbacher "
     shortname: gmb
     hostname_prefix: gmb-
-    community: ffnrw
+    community: Eulenfunk NRW
+    metacommunity: Eulenfunk
+    metacom: eul
     ffv4_network: 10.158.0.0/16
     ffv6_network: 2a0f:b507:ff02:0500::/64
 #   map_scale: 0.9
@@ -362,9 +405,12 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
   "17":
     name: Wipperfürth
+    name_adj: "wipperfürther "
     shortname: wip
     hostname_prefix: wip-
-    community: ffnrw
+    community: Eulenfunk NRW
+    metacommunity: Eulenfunk
+    metacom: eul
     ffv4_network: 10.159.0.0/16
     ffv6_network: 2a0f:b507:ff02:0600::/64
 #   map_scale: 0.9
