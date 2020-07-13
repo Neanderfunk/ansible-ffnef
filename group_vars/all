@@ -156,7 +156,7 @@ domaenen:
     metacom: ffnef
     ffv4_network: 10.6.0.0/16
     ffv6_network: 2a03:2260:300e:0600::/64
-    #   map_scale: 0.9
+#   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: han/
@@ -169,9 +169,9 @@ domaenen:
     lat: 51.2006
     lon: 7.0056
     zoom: 13
-    
+    authorized_admins:
 
-
+  "07":
     name: Erkrath
     name_adj: "erkrather "
     shortname: erk
@@ -194,7 +194,7 @@ domaenen:
     lat: 51.2145
     lon: 6.9318
     zoom: 13
-    authorized_keys:
+    authorized_admins:
     
   "08":
     name: Heiligenhaus
@@ -206,7 +206,7 @@ domaenen:
     metacom: ffnef
     ffv4_network: 10.8.0.0/16
     ffv6_network: 2a03:2260:300e:0800::/64
-   #   map_scale: 0.9
+#   map_scale: 0.9
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: hlg/
@@ -219,10 +219,10 @@ domaenen:
     lat: 51.3250 
     lon: 6.9707
     zoom: 13
-    authorized_keys:
+    authorized_admins:
 
 
- "09":
+  "09":
     name: Langenfeld
     name_adj: "langenfelder "
     shortname: lgf
@@ -245,7 +245,7 @@ domaenen:
     lat: 51.1051
     lon: 6.9519
     zoom: 13
-    authorized_keys:
+    authorized_admins:
     
   "10":
     name: Wülfrath
@@ -270,7 +270,7 @@ domaenen:
     lat: 51.2863
     lon: 7.0367
     zoom: 13
-    authorized_keys:
+    authorized_admins:
    
   "11":
     name: LVR-HPH
@@ -295,7 +295,7 @@ domaenen:
     lat: 51.1388
     lon: 7.2056
     zoom: 9
-    authorized_keys:
+    authorized_admins:
 
   "12":
     name: Düsseldorf-Unterkünfte
@@ -432,8 +432,6 @@ domaenen:
     lon: 7.5627
     zoom: 14
     authorized_admins:
-
-
 
   "17":
     name: Wipperfürth
