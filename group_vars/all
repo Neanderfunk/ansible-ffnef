@@ -487,6 +487,7 @@ ff_network:
   v4_network: 10.43.0.0/16
   # IPv6 adressraum
   v6_network: 2a03:2260:300e::/48
+  v6_anycast: 'ac1'
 
 bind:
   ffnet_zone_type: slave
