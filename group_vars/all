@@ -164,7 +164,8 @@ ff_network:
   v4_network: 10.43.0.0/16
   ##### IPv6 prefix for FFNW #####
   v6_network: 2a0f:b507:ff02::/48
-
+  # IPv6 anycast ::ac1 in decimal 
+  v6_anycast: 2753
 
 bind:
   ffnet_zone_type: slave
