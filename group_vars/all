@@ -508,6 +508,11 @@ freifunk:
   search_domain: "ffnef.de"
   email: kontakt@neanderfunk.de
   domain: neanderfunk.de
+  ffnet_dns_entries_for_internal_tld:
+    "unifi":
+       A: 54.37.190.26
+    "unifi-legacy":
+       A: http://54.37.190.26
 
 domains:
   "ffnef.de":
