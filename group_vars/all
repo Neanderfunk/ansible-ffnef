@@ -495,7 +495,7 @@ bind:
   ffnet_zone_masters:
      - 10.45.67.123
 bind_zonemaster:
-  server: ns1.nadeshda.net
+  server: localhost
   email: kontakt@neanderfunk.de
 
 logrotate:
@@ -512,7 +512,7 @@ freifunk:
     "unifi":
        A: 54.37.190.26
     "unifi-legacy":
-       A: http://54.37.190.26
+       A: 54.37.190.26
 
 domains:
   "ffnef.de":
