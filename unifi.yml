@@ -1,0 +1,18 @@
+---
+- hosts: unifi
+  vars_files:
+    - passwords.yml
+  remote_user: root
+  serial: 2
+  roles:
+    - { role: hostname, tags: "hostname"}
+    - { role: common, tags: "common"}
+    - { role: motd, tags: "motd"}
+    - { role: batman_install, tags: "batman_install"}
+    #- { role: mapserver_interfaces, tags: "mapserver_interfaces"}
+    - { role: dienste_unifi, tags: "dienste_unifi"}
+    - { role: check_mk_agent, tags: "check_mk_agent"}
+    - { role: unattended_upgrades, tags: "unattended_upgrades"}
+    - { role: pause, tags: "pause" }
+
+

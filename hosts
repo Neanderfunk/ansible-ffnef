@@ -21,3 +21,6 @@ meet  	ipv4=85.10.205.83	ansible_ssh_host="{{ipv4}}"		ansible_ssh_port=22
 
 [statistics]
 stats		ansible_ssh_host=stats.ffnef.de	ansible_ssh_port=62954
+
+[unifi]
+unifi_ffnef		ansible_ssh_host=unifi.ffnef.de	ansible_ssh_port=62954
