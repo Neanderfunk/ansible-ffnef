@@ -519,7 +519,7 @@ domains:
     extern_dns:
       # -
       # -
-    email: kontakt@neanderfunk.de
+    email: admin@neanderfunk.de
 
 ipv6backbone64prefixstr: "2a03:2260:300e:"
 
@@ -529,6 +529,7 @@ check_mk:
 administratorenteam:
   - "adorfer"
   - "plaste"
+  - "alex"
 
 ntp:
  intern: "ntp.ffnef"

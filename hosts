@@ -3,6 +3,7 @@
 monitoring	dns=monitoring.ffnef.de	ansible_ssh_host={{dns}}	ansible_ssh_port=62954
 meet2 	 ipv4=51.83.29.21		ansible_ssh_host="{{ipv4}}"		ansible_ssh_port=62954
 stun	dns=stun.ffnef.de ansible_ssh_host={{dns}}	ansible_ssh_port=62954 #ansible_user=<user> ansible_become=yes
+cloud dns=cloud.neanderfunk.de ansible_ssh_host={{dns}}	ansible_ssh_port=62954 ansible_user=plaste ansible_become=yes
 
 # Multidomänen-L2TP Gateways mit oder ohne Direktanbindung FFRL
 # 'capacity' im Kommentar gibt die erwünschte relative Auslastung mit Traffic und L2TP-Verbindungen an
