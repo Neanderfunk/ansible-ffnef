@@ -1,9 +1,9 @@
 [common]
 #jump	 dns=jump.ffnef.de	ansible_ssh_host={{dns}} ansible_ssh_port=62954
 monitoring	dns=monitoring.ffnef.de	ansible_ssh_host={{dns}}	ansible_ssh_port=62954
-meet2 	 ipv4=51.83.29.21		ansible_ssh_host="{{ipv4}}"		ansible_ssh_port=62954
+#meet2 	 ipv4=51.83.29.21		ansible_ssh_host="{{ipv4}}"		ansible_ssh_port=62954
 stun	dns=stun.ffnef.de ansible_ssh_host={{dns}}	ansible_ssh_port=62954 #ansible_user=<user> ansible_become=yes
-cloud dns=cloud.neanderfunk.de ansible_ssh_host={{dns}}	ansible_ssh_port=62954 ansible_user=plaste ansible_become=yes
+cloud dns=cloud.neanderfunk.de ansible_ssh_host={{dns}}	ansible_ssh_port=62954 #ansible_user=plaste ansible_become=yes
 
 # Multidomänen-L2TP Gateways mit oder ohne Direktanbindung FFRL
 # 'capacity' im Kommentar gibt die erwünschte relative Auslastung mit Traffic und L2TP-Verbindungen an
@@ -18,7 +18,7 @@ amalthea		ipv4=46.4.113.218 ipv6=2a01:4f8:141:11e2::2 ansible_ssh_host="{{ipv4}}
 #karte			ipv4=51.83.29.16	ipv6=2001:41d0:c:6ea::93:b9ee	ansible_ssh_host="{{ipv4}}"	ansible_ssh_port=62954
 
 [jitsiffmuc]
-meet  	ipv4=85.10.205.83	ansible_ssh_host="{{ipv4}}"		ansible_ssh_port=22
+meet  	ipv4=85.10.205.83	ansible_ssh_host="{{ipv4}}"		ansible_ssh_port=62954
 
 [statistics]
 stats		ansible_ssh_host=stats.ffnef.de	ansible_ssh_port=62954
