@@ -1,2 +1,6 @@
 server_besitzer: "adorfer"
 hoster: "OVH"
+
+nextcloud_domains:
+  - cloud.neanderfunk.de
+  - cloud.wir-wuelfrath.de
