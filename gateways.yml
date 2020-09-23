@@ -31,6 +31,5 @@
     - { role: check_mk_agent, tags: "check_mk_agent"}
     #- { role: nrpe, tags: "nrpe"}
     - { role: unattended_upgrades, tags: "unattended_upgrades"}
+    - { role: ntp, tags: "ntp_server" }
     - { role: pause, tags: "pause" }
-
-
