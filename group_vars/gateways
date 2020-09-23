@@ -32,7 +32,7 @@ kea:
       - "208.67.222.222"
       # google
       - "8.8.8.8"
-      
+
   routers:
     all_gateways: false
   loggers:
@@ -63,3 +63,10 @@ tunneldigger:
 
 fastd:
   port_base: 21100
+
+unattended_upgrades:
+  origins_pattern:
+    - "${distro_id}:${distro_codename}-updates"
+    - "${distro_id}:${distro_codename}-proposed"
+    - "${distro_id}:${distro_codename}-backports"
+    - "apt.postgresql.org:*"
