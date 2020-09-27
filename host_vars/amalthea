@@ -5,20 +5,22 @@ vm_id: 4
 server_besitzer: "FFNEF"
 hoster: "hetzner"
 
-ffrl_nat_ip: 185.66.195.79
-#ffrl_nat_ip: 185.66.193.110/31
+ffrl_nat_ip: 185.66.195.90/31
+#ffrl_nat_ip: 185.66.193.79/31 
 
 #ffrl-tunnel neander-3
 
 ffrl_tun:
-#- name: ber1
-#  gre_target: 185.66.195.0
-#  v4_remote: 100.64.3.102/31
-#  v6_remote: 2a03:2260:0:1bd::1/64
-#- name: ber2
-#  gre_target: 185.66.195.1
-#  v4_remote: 100.64.3.106/31
-#  v6_remote: 2a03:2260:0:1bf::1/64
+- name: ber1
+  gre_target: 185.66.195.0
+  v4_remote: 100.64.3.102/31
+  v6_remote: 2a03:2260:0:1bd::1/64
+  bgp_local_pref: 200
+- name: ber2
+  gre_target: 185.66.195.1
+  v4_remote: 100.64.3.106/31
+  v6_remote: 2a03:2260:0:1bf::1/64
+  bgp_local_pref: 200
 - name: dus1
   gre_target: 185.66.193.0
   v4_remote: 100.64.3.104/31
@@ -33,12 +35,11 @@ ffrl_tun:
   gre_target: 185.66.194.0
   v4_remote: 100.64.7.58/31
   v6_remote: 2a03:2260:0:42c::1/64
-  bgp_local_pref: 210
 - name: fra2b
   gre_target: 185.66.194.1
   v4_remote: 100.64.8.8/31
   v6_remote: 2a03:2260:0:42d::1/64
-  bgp_local_pref: 210
+  
 
 
 is_external_nameserver: false
