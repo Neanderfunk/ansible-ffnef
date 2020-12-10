@@ -1,0 +1,76 @@
+server_id: 5
+vm_id: 5
+
+
+server_besitzer: "FFNEF"
+hoster: "netcup"
+
+ffrl_nat_ip: 185.66.195.110/31
+#ffrl_nat_ip: 185.66.193.79/31 
+
+#ffrl-tunnel neander-1
+
+ffrl_tun:
+- name: ber1
+  gre_target: 185.66.195.0
+  v4_remote: 100.64.3.86/31
+  v6_remote: 2a03:2260:0:1b5::1/64
+  bgp_local_pref: 250
+- name: ber2
+  gre_target: 185.66.195.1
+  v4_remote: 100.64.3.90/31
+  v6_remote: 2a03:2260:0:1b7::1/64
+  bgp_local_pref: 250
+- name: dus1
+  gre_target: 185.66.193.0
+  v4_remote: 100.64.3.92/31
+  v6_remote: 2a03:2260:0:1b8::1/64
+  bgp_local_pref: 200
+- name: dus2
+  gre_target: 185.66.193.1
+  v4_remote: 100.64.3.88/31
+  v6_remote: 2a03:2260:0:1b6::1/64
+  bgp_local_pref: 200
+
+
+
+is_external_nameserver: false
+
+domaenenliste:
+   "01":
+      dhcp_start: 10.1.1.0  
+      dhcp_ende: 10.1.31.255
+      server_id: 5
+      partner: "amalthea"
+   "02":
+      dhcp_start: 10.2.1.0  
+      dhcp_ende: 10.2.31.255
+      server_id: 5
+      partner: "amalthea"
+   "03":
+      dhcp_start: 10.3.1.0  
+      dhcp_ende: 10.3.31.255
+      server_id: 5
+      partner: "amalthea"
+   "04":
+      dhcp_start: 10.4.1.0  
+      dhcp_ende: 10.4.31.255
+      server_id: 5
+      partner: "amalthea"
+
+
+
+dhcp_type: "kea"
+
+tunneldigger:
+  instance_per_domain: true
+  interface: "eth0"
+  max_tunnels: 1024
+  port_base: 20100
+  pmtu_discovery: false
+  tunnel_timeout: 60
+
+use_wlan_slovenija_tunneldigger: true
+
+
+batman_version: "2019.4"
