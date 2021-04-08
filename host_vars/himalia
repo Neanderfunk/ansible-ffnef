@@ -92,4 +92,5 @@ tunneldigger:
 use_wlan_slovenija_tunneldigger: true
 
 
-batman_version: "2019.4"
+batman:
+  version: "2021.0"
