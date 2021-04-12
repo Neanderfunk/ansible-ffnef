@@ -330,7 +330,7 @@ routing_table: 42
 
 # Batman Einstellungen
 batman:
-  version: 2019.4
+  version: 2019.5
   # Bandbreite, die Batman annoncieren soll
   downstream: 1024Mbit
   # Bandbreite, die Batman annoncieren soll
@@ -378,7 +378,7 @@ domains:
       # -
     email: admin@neanderfunk.de
 
-ipv6backbone64prefixstr: "2a03:2260:300e:"
+ipv6backbone64prefixstr: "2a0f:b507:ff03::"
 
 check_mk:
   deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_1.6.0p17-1_all.deb

@@ -39,7 +39,7 @@ domaenenliste:
       dhcp_ende: 10.20.255.255
       server_id: 5
     "21":
-      dhcp_start: 10.19.0.0
+      dhcp_start: 10.21.0.0
       dhcp_ende: 10.21.255.255
       server_id: 5
     "22":
@@ -91,10 +91,3 @@ tunneldigger:
 
 use_wlan_slovenija_tunneldigger: true
 
-
-batman:
-  version: "2019.5"
-  # Bandbreite, die Batman annoncieren soll
-  downstream: 1024Mbit
-  # Bandbreite, die Batman annoncieren soll
-  upstream: 1024Mbit
