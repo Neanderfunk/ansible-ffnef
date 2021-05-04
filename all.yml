@@ -1,12 +1,11 @@
 ---
-# Playbook zur Basis-Konfiguration von allen Servern 
+# Playbook zur Basis-Konfiguration von allen Servern
 
-- hosts: all 
+- hosts: all
   remote_user: root
   become: true
   roles:
-    - { role: hostname, tags: "hostname"}
-    - { role: common, tags: "common"}
-    - { role: motd, tags: "motd"}
-
-
+    - { role: hostname, tags: "hostname" }
+    - { role: common, tags: "common" }
+    - { role: motd, tags: "motd" }
+    - { role: check_mk_agent, tags: "check_mk_agent" }

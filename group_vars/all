@@ -89,7 +89,7 @@ domaenen:
     lon: 6.8480
     zoom: 13
     authorized_admins:
-  
+
   "04":
     name: Hilden
     name_adj: "hildener "
@@ -195,7 +195,7 @@ domaenen:
     lon: 6.9318
     zoom: 13
     authorized_admins:
-    
+
   "08":
     name: Heiligenhaus
     name_adj: "heiligenhauser "
@@ -216,7 +216,7 @@ domaenen:
     firmware_int_fqdn: "ffnef"
     firmware_ip6: "2a03:2260:300e:1300::733"
     maplink: "https://karte.neanderfunk.de"
-    lat: 51.3250 
+    lat: 51.3250
     lon: 6.9707
     zoom: 13
     authorized_admins:
@@ -246,7 +246,7 @@ domaenen:
     lon: 6.9519
     zoom: 13
     authorized_admins:
-    
+
   "10":
     name: Wülfrath
     name_adj: "wülfrather "
@@ -271,7 +271,7 @@ domaenen:
     lon: 7.0367
     zoom: 13
     authorized_admins:
-   
+
   "11":
     name: LVR-HPH
     name_adj: "LVR-Unterkunfts-"
@@ -296,7 +296,7 @@ domaenen:
     lon: 7.2056
     zoom: 9
     authorized_admins:
-    
+
 
 gluon_global_vars:
   wifi24channel: 9
@@ -325,7 +325,7 @@ ff_network:
   v4_network: 10.43.0.0/16
   # IPv6 adressraum
   v6_network: 2a03:2260:300e::/48
-  # IPv6 anycast ::ac1 in decimal 
+  # IPv6 anycast ::ac1 in decimal
   v6_anycast: 2753
 
 bind:

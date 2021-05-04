@@ -70,3 +70,8 @@ unattended_upgrades:
     - "${distro_id}:${distro_codename}-proposed"
     - "${distro_id}:${distro_codename}-backports"
     - "apt.postgresql.org:*"
+
+checkmk_checks_serverstatus: true
+checkmk_checks_supernode: true
+checkmk_checks_supernodeinfra: true
+checkmk_checks_updatestatus: true
