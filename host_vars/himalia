@@ -6,7 +6,7 @@ server_besitzer: "FFNEF"
 hoster: "netcup"
 
 ffrl_nat_ip: 185.66.195.110/31
-#ffrl_nat_ip: 185.66.193.79/31 
+#ffrl_nat_ip: 185.66.193.79/31
 
 #ffrl-tunnel neander-1
 

@@ -339,6 +339,7 @@ bind_zonemaster:
 logrotate:
   cycle: daily
   count: 3
+  setsu: yes
 
 freifunk:
   name: "Freifunk im Neanderland"
