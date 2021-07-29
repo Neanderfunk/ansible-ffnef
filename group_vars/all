@@ -85,7 +85,7 @@ domaenen:
 #   map_show_contact: false
 #   map_max_age: 14
 #   firmware: mrh/
-    lat: 51.0832 
+    lat: 51.0832
     lon: 7.5330
     zoom: 14
     wifi24channel: 9
@@ -164,7 +164,7 @@ ff_network:
   v4_network: 10.43.0.0/16
   ##### IPv6 prefix for FFNW #####
   v6_network: 2a0f:b507:ff02::/48
-  # IPv6 anycast ::ac1 in decimal 
+  # IPv6 anycast ::ac1 in decimal
   v6_anycast: 2753
 
 bind:
@@ -178,6 +178,7 @@ bind_zonemaster:
 logrotate:
   cycle: daily
   count: 3
+  setsu: yes
 
 freifunk:
   name: "Freifunk im Neanderland"
@@ -192,7 +193,7 @@ freifunk:
     "unifi-legacy":
        A: 51.83.29.25
        AAAA: 2001:41d0:c:6ea::a:f21d
-       
+
 domains:
   "ffnef.de":
     extern_dns:
@@ -208,6 +209,7 @@ check_mk:
 administratorenteam:
   - "adorfer"
   - "plaste"
+  - "alex"
 
 ntp:
  intern: "ntp.ffnef"
