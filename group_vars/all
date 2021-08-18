@@ -204,7 +204,7 @@ domains:
 ipv6backbone64prefixstr: "2a0f:b507:ff02:"
 
 check_mk:
-  deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_1.6.0p17-1_all.deb
+  deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_1.6.0p24-1_all.deb
 
 administratorenteam:
   - "adorfer"
