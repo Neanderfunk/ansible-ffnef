@@ -36,6 +36,14 @@ domaenen:
     nextnode4:
     nextnode6:
     authorized_admins:
+    dhcp:
+     reservations:
+       - ip: "10.1.96.142" # tasmota SP112 Finanzamt Velbert
+         id: "e8:68:e7:42:32:87"
+       - ip: "10.1.97.6" # tasmota SP112 Finanzamt Velbert
+         id: "70:03:9f:69:3f:14"
+       - ip: "10.1.97.33" # tasmota SP112 Finanzamt Velbert
+         id: "c4:dd:57:36:7d:b0"
 
 
   "02":

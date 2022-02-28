@@ -1,0 +1,4 @@
+---
+- hosts: proxmox
+  roles:
+    - { role: ext_wireguard, tags: "ext_wireguard", become: yes }

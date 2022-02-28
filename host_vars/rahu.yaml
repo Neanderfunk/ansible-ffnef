@@ -1,0 +1,14 @@
+
+
+
+wireguard_address: "172.30.0.41/24"
+
+wireguard_port: "51820"
+
+wireguard_interface: "backupnetz"
+
+wireguard_unmanaged_peers:
+  fwwirhaus:
+    public_key: "4bvFpx57XdCTvu/xrn3gYeaAnYXGWCdAemekW5c4axw="
+    allowed_ips: 172.30.0.1/32, 192.168.232.15/24
+    persistent_keepalive: 60

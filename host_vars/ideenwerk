@@ -1,0 +1,28 @@
+server_besitzer: "adorfer"
+hoster: "OVH"
+
+nginx_sites_acme_account_thumbprint: "g8yFwxNAIJEuVrgfBCloYqSaPAn1Z1rcq6QZulN-DFg"
+nginx_sites_acme_stateless: yes
+
+nginx_sites_domains:
+  -
+    hauptdomain: www.ideenwerk.me
+    subdomains:
+      - ideenwerk.me
+    createacmecert: yes
+    enabled: yes
+    enablessl: yes
+    acme_stateless: yes
+#    template: "vhost_proxy.j2"
+#    template: "host_files/{{inventory_hostname}}/vhosts/www.ideenwerk.me.j2"
+#    rootpath: "/var/www/www.ideenwerk.me/web/public"
+#    filename: ""
+#    state: absent
+    includes:
+      - global/global.conf
+      - global/ssl_moderat.conf
+      - global/acme_stateless.conf
+#    error_log: "/var/log/nginx/www.ideenwerk.me_error.log"
+#    access_log: "/var/log/nginx/www.ideenwerk.me_access.log"
+    # proxypass: "http://127.0.0.1:8080/"
+    # dockerprojekt: yes

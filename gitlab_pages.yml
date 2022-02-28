@@ -1,0 +1,7 @@
+---
+- hosts: ideenwerk
+  become: yes
+  roles:
+    - { role: gitlab_webseiten, tags: "gitlab_webseiten" }
+    - { role: nginx_sites_acme, tags: "nginx_sites_acme" }
+    - { role: nginx_sites, tags: "nginx_sites" }

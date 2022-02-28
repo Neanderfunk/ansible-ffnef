@@ -4,15 +4,16 @@ monitoring	dns=monitoring.ffnef.de	ansible_ssh_host={{dns}}	ansible_ssh_port=629
 #meet2 	 ipv4=51.83.29.21		ansible_ssh_host="{{ipv4}}"		ansible_ssh_port=62954
 stun	dns=stun.ffnef.de ansible_ssh_host={{dns}}	ansible_ssh_port=62954 #ansible_user=<user> ansible_become=yes
 cloud dns=cloud.neanderfunk.de ansible_ssh_host={{dns}}	ansible_ssh_port=62954 #ansible_user=plaste ansible_become=yes
+ideenwerk dns=www.ideenwerk.me ipv4=152.228.249.117 ipv6=2001:41d0:a:4735::8f:3cf3 ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954 # ansible_user=alex
 
 # Multidomänen-L2TP Gateways mit oder ohne Direktanbindung FFRL
 # 'capacity' im Kommentar gibt die erwünschte relative Auslastung mit Traffic und L2TP-Verbindungen an
 # 'server' im Kommentar muss angegeben werden, wenn mehrere L2TP-VM auf einem Blech laufen. Der Wert kann frei gewählt werden.
 [gateways]
 #ganymed		ipv4=51.83.29.17	ipv6=2001:41d0:c:6ea::5:246a	ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954	# IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00	server=sn1
-#kallisto		ipv4=5.9.142.115 ipv6=2a01:4f8:190:216e::2 ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954	# IPv4 -> FFNW	IPv6 -> FFnW	capacity=1.00	server=sn2 
-amalthea		ipv4=46.4.113.218 ipv6=2a01:4f8:141:11e2::2 ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954	# IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00	server=sn4 
-#himalia		ipv4=45.157.178.229 ipv6=2a03:4000:4b:d8a::/64 ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954 # IPv4 -> FFNW	IPv6 -> FFNW	capacity=1.00	server=sn5 
+#kallisto		ipv4=5.9.142.115 ipv6=2a01:4f8:190:216e::2 ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954	# IPv4 -> FFNW	IPv6 -> FFnW	capacity=1.00	server=sn2
+amalthea		ipv4=46.4.113.218 ipv6=2a01:4f8:141:11e2::2 ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954	# IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00	server=sn4
+#himalia		ipv4=45.157.178.229 ipv6=2a03:4000:4b:d8a::/64 ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954 # IPv4 -> FFNW	IPv6 -> FFNW	capacity=1.00	server=sn5
 
 # Server für Hoppglas Karten
 #[mapserver]
@@ -28,5 +29,7 @@ stats		ansible_ssh_host=stats.ffnef.de	ansible_ssh_port=62954
 unifi_ffnef		ansible_ssh_host=unifi.ffnef.de	ansible_ssh_port=62954
 
 [proxmox]
+neander-pm3 ipv4=37.187.254.234	ansible_ssh_host="{{ipv4}}"	 ansible_ssh_port=62954
 neander-pm4 ipv4=37.187.137.53	ansible_ssh_host="{{ipv4}}"	 ansible_ssh_port=62954
-
+twin1       ipv4=37.187.152.96  ansible_ssh_host="{{ipv4}}"	 ansible_ssh_port=62954
+rahu        ipv4=91.121.108.26  ansible_ssh_host="{{ipv4}}"	 ansible_ssh_port=62954
