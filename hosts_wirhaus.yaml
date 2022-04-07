@@ -1,0 +1,20 @@
+all:
+  children:
+    wirhaus:
+      children:
+        # Generelle Gruppierungen
+        ubuntuvms:
+          hosts:
+            pihole1.wirhaus.de:
+            pihole2.wirhaus.de:
+            dockerhost.wirhaus.de:
+
+        proxmox:
+          hosts:
+            wirpmhost1.wirhaus.de:
+
+        # Anwenungsgruppierung
+        pihole:
+          hosts:
+            pihole1.wirhaus.de:
+            pihole2.wirhaus.de:

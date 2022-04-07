@@ -1,0 +1,30 @@
+ansible_host: 192.168.70.251
+ansible_port: 22
+# ansible_user: root
+# ansible_port: 52150
+ansible_user: alex
+
+installfail2ban: no
+
+install_qemu_guest_agent: yes
+
+# Zusätzliche Netzwerkkonfiguration
+netplan_config_file: /etc/netplan/99-custom.yaml
+netplan_enabled: true
+netplan_remove_existing: true
+netplan_check_install: false
+netplan_configuration:
+  network:
+    version: 2
+    ethernets:
+      ens3:
+        addresses:
+          - 192.168.70.251/24
+        dhcp6: yes
+        accept-ra: yes
+        gateway4: 192.168.70.1
+        nameservers:
+          addresses:
+            - 192.168.70.1
+          search:
+            - wirhaus.de
