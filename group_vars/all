@@ -328,9 +328,9 @@ batman:
 # Parameter für das eigene Freifunk-Netzwerk
 ff_network:
   # Eindeutige AS-Nummer des Netzwerk
-  as_number: 64863
+  as_number: 206554
   # IPv4 Adressraum
-  v4_network: 10.43.0.0/16
+  v4_network: 10.45.0.0/16
   # IPv6 adressraum
   v6_network: 2a03:2260:300e::/48
   # IPv6 anycast ::ac1 in decimal
@@ -373,7 +373,7 @@ domains:
 ipv6backbone64prefixstr: "2a03:2260:300e:"
 
 check_mk:
-  deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_1.6.0p17-1_all.deb
+  deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_1.6.0p27-1_all.deb
 
 administratorenteam:
   - "adorfer"
