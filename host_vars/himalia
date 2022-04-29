@@ -28,8 +28,9 @@ is_external_nameserver: false
 domaenenliste:
    "01":
       dhcp_start: 10.1.0.0
-      dhcp_ende: 10.1.255.255
+      dhcp_ende: 10.1.95.255
       server_id: 5
+      partner: "amalthea"
    "02":
       dhcp_start: 10.2.0.0  
       dhcp_ende: 10.2.255.255
@@ -79,8 +80,8 @@ domaenenliste:
       dhcp_ende: 10.13.255.255
       server_id: 5   
    "14":
-      dhcp_start: 10.13.1.0
-      dhcp_ende: 10.13.255.255
+      dhcp_start: 10.14.0.0
+      dhcp_ende: 10.14.255.255
       server_id: 5
    "15":
       dhcp_start: 10.15.0.0

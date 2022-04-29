@@ -22,6 +22,7 @@ domaenenliste:
       dhcp_start: 10.155.129.0
       dhcp_ende: 10.155.255.255
       server_id: 3
+      partner: "himalia"
    "13":
       dhcp_start: 10.155.1.0
       dhcp_ende: 10.155.127.255
