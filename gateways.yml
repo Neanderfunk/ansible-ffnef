@@ -16,7 +16,7 @@
     - { role: backbone_gre_intern, tags: "backbone_gre_intern"}
     - { role: batman_install, tags: "batman_install", when:  "domaenenliste is defined"}
     - { role: gateways_batman, tags: "gateways_batman"}
-    - { role: gateways_gretap, tags: "gateways_gretap"}
+  #  - { role: gateways_gretap, tags: "gateways_gretap"}
     - { role: gateways_l2tp, tags: "gateways_l2tp", when: "'use_wlan_slovenija_tunneldigger' not in hostvars[inventory_hostname] or use_wlan_slovenija_tunneldigger == false"}
     - { role: gateways_l2tp_slovenija, tags: "gateways_l2tp_slovenija", when: "'use_wlan_slovenija_tunneldigger' in hostvars[inventory_hostname] and use_wlan_slovenija_tunneldigger == true"}
     - { role: gateways_fastd, tags: "gateways_fastd", when: "'domaenenliste' in hostvars[inventory_hostname]"}

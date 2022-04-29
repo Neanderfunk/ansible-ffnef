@@ -3,7 +3,376 @@ build_tunnels_over_ipv6_if_available: true
 
 
 domaenen:
- "18":
+  "01":
+    name: Velbert
+    shortname: vel
+    hostname_prefix: VEL-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.1.0.0/16
+    ffv6_network: 2a0f:b507:ff03:0100::/64
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a0f:b507:ff03:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.330611638
+    lon: 7.084465027
+    zoom: 12
+    wifi24channel: 9
+    wifi5channel: 44
+    url_website:
+    nextnode4:
+    nextnode6:
+    authorized_admins:
+    dhcp:
+     reservations:
+       - ip: "10.1.96.142" # tasmota SP112 Finanzamt Velbert
+         id: "e8:68:e7:42:32:87"
+       - ip: "10.1.97.6" # tasmota SP112 Finanzamt Velbert
+         id: "70:03:9f:69:3f:14"
+       - ip: "10.1.97.33" # tasmota SP112 Finanzamt Velbert
+         id: "c4:dd:57:36:7d:b0"
+
+
+  "02":
+    name: Mettmann
+    name_adj: "mettmanner "
+    shortname: met
+    hostname_prefix: ME-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.2.0.0/16
+    ffv6_network: 2a0f:b507:ff03:0200::/64
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a0f:b507:ff03:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.2506
+    lon: 6.9746
+    zoom: 14
+    authorized_admins:
+
+
+
+  "03":
+    name: Ratingen
+    name_adj: "ratinger "
+    shortname: rat
+    hostname_prefix: RAT-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.3.0.0/16
+    ffv6_network: 2a0f:b507:ff03:0300::/64
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a0f:b507:ff03:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.2968
+    lon: 6.8480
+    zoom: 13
+    authorized_admins:
+
+  "04":
+    name: Hilden
+    name_adj: "hildener "
+    shortname: hld
+    hostname_prefix: HLD-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.4.0.0/16
+    ffv6_network: 2a0f:b507:ff03:0400::/64
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a0f:b507:ff03:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.1687
+    lon: 6.9331
+    zoom: 13
+    authorized_admins:
+
+
+
+  "05":
+    name: Monheim
+    name_adj: "monheimer "
+    shortname: mon
+    hostname_prefix: MON-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.5.0.0/16
+    ffv6_network: 2a0f:b507:ff03:0500::/64
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a0f:b507:ff03:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.0893
+    lon: 6.8900
+    zoom: 14
+    authorized_admins:
+      - "adorfer"
+      - "plaste"
+      - "alex"
+
+
+  "06":
+    name: Haan
+    name_adj: "haaner "
+    shortname: han
+    hostname_prefix: HAAN-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.6.0.0/16
+    ffv6_network: 2a0f:b507:ff03:0600::/64
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a0f:b507:ff03:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.2006
+    lon: 7.0056
+    zoom: 13
+    authorized_admins:
+
+  "07":
+    name: Erkrath
+    name_adj: "erkrather "
+    shortname: erk
+    hostname_prefix: ERK-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.7.0.0/16
+    ffv6_network: 2a0f:b507:ff03:0700::/64
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a0f:b507:ff03:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.2145
+    lon: 6.9318
+    zoom: 13
+    authorized_admins:
+
+  "08":
+    name: Heiligenhaus
+    name_adj: "heiligenhauser "
+    shortname: hlg
+    hostname_prefix: HLG-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.8.0.0/16
+    ffv6_network: 2a0f:b507:ff03:0800::/64
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a0f:b507:ff03:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.3250
+    lon: 6.9707
+    zoom: 13
+    authorized_admins:
+
+
+  "09":
+    name: Langenfeld
+    name_adj: "langenfelder "
+    shortname: lgf
+    hostname_prefix: LGF-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.9.0.0/16
+    ffv6_network: 2a0f:b507:ff03:0900::/64
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a0f:b507:ff03:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.1051
+    lon: 6.9519
+    zoom: 13
+    authorized_admins:
+
+  "10":
+    name: Wülfrath
+    name_adj: "wülfrather "
+    shortname: wlf
+    hostname_prefix: WLF-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.10.0.0/16
+    ffv6_network: 2a0f:b507:ff03:0a00::/64
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a0f:b507:ff03:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.2863
+    lon: 7.0367
+    zoom: 13
+    authorized_admins:
+
+  "11":
+    name: LVR-HPH
+    name_adj: "LVR-Unterkunfts-"
+    shortname: lvr
+    hostname_prefix: LVR-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.11.0.0/16
+    ffv6_network: 2a0f:b507:ff03:0b00::/64
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a0f:b507:ff03:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.1388
+    lon: 7.2056
+    zoom: 9
+    authorized_admins:
+  "12":
+    name: Düsseldorf-Unterkünfte
+    shortname: dusuk
+    hostname_prefix: dusuk-
+    community: flingern
+    ffv4_network: 10.12.0.0/17
+    ffv6_network: 2a0f:b507:ff02:0100::/64
+    name_adj: "düsseldorfer Unterkunfts-"
+    lat: 51.2140
+    lon: 6.8255
+    zoom: 11
+    wifi24channel: 9
+    wifi5channel: 48
+    authorized_keys:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEAufGE6eK/iZTeLKCduy4UEyQpkXX+Z/0SAbYCbkJhJjNpYJaAaMhPI9yPWqsSJlQ9NSMVHMWF+3fTYb8uXEMFxEAXLqgYWhc7fs45FwvP7Ki9q5vZlvrKdB0MOPkQsY1sI3AEtcFwoft0uemW9QZUJ9jxBSi82BDbSZnFykv81ds= adorfer"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvMCy/RjnGc/ppzxIqvyv3WnaQ3Tj495MLw8qV4FpTkVndjIuqrY7heW4G1W4AFV97QpwCnBTOVmL6xg8kS+zPWN8/pFbIWF1tDBBocZuIYQhOzyd4KPewgu/GXPhmDTtAqdU/MC1CL9Zmd5P+YTzTTVYvvJmLx8ZNWx1KVU9BTePF1y6ekhLduvzOfGDW4rhPhjGGeEIW15sLpM/JnlLMP0nZvbmTQQH91g3qKsabxmYPH6W/s+rTja2ds+SfrNzj4VrRRNUaNFaUo/2G/m5lr/yYTgF2bDb1D7MijMs/u0Z6cdvlOXzdESII8jgVsa942KdEiskak0cRFEDLhf7Qomjamf/fGfQyrhQeH+XBDVlPbumN5LrHpO68U9kbpRpPxX/IRlsjKG6fYj5LIOQqpfWBqvlCuAFacUcp8EglQVKlB5yuSpEcwhH4vb03z+hLQndmGkzlp2yqcM/+sDpIzeQHK58MyLXXIiNJW7cUoExqmaGSrvXl1duncpBNVEgBfCYaWA9PwnTxWOf5Ywl2Zei5W9p5G8vJSSaEV+SyxrCUl2MGbAQob01KrsgSRQ5lK1Uhjzq62ewVmUWvfu+1dy/NKwTNLofd957pd4f0BpB0wRd4c5EQDtyHyKjGT27EdzoukUdlELWBCXvt7i/W0MBco/spgL+05YqDrJJNbw== stephan@neanderfunk.de',    'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAglrpnR+Rk0XYlStQsT6IipZE6evhO4Hd+zd3yJiClWkqGmomgnGUHafLn8I4lPOZMS3e3QAEcJdqKChXwURBga1Ghi4GrN03nfPzA/fY41zGXIwGnskZNN9c2rt6aCl8XG1OwIOSFj5Zg2PBRtL3vSx0oe3ZxRbNHyg2sHWcqIuPmb5ULd04t7Ehs6QA7lKDIVSeJJFQr+b4zsDGeGJlGSHDYjuVuwbVm5ddelYM8+vYqY3N479pcb0clU+DflW+UnhzYzKwO752uJ2W7jCzxpv8DfCtArjXKlk3uE/9mdxuUQAPrW9h8iuVUIk8HtCdkUjppqkmDFrICzeL3KXmjw== Frankth"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvMCy/RjnGc/ppzxIqvyv3WnaQ3Tj495MLw8qV4FpTkVndjIuqrY7heW4G1W4AFV97QpwCnBTOVmL6xg8kS+zPWN8/pFbIWF1tDBBocZuIYQhOzyd4KPewgu/GXPhmDTtAqdU/MC1CL9Zmd5P+YTzTTVYvvJmLx8ZNWx1KVU9BTePF1y6ekhLduvzOfGDW4rhPhjGGeEIW15sLpM/JnlLMP0nZvbmTQQH91g3qKsabxmYPH6W/s+rTja2ds+SfrNzj4VrRRNUaNFaUo/2G/m5lr/yYTgF2bDb1D7MijMs/u0Z6cdvlOXzdESII8jgVsa942KdEiskak0cRFEDLhf7Qomjamf/fGfQyrhQeH+XBDVlPbumN5LrHpO68U9kbpRpPxX/IRlsjKG6fYj5LIOQqpfWBqvlCuAFacUcp8EglQVKlB5yuSpEcwhH4vb03z+hLQndmGkzlp2yqcM/+sDpIzeQHK58MyLXXIiNJW7cUoExqmaGSrvXl1duncpBNVEgBfCYaWA9PwnTxWOf5Ywl2Zei5W9p5G8vJSSaEV+SyxrCUl2MGbAQob01KrsgSRQ5lK1Uhjzq62ewVmUWvfu+1dy/NKwTNLofd957pd4f0BpB0wRd4c5EQDtyHyKjGT27EdzoukUdlELWBCXvt7i/W0MBco/spgL+05YqDrJJNbw== stephan@neanderfunk.de"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
+  "13":
+    name: Düsseldorf-Flingern
+    shortname: dusfl
+    hostname_prefix: dusfl-
+    community: flingern
+    ffv4_network: 10.13.0.0/17
+    ffv6_network: 2a0f:b507:ff02:0200::/64
+    lat: 51.2236
+    lon: 6.8228
+    zoom: 14
+    wifi24channel: 9
+    wifi5channel: 48
+    authorized_keys:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEAufGE6eK/iZTeLKCduy4UEyQpkXX+Z/0SAbYCbkJhJjNpYJaAaMhPI9yPWqsSJlQ9NSMVHMWF+3fTYb8uXEMFxEAXLqgYWhc7fs45FwvP7Ki9q5vZlvrKdB0MOPkQsY1sI3AEtcFwoft0uemW9QZUJ9jxBSi82BDbSZnFykv81ds= adorfer"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvMCy/RjnGc/ppzxIqvyv3WnaQ3Tj495MLw8qV4FpTkVndjIuqrY7heW4G1W4AFV97QpwCnBTOVmL6xg8kS+zPWN8/pFbIWF1tDBBocZuIYQhOzyd4KPewgu/GXPhmDTtAqdU/MC1CL9Zmd5P+YTzTTVYvvJmLx8ZNWx1KVU9BTePF1y6ekhLduvzOfGDW4rhPhjGGeEIW15sLpM/JnlLMP0nZvbmTQQH91g3qKsabxmYPH6W/s+rTja2ds+SfrNzj4VrRRNUaNFaUo/2G/m5lr/yYTgF2bDb1D7MijMs/u0Z6cdvlOXzdESII8jgVsa942KdEiskak0cRFEDLhf7Qomjamf/fGfQyrhQeH+XBDVlPbumN5LrHpO68U9kbpRpPxX/IRlsjKG6fYj5LIOQqpfWBqvlCuAFacUcp8EglQVKlB5yuSpEcwhH4vb03z+hLQndmGkzlp2yqcM/+sDpIzeQHK58MyLXXIiNJW7cUoExqmaGSrvXl1duncpBNVEgBfCYaWA9PwnTxWOf5Ywl2Zei5W9p5G8vJSSaEV+SyxrCUl2MGbAQob01KrsgSRQ5lK1Uhjzq62ewVmUWvfu+1dy/NKwTNLofd957pd4f0BpB0wRd4c5EQDtyHyKjGT27EdzoukUdlELWBCXvt7i/W0MBco/spgL+05YqDrJJNbw== stephan@neanderfunk.de',    'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAglrpnR+Rk0XYlStQsT6IipZE6evhO4Hd+zd3yJiClWkqGmomgnGUHafLn8I4lPOZMS3e3QAEcJdqKChXwURBga1Ghi4GrN03nfPzA/fY41zGXIwGnskZNN9c2rt6aCl8XG1OwIOSFj5Zg2PBRtL3vSx0oe3ZxRbNHyg2sHWcqIuPmb5ULd04t7Ehs6QA7lKDIVSeJJFQr+b4zsDGeGJlGSHDYjuVuwbVm5ddelYM8+vYqY3N479pcb0clU+DflW+UnhzYzKwO752uJ2W7jCzxpv8DfCtArjXKlk3uE/9mdxuUQAPrW9h8iuVUIk8HtCdkUjppqkmDFrICzeL3KXmjw== Frankth"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvMCy/RjnGc/ppzxIqvyv3WnaQ3Tj495MLw8qV4FpTkVndjIuqrY7heW4G1W4AFV97QpwCnBTOVmL6xg8kS+zPWN8/pFbIWF1tDBBocZuIYQhOzyd4KPewgu/GXPhmDTtAqdU/MC1CL9Zmd5P+YTzTTVYvvJmLx8ZNWx1KVU9BTePF1y6ekhLduvzOfGDW4rhPhjGGeEIW15sLpM/JnlLMP0nZvbmTQQH91g3qKsabxmYPH6W/s+rTja2ds+SfrNzj4VrRRNUaNFaUo/2G/m5lr/yYTgF2bDb1D7MijMs/u0Z6cdvlOXzdESII8jgVsa942KdEiskak0cRFEDLhf7Qomjamf/fGfQyrhQeH+XBDVlPbumN5LrHpO68U9kbpRpPxX/IRlsjKG6fYj5LIOQqpfWBqvlCuAFacUcp8EglQVKlB5yuSpEcwhH4vb03z+hLQndmGkzlp2yqcM/+sDpIzeQHK58MyLXXIiNJW7cUoExqmaGSrvXl1duncpBNVEgBfCYaWA9PwnTxWOf5Ywl2Zei5W9p5G8vJSSaEV+SyxrCUl2MGbAQob01KrsgSRQ5lK1Uhjzq62ewVmUWvfu+1dy/NKwTNLofd957pd4f0BpB0wRd4c5EQDtyHyKjGT27EdzoukUdlELWBCXvt7i/W0MBco/spgL+05YqDrJJNbw== stephan@neanderfunk.de"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
+  "14":
+    name: Wuppertal-Barmen
+    shortname: bar
+    hostname_prefix: bar-
+    community: Wuppertal-Hilfsdomain
+    ffv4_network: 10.14.0.0/16
+    ffv6_network: 2a0f:b507:ff02:0300::/64
+    name_adj: "wuppertaler"
+    lat: 51.2645
+    lon: 7.1835
+    zoom: 12
+    wifi24channel: 9
+    wifi5channel: 44
+    authorized_keys:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEAufGE6eK/iZTeLKCduy4UEyQpkXX+Z/0SAbYCbkJhJjNpYJaAaMhPI9yPWqsSJlQ9NSMVHMWF+3fTYb8uXEMFxEAXLqgYWhc7fs45FwvP7Ki9q5vZlvrKdB0MOPkQsY1sI3AEtcFwoft0uemW9QZUJ9jxBSi82BDbSZnFykv81ds= adorfer"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvMCy/RjnGc/ppzxIqvyv3WnaQ3Tj495MLw8qV4FpTkVndjIuqrY7heW4G1W4AFV97QpwCnBTOVmL6xg8kS+zPWN8/pFbIWF1tDBBocZuIYQhOzyd4KPewgu/GXPhmDTtAqdU/MC1CL9Zmd5P+YTzTTVYvvJmLx8ZNWx1KVU9BTePF1y6ekhLduvzOfGDW4rhPhjGGeEIW15sLpM/JnlLMP0nZvbmTQQH91g3qKsabxmYPH6W/s+rTja2ds+SfrNzj4VrRRNUaNFaUo/2G/m5lr/yYTgF2bDb1D7MijMs/u0Z6cdvlOXzdESII8jgVsa942KdEiskak0cRFEDLhf7Qomjamf/fGfQyrhQeH+XBDVlPbumN5LrHpO68U9kbpRpPxX/IRlsjKG6fYj5LIOQqpfWBqvlCuAFacUcp8EglQVKlB5yuSpEcwhH4vb03z+hLQndmGkzlp2yqcM/+sDpIzeQHK58MyLXXIiNJW7cUoExqmaGSrvXl1duncpBNVEgBfCYaWA9PwnTxWOf5Ywl2Zei5W9p5G8vJSSaEV+SyxrCUl2MGbAQob01KrsgSRQ5lK1Uhjzq62ewVmUWvfu+1dy/NKwTNLofd957pd4f0BpB0wRd4c5EQDtyHyKjGT27EdzoukUdlELWBCXvt7i/W0MBco/spgL+05YqDrJJNbw== stephan@neanderfunk.de',    'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAglrpnR+Rk0XYlStQsT6IipZE6evhO4Hd+zd3yJiClWkqGmomgnGUHafLn8I4lPOZMS3e3QAEcJdqKChXwURBga1Ghi4GrN03nfPzA/fY41zGXIwGnskZNN9c2rt6aCl8XG1OwIOSFj5Zg2PBRtL3vSx0oe3ZxRbNHyg2sHWcqIuPmb5ULd04t7Ehs6QA7lKDIVSeJJFQr+b4zsDGeGJlGSHDYjuVuwbVm5ddelYM8+vYqY3N479pcb0clU+DflW+UnhzYzKwO752uJ2W7jCzxpv8DfCtArjXKlk3uE/9mdxuUQAPrW9h8iuVUIk8HtCdkUjppqkmDFrICzeL3KXmjw== Frankth"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvMCy/RjnGc/ppzxIqvyv3WnaQ3Tj495MLw8qV4FpTkVndjIuqrY7heW4G1W4AFV97QpwCnBTOVmL6xg8kS+zPWN8/pFbIWF1tDBBocZuIYQhOzyd4KPewgu/GXPhmDTtAqdU/MC1CL9Zmd5P+YTzTTVYvvJmLx8ZNWx1KVU9BTePF1y6ekhLduvzOfGDW4rhPhjGGeEIW15sLpM/JnlLMP0nZvbmTQQH91g3qKsabxmYPH6W/s+rTja2ds+SfrNzj4VrRRNUaNFaUo/2G/m5lr/yYTgF2bDb1D7MijMs/u0Z6cdvlOXzdESII8jgVsa942KdEiskak0cRFEDLhf7Qomjamf/fGfQyrhQeH+XBDVlPbumN5LrHpO68U9kbpRpPxX/IRlsjKG6fYj5LIOQqpfWBqvlCuAFacUcp8EglQVKlB5yuSpEcwhH4vb03z+hLQndmGkzlp2yqcM/+sDpIzeQHK58MyLXXIiNJW7cUoExqmaGSrvXl1duncpBNVEgBfCYaWA9PwnTxWOf5Ywl2Zei5W9p5G8vJSSaEV+SyxrCUl2MGbAQob01KrsgSRQ5lK1Uhjzq62ewVmUWvfu+1dy/NKwTNLofd957pd4f0BpB0wRd4c5EQDtyHyKjGT27EdzoukUdlELWBCXvt7i/W0MBco/spgL+05YqDrJJNbw== stephan@neanderfunk.de"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
+  "15":
+    name: Marienheide
+    shortname: mrh
+    hostname_prefix: mrh-
+    community: ffnrw
+    ffv4_network: 10.15.0.0/16
+    ffv6_network: 2a0f:b507:ff02:0400::/64
+    name_adj: "marienheider"
+    lat: 51.0832
+    lon: 7.5330
+    zoom: 14
+    wifi24channel: 9
+    wifi5channel: 48
+    authorized_keys:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEAufGE6eK/iZTeLKCduy4UEyQpkXX+Z/0SAbYCbkJhJjNpYJaAaMhPI9yPWqsSJlQ9NSMVHMWF+3fTYb8uXEMFxEAXLqgYWhc7fs45FwvP7Ki9q5vZlvrKdB0MOPkQsY1sI3AEtcFwoft0uemW9QZUJ9jxBSi82BDbSZnFykv81ds= adorfer"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvMCy/RjnGc/ppzxIqvyv3WnaQ3Tj495MLw8qV4FpTkVndjIuqrY7heW4G1W4AFV97QpwCnBTOVmL6xg8kS+zPWN8/pFbIWF1tDBBocZuIYQhOzyd4KPewgu/GXPhmDTtAqdU/MC1CL9Zmd5P+YTzTTVYvvJmLx8ZNWx1KVU9BTePF1y6ekhLduvzOfGDW4rhPhjGGeEIW15sLpM/JnlLMP0nZvbmTQQH91g3qKsabxmYPH6W/s+rTja2ds+SfrNzj4VrRRNUaNFaUo/2G/m5lr/yYTgF2bDb1D7MijMs/u0Z6cdvlOXzdESII8jgVsa942KdEiskak0cRFEDLhf7Qomjamf/fGfQyrhQeH+XBDVlPbumN5LrHpO68U9kbpRpPxX/IRlsjKG6fYj5LIOQqpfWBqvlCuAFacUcp8EglQVKlB5yuSpEcwhH4vb03z+hLQndmGkzlp2yqcM/+sDpIzeQHK58MyLXXIiNJW7cUoExqmaGSrvXl1duncpBNVEgBfCYaWA9PwnTxWOf5Ywl2Zei5W9p5G8vJSSaEV+SyxrCUl2MGbAQob01KrsgSRQ5lK1Uhjzq62ewVmUWvfu+1dy/NKwTNLofd957pd4f0BpB0wRd4c5EQDtyHyKjGT27EdzoukUdlELWBCXvt7i/W0MBco/spgL+05YqDrJJNbw== stephan@neanderfunk.de',    'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAglrpnR+Rk0XYlStQsT6IipZE6evhO4Hd+zd3yJiClWkqGmomgnGUHafLn8I4lPOZMS3e3QAEcJdqKChXwURBga1Ghi4GrN03nfPzA/fY41zGXIwGnskZNN9c2rt6aCl8XG1OwIOSFj5Zg2PBRtL3vSx0oe3ZxRbNHyg2sHWcqIuPmb5ULd04t7Ehs6QA7lKDIVSeJJFQr+b4zsDGeGJlGSHDYjuVuwbVm5ddelYM8+vYqY3N479pcb0clU+DflW+UnhzYzKwO752uJ2W7jCzxpv8DfCtArjXKlk3uE/9mdxuUQAPrW9h8iuVUIk8HtCdkUjppqkmDFrICzeL3KXmjw== Frankth"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvMCy/RjnGc/ppzxIqvyv3WnaQ3Tj495MLw8qV4FpTkVndjIuqrY7heW4G1W4AFV97QpwCnBTOVmL6xg8kS+zPWN8/pFbIWF1tDBBocZuIYQhOzyd4KPewgu/GXPhmDTtAqdU/MC1CL9Zmd5P+YTzTTVYvvJmLx8ZNWx1KVU9BTePF1y6ekhLduvzOfGDW4rhPhjGGeEIW15sLpM/JnlLMP0nZvbmTQQH91g3qKsabxmYPH6W/s+rTja2ds+SfrNzj4VrRRNUaNFaUo/2G/m5lr/yYTgF2bDb1D7MijMs/u0Z6cdvlOXzdESII8jgVsa942KdEiskak0cRFEDLhf7Qomjamf/fGfQyrhQeH+XBDVlPbumN5LrHpO68U9kbpRpPxX/IRlsjKG6fYj5LIOQqpfWBqvlCuAFacUcp8EglQVKlB5yuSpEcwhH4vb03z+hLQndmGkzlp2yqcM/+sDpIzeQHK58MyLXXIiNJW7cUoExqmaGSrvXl1duncpBNVEgBfCYaWA9PwnTxWOf5Ywl2Zei5W9p5G8vJSSaEV+SyxrCUl2MGbAQob01KrsgSRQ5lK1Uhjzq62ewVmUWvfu+1dy/NKwTNLofd957pd4f0BpB0wRd4c5EQDtyHyKjGT27EdzoukUdlELWBCXvt7i/W0MBco/spgL+05YqDrJJNbw== stephan@neanderfunk.de"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
+  "16":
+    name: Gummersbach
+    shortname: gmb
+    hostname_prefix: gmb-
+    community: ffnrw
+    ffv4_network: 10.16.0.0/16
+    ffv6_network: 2a0f:b507:ff02:0500::/64
+    lat: 51.0227
+    lon: 7.5627
+    zoom: 14
+    wifi24channel: 9
+    wifi5channel: 44
+    authorized_keys:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEAufGE6eK/iZTeLKCduy4UEyQpkXX+Z/0SAbYCbkJhJjNpYJaAaMhPI9yPWqsSJlQ9NSMVHMWF+3fTYb8uXEMFxEAXLqgYWhc7fs45FwvP7Ki9q5vZlvrKdB0MOPkQsY1sI3AEtcFwoft0uemW9QZUJ9jxBSi82BDbSZnFykv81ds= adorfer"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvMCy/RjnGc/ppzxIqvyv3WnaQ3Tj495MLw8qV4FpTkVndjIuqrY7heW4G1W4AFV97QpwCnBTOVmL6xg8kS+zPWN8/pFbIWF1tDBBocZuIYQhOzyd4KPewgu/GXPhmDTtAqdU/MC1CL9Zmd5P+YTzTTVYvvJmLx8ZNWx1KVU9BTePF1y6ekhLduvzOfGDW4rhPhjGGeEIW15sLpM/JnlLMP0nZvbmTQQH91g3qKsabxmYPH6W/s+rTja2ds+SfrNzj4VrRRNUaNFaUo/2G/m5lr/yYTgF2bDb1D7MijMs/u0Z6cdvlOXzdESII8jgVsa942KdEiskak0cRFEDLhf7Qomjamf/fGfQyrhQeH+XBDVlPbumN5LrHpO68U9kbpRpPxX/IRlsjKG6fYj5LIOQqpfWBqvlCuAFacUcp8EglQVKlB5yuSpEcwhH4vb03z+hLQndmGkzlp2yqcM/+sDpIzeQHK58MyLXXIiNJW7cUoExqmaGSrvXl1duncpBNVEgBfCYaWA9PwnTxWOf5Ywl2Zei5W9p5G8vJSSaEV+SyxrCUl2MGbAQob01KrsgSRQ5lK1Uhjzq62ewVmUWvfu+1dy/NKwTNLofd957pd4f0BpB0wRd4c5EQDtyHyKjGT27EdzoukUdlELWBCXvt7i/W0MBco/spgL+05YqDrJJNbw== stephan@neanderfunk.de',    'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAglrpnR+Rk0XYlStQsT6IipZE6evhO4Hd+zd3yJiClWkqGmomgnGUHafLn8I4lPOZMS3e3QAEcJdqKChXwURBga1Ghi4GrN03nfPzA/fY41zGXIwGnskZNN9c2rt6aCl8XG1OwIOSFj5Zg2PBRtL3vSx0oe3ZxRbNHyg2sHWcqIuPmb5ULd04t7Ehs6QA7lKDIVSeJJFQr+b4zsDGeGJlGSHDYjuVuwbVm5ddelYM8+vYqY3N479pcb0clU+DflW+UnhzYzKwO752uJ2W7jCzxpv8DfCtArjXKlk3uE/9mdxuUQAPrW9h8iuVUIk8HtCdkUjppqkmDFrICzeL3KXmjw== Frankth"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvMCy/RjnGc/ppzxIqvyv3WnaQ3Tj495MLw8qV4FpTkVndjIuqrY7heW4G1W4AFV97QpwCnBTOVmL6xg8kS+zPWN8/pFbIWF1tDBBocZuIYQhOzyd4KPewgu/GXPhmDTtAqdU/MC1CL9Zmd5P+YTzTTVYvvJmLx8ZNWx1KVU9BTePF1y6ekhLduvzOfGDW4rhPhjGGeEIW15sLpM/JnlLMP0nZvbmTQQH91g3qKsabxmYPH6W/s+rTja2ds+SfrNzj4VrRRNUaNFaUo/2G/m5lr/yYTgF2bDb1D7MijMs/u0Z6cdvlOXzdESII8jgVsa942KdEiskak0cRFEDLhf7Qomjamf/fGfQyrhQeH+XBDVlPbumN5LrHpO68U9kbpRpPxX/IRlsjKG6fYj5LIOQqpfWBqvlCuAFacUcp8EglQVKlB5yuSpEcwhH4vb03z+hLQndmGkzlp2yqcM/+sDpIzeQHK58MyLXXIiNJW7cUoExqmaGSrvXl1duncpBNVEgBfCYaWA9PwnTxWOf5Ywl2Zei5W9p5G8vJSSaEV+SyxrCUl2MGbAQob01KrsgSRQ5lK1Uhjzq62ewVmUWvfu+1dy/NKwTNLofd957pd4f0BpB0wRd4c5EQDtyHyKjGT27EdzoukUdlELWBCXvt7i/W0MBco/spgL+05YqDrJJNbw== stephan@neanderfunk.de"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
+  "17":
+    name: Wipperfürth
+    shortname: wip
+    hostname_prefix: wip-
+    community: ffnrw
+    ffv4_network: 10.17.0.0/16
+    ffv6_network: 2a0f:b507:ff02:0600::/64
+    lat: 51.1173
+    lon: 7.3940
+    zoom: 13
+    wifi24channel: 9
+    wifi5channel: 44
+    authorized_keys:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEAufGE6eK/iZTeLKCduy4UEyQpkXX+Z/0SAbYCbkJhJjNpYJaAaMhPI9yPWqsSJlQ9NSMVHMWF+3fTYb8uXEMFxEAXLqgYWhc7fs45FwvP7Ki9q5vZlvrKdB0MOPkQsY1sI3AEtcFwoft0uemW9QZUJ9jxBSi82BDbSZnFykv81ds= adorfer"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvMCy/RjnGc/ppzxIqvyv3WnaQ3Tj495MLw8qV4FpTkVndjIuqrY7heW4G1W4AFV97QpwCnBTOVmL6xg8kS+zPWN8/pFbIWF1tDBBocZuIYQhOzyd4KPewgu/GXPhmDTtAqdU/MC1CL9Zmd5P+YTzTTVYvvJmLx8ZNWx1KVU9BTePF1y6ekhLduvzOfGDW4rhPhjGGeEIW15sLpM/JnlLMP0nZvbmTQQH91g3qKsabxmYPH6W/s+rTja2ds+SfrNzj4VrRRNUaNFaUo/2G/m5lr/yYTgF2bDb1D7MijMs/u0Z6cdvlOXzdESII8jgVsa942KdEiskak0cRFEDLhf7Qomjamf/fGfQyrhQeH+XBDVlPbumN5LrHpO68U9kbpRpPxX/IRlsjKG6fYj5LIOQqpfWBqvlCuAFacUcp8EglQVKlB5yuSpEcwhH4vb03z+hLQndmGkzlp2yqcM/+sDpIzeQHK58MyLXXIiNJW7cUoExqmaGSrvXl1duncpBNVEgBfCYaWA9PwnTxWOf5Ywl2Zei5W9p5G8vJSSaEV+SyxrCUl2MGbAQob01KrsgSRQ5lK1Uhjzq62ewVmUWvfu+1dy/NKwTNLofd957pd4f0BpB0wRd4c5EQDtyHyKjGT27EdzoukUdlELWBCXvt7i/W0MBco/spgL+05YqDrJJNbw== stephan@neanderfunk.de',    'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAglrpnR+Rk0XYlStQsT6IipZE6evhO4Hd+zd3yJiClWkqGmomgnGUHafLn8I4lPOZMS3e3QAEcJdqKChXwURBga1Ghi4GrN03nfPzA/fY41zGXIwGnskZNN9c2rt6aCl8XG1OwIOSFj5Zg2PBRtL3vSx0oe3ZxRbNHyg2sHWcqIuPmb5ULd04t7Ehs6QA7lKDIVSeJJFQr+b4zsDGeGJlGSHDYjuVuwbVm5ddelYM8+vYqY3N479pcb0clU+DflW+UnhzYzKwO752uJ2W7jCzxpv8DfCtArjXKlk3uE/9mdxuUQAPrW9h8iuVUIk8HtCdkUjppqkmDFrICzeL3KXmjw== Frankth"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvMCy/RjnGc/ppzxIqvyv3WnaQ3Tj495MLw8qV4FpTkVndjIuqrY7heW4G1W4AFV97QpwCnBTOVmL6xg8kS+zPWN8/pFbIWF1tDBBocZuIYQhOzyd4KPewgu/GXPhmDTtAqdU/MC1CL9Zmd5P+YTzTTVYvvJmLx8ZNWx1KVU9BTePF1y6ekhLduvzOfGDW4rhPhjGGeEIW15sLpM/JnlLMP0nZvbmTQQH91g3qKsabxmYPH6W/s+rTja2ds+SfrNzj4VrRRNUaNFaUo/2G/m5lr/yYTgF2bDb1D7MijMs/u0Z6cdvlOXzdESII8jgVsa942KdEiskak0cRFEDLhf7Qomjamf/fGfQyrhQeH+XBDVlPbumN5LrHpO68U9kbpRpPxX/IRlsjKG6fYj5LIOQqpfWBqvlCuAFacUcp8EglQVKlB5yuSpEcwhH4vb03z+hLQndmGkzlp2yqcM/+sDpIzeQHK58MyLXXIiNJW7cUoExqmaGSrvXl1duncpBNVEgBfCYaWA9PwnTxWOf5Ywl2Zei5W9p5G8vJSSaEV+SyxrCUl2MGbAQob01KrsgSRQ5lK1Uhjzq62ewVmUWvfu+1dy/NKwTNLofd957pd4f0BpB0wRd4c5EQDtyHyKjGT27EdzoukUdlELWBCXvt7i/W0MBco/spgL+05YqDrJJNbw== stephan@neanderfunk.de"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
+  "18":
     name: Neander-Unterkünfte
     shortname: NeanderUK
     hostname_prefix: ffnefuk-
@@ -11,10 +380,6 @@ domaenen:
     ffv4_network: 10.18.0.0/16
     ffv6_network: 2a0f:b507:ff03:1800::/64
     name_adj: "Freifunk im Neanderlands Unterkunfts-"
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
     lat: 51.2140
     lon: 6.8255
     zoom: 11
@@ -26,7 +391,7 @@ domaenen:
       - 'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAglrpnR+Rk0XYlStQsT6IipZE6evhO4Hd+zd3yJiClWkqGmomgnGUHafLn8I4lPOZMS3e3QAEcJdqKChXwURBga1Ghi4GrN03nfPzA/fY41zGXIwGnskZNN9c2rt6aCl8XG1OwIOSFj5Zg2PBRtL3vSx0oe3ZxRbNHyg2sHWcqIuPmb5ULd04t7Ehs6QA7lKDIVSeJJFQr+b4zsDGeGJlGSHDYjuVuwbVm5ddelYM8+vYqY3N479pcb0clU+DflW+UnhzYzKwO752uJ2W7jCzxpv8DfCtArjXKlk3uE/9mdxuUQAPrW9h8iuVUIk8HtCdkUjppqkmDFrICzeL3KXmjw== Frankth"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
- "19":
+  "19":
     name: Agios
     shortname: agios
     hostname_prefix: agios-
@@ -34,10 +399,6 @@ domaenen:
     ffv4_network: 10.19.0.0/16
     ffv6_network: 2a0f:b507:ff03:1900::/64
     name_adj: "Agios-"
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
     lat: 51.2140
     lon: 6.8255
     zoom: 11
@@ -50,7 +411,7 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
- "20":
+  "20":
     name: Gertis
     shortname: gertis
     hostname_prefix: gertis-
@@ -58,10 +419,6 @@ domaenen:
     ffv4_network: 10.20.0.0/16
     ffv6_network: 2a0f:b507:ff03:2000::/64
     name_adj: "Gertis-"
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
     lat: 51.2140
     lon: 6.8255
     zoom: 11
@@ -74,7 +431,7 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
- "21":
+  "21":
     name: Glastria
     shortname: glastria
     hostname_prefix: glastria-
@@ -82,10 +439,6 @@ domaenen:
     ffv4_network: 10.21.0.0/16
     ffv6_network: 2a0f:b507:ff03:2100::/64
     name_adj: "Glastria"
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
     lat: 51.2140
     lon: 6.8255
     zoom: 11
@@ -98,7 +451,7 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
- "22":
+  "22":
     name: Panagia
     shortname: panagia
     hostname_prefix: panagia-
@@ -106,10 +459,6 @@ domaenen:
     ffv4_network: 10.22.0.0/16
     ffv6_network: 2a0f:b507:ff03:2200::/64
     name_adj: "Panagia"
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
     lat: 51.2140
     lon: 6.8255
     zoom: 11
@@ -122,7 +471,7 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
- "23":
+  "23":
     name: Atokos
     shortname: atokos
     hostname_prefix: atokos-
@@ -130,10 +479,6 @@ domaenen:
     ffv4_network: 10.23.0.0/16
     ffv6_network: 2a0f:b507:ff03:2300::/64
     name_adj: "Atokos"
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
     lat: 51.2140
     lon: 6.8255
     zoom: 11
@@ -146,7 +491,7 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
- "24":
+  "24":
     name: Kravia
     shortname: kravia
     hostname_prefix: kravia-
@@ -154,10 +499,6 @@ domaenen:
     ffv4_network: 10.24.0.0/16
     ffv6_network: 2a0f:b507:ff03:2400::/64
     name_adj: "Kravia"
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
     lat: 51.2140
     lon: 6.8255
     zoom: 11
@@ -170,7 +511,7 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
- "25":
+  "25":
     name: Pasas
     shortname: pasas
     hostname_prefix: pasas-
@@ -178,10 +519,6 @@ domaenen:
     ffv4_network: 10.25.0.0/16
     ffv6_network: 2a0f:b507:ff03:2500::/64
     name_adj: "Pasas"
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
     lat: 51.2140
     lon: 6.8255
     zoom: 11
@@ -194,7 +531,7 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
- "26":
+  "26":
     name: Vatos
     shortname: vatos
     hostname_prefix: vatos-
@@ -202,10 +539,6 @@ domaenen:
     ffv4_network: 10.26.0.0/16
     ffv6_network: 2a0f:b507:ff03:2600::/64
     name_adj: "Vatos"
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
     lat: 51.2140
     lon: 6.8255
     zoom: 11
@@ -218,7 +551,7 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
- "27":
+  "27":
     name: Gordi
     shortname: gordi
     hostname_prefix: gordi-
@@ -226,10 +559,6 @@ domaenen:
     ffv4_network: 10.27.0.0/16
     ffv6_network: 2a0f:b507:ff03:2700::/64
     name_adj: "Gordi"
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
     lat: 51.2140
     lon: 6.8255
     zoom: 11
@@ -242,7 +571,7 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
- "28":
+  "28":
     name: Platia
     shortname: platia
     hostname_prefix: platia-
@@ -250,10 +579,6 @@ domaenen:
     ffv4_network: 10.28.0.0/16
     ffv6_network: 2a0f:b507:ff03:2800::/64
     name_adj: "Platia"
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
     lat: 51.2140
     lon: 6.8255
     zoom: 11
@@ -266,7 +591,7 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
- "29":
+  "29":
     name: Gavados
     shortname: gavados
     hostname_prefix: gavados-
@@ -274,10 +599,6 @@ domaenen:
     ffv4_network: 10.29.0.0/16
     ffv6_network: 2a0f:b507:ff03:2900::/64
     name_adj: "Gavados"
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
     lat: 51.2140
     lon: 6.8255
     zoom: 11
@@ -290,7 +611,7 @@ domaenen:
       - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
       - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
- "30":
+  "30":
     name: Arisida
     shortname: arisida
     hostname_prefix: arisida-
@@ -298,10 +619,6 @@ domaenen:
     ffv4_network: 10.30.0.0/16
     ffv6_network: 2a0f:b507:ff03:3000::/64
     name_adj: "Arisida"
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
     lat: 51.2140
     lon: 6.8255
     zoom: 11
@@ -383,7 +700,7 @@ domains:
 ipv6backbone64prefixstr: "2a0f:b507:ff03::"
 
 check_mk:
-  deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_1.6.0p17-1_all.deb
+  deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_1.6.0p27-1_all.deb 
 
 administratorenteam:
   - "adorfer"
