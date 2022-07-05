@@ -5,6 +5,8 @@ wireguard_address: "172.30.0.41/24"
 
 wireguard_port: "51820"
 
+wireguard_mtu: 1300
+
 wireguard_interface: "backupnetz"
 
 wireguard_endpoint: "rahu.nadeshda.org"
