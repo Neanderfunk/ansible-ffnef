@@ -188,11 +188,11 @@ freifunk:
   domain: neanderfunk.de
   ffnet_dns_entries_for_internal_tld:
     "unifi":
-       A: 51.83.29.25
-       AAAA: 2001:41d0:c:6ea::a:f21d
+       A: 193.70.47.63
+       AAAA: 2001:41d0:303:d3f:8000:0:a:f21d
     "unifi-legacy":
-       A: 51.83.29.25
-       AAAA: 2001:41d0:c:6ea::a:f21d
+       A: 193.70.47.63
+       AAAA: 2001:41d0:303:d3f:8000:0:a:f21d
 
 domains:
   "ffnef.de":

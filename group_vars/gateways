@@ -25,6 +25,7 @@ kea:
     mtu: 1364
     lease_default: 1200
     search_domain: "{{freifunk.search_domain}}"
+    unifiinformip: "193.70.47.63" # unifi.ffnef.de
   dns:
     all_gateways: true
     additional:
@@ -32,7 +33,7 @@ kea:
       - "208.67.222.222"
       # google
       - "8.8.8.8"
-      
+
   routers:
     all_gateways: false
   loggers:
@@ -63,5 +64,3 @@ tunneldigger:
 
 fastd:
   port_base: 21100
-
-
