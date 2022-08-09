@@ -1,0 +1,11 @@
+ansible_host: 152.228.249.119
+ansible_port: 62954
+# ansible_user: root
+# ansible_port: 52150
+ansible_user: alex
+
+# installfail2ban: yes
+#
+# install_qemu_guest_agent: yes
+
+docker_portainer_install: yes

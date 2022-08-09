@@ -1,0 +1,8 @@
+---
+- hosts: dockerhost
+  # vars_files:
+  #   - passwords.yml
+  # remote_user: root
+  roles:
+    - { role: ext_docker, tags: "docker", become: yes }
+    - { role: dienste_docker_portainer, tags: "portainerdienst" }

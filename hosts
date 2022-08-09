@@ -28,6 +28,9 @@ stats		ansible_ssh_host=stats.ffnef.de	ansible_ssh_port=62954
 [unifi]
 unifi_ffnef		ansible_ssh_host=unifi.ffnef.de	ansible_ssh_port=62954
 
+[dockerhost]
+iot.ffnef.de
+
 [proxmox]
 neander-pm3 ipv4=37.187.254.234	ansible_ssh_host="{{ipv4}}"	 ansible_ssh_port=62954
 neander-pm4 ipv4=37.187.137.53	ansible_ssh_host="{{ipv4}}"	 ansible_ssh_port=62954
