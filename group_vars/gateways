@@ -25,6 +25,7 @@ kea:
     mtu: 1364
     lease_default: 1200
     search_domain: "{{freifunk.search_domain}}"
+    unifiinformip: "193.70.47.63" # unifi.ffnef.de
   dns:
     all_gateways: true
     additional:
