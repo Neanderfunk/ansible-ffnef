@@ -332,7 +332,7 @@ ff_network:
   # IPv4 Adressraum
   v4_network: 10.45.0.0/16
   # IPv6 adressraum
-  v6_network: 2a03:2260:300e::/48
+  v6_network: 2a0f:5707:aa80:125::/48
   # IPv6 anycast ::ac1 in decimal
   v6_anycast: 2753
 
