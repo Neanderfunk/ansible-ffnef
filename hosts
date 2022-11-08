@@ -32,8 +32,10 @@ unifi_ffnef		ansible_ssh_host=unifi.ffnef.de	ansible_ssh_port=62954
 iot.ffnef.de
 
 [proxmox]
-neander-pm3 ipv4=37.187.254.234	ansible_ssh_host="{{ipv4}}"	 ansible_ssh_port=62954
+#neander-pm3 ipv4=37.187.254.234	ansible_ssh_host="{{ipv4}}"	 ansible_ssh_port=62954
 neander-pm4 ipv4=37.187.137.53	ansible_ssh_host="{{ipv4}}"	 ansible_ssh_port=62954
 neander-pm5 ipv4=193.70.47.63	ansible_ssh_host="{{ipv4}}"	 ansible_ssh_port=62954
+neander-pm6 ipv4=149.202.94.81	ansible_ssh_host="{{ipv4}}"	 ansible_ssh_port=62954
 twin1       ipv4=37.187.152.96  ansible_ssh_host="{{ipv4}}"	 ansible_ssh_port=62954
-rahu        ipv4=91.121.108.26  ansible_ssh_host="{{ipv4}}"	 ansible_ssh_port=62954
+#rahu        ipv4=91.121.108.26  ansible_ssh_host="{{ipv4}}"	 ansible_ssh_port=62954
+uemit       ipv4=188.165.204.36  ansible_ssh_host="{{ipv4}}"	 ansible_ssh_port=62954
