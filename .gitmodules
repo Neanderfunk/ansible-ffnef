@@ -1,3 +1,3 @@
 [submodule "roles"]
 	path = roles
-	url = git@github.com:FreiFunkMuenster/Ansible-Freifunk-Gateway.git
+	url = https://github.com/Neanderfunk/Ansible-Freifunk-Gateway.git

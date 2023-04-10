@@ -1,0 +1,297 @@
+vm_id: 6
+server_id: 6
+
+server_besitzer: "FFNEF"
+hoster: "hetzner"
+
+
+# Allgemeine Einstellungen
+use_wlan_slovenija_tunneldigger : true
+
+# TODO: FFNEF Wird aktuell nicht gebraucht. Nutzung gre supernode mesh und mapserver anbindung.
+#       Da wir kein Mesh nutzen und der Mapserver als Client in allen Domänen ist wird es nicht gebraucht.
+#build_tunnels_over_ipv6_if_available: true
+
+
+dhcp_type: "kea"
+
+# Kea Konfiguration START
+kea:
+  database:
+    type: "postgresql"
+    db_host: "127.0.0.1"
+    db_name: "kea_leases"
+    db_user: "kea"
+    db_pass: "{{kea_postgres_pw}}"
+  global:
+    mtu: 1364
+    lease_default: 1200
+    search_domain: "{{freifunk.search_domain}}"
+    unifiinformip: "193.70.47.63" # unifi.ffnef.de
+  dns:
+    all_gateways: true
+    additional:
+      # opendns
+      - "208.67.222.222"
+      # google
+      - "8.8.8.8"
+
+  routers:
+    all_gateways: false
+  loggers:
+    - name: "kea-dhcp4"
+      level: "WARN"
+      file: "/var/log/kea-dhcp4.log"
+  expired_leases:
+    - name: "reclaim-timer-wait-time"
+      value: 4
+    - name: "flush-reclaimed-timer-wait-time"
+      value: 10
+    - name: "hold-reclaimed-time"
+      value: 72000
+    - name: "max-reclaim-leases"
+      value: 15000
+    - name: "max-reclaim-time"
+      value: 3000
+    - name: "unwarned-reclaim-cycles"
+      value: 5
+# Kea Konfiguration ENDE
+
+
+# Uplink Tunnel START
+
+ffrl_nat_ip: 185.66.195.90/31
+#ffrl_nat_ip: 185.66.193.79/31 
+
+#ffrl-tunnel neander-3
+
+ffrl_tun:
+- name: ber1
+  gre_target: 185.66.195.0
+  v4_remote: 100.64.5.78/31
+  v6_remote: 2a03:2260:0:29b::1/64
+  bgp_local_pref: 200
+- name: ber2
+  gre_target: 185.66.195.1
+  v4_remote: 100.64.5.84/31
+  v6_remote: 2a03:2260:0:29e::1/64
+  bgp_local_pref: 200
+- name: dus1
+  gre_target: 185.66.193.0
+  v4_remote: 100.64.5.82/31
+  v6_remote: 2a03:2260:0:29d::1/64
+  bgp_local_pref: 201
+- name: dus2
+  gre_target: 185.66.193.1
+  v4_remote: 100.64.5.88/31
+  v6_remote: 2a03:2260:0:2a0::1/64
+  bgp_local_pref: 201
+- name: fra2a
+  gre_target: 185.66.194.0
+  v4_remote: 100.64.5.80/31
+  v6_remote: 2a03:2260:0:29c::1/64
+- name: fra2b
+  gre_target: 185.66.194.1
+  v4_remote: 100.64.5.86/31
+  v6_remote: 2a03:2260:0:29f::1/64
+  
+
+# Uplink Tunnel ENDE
+
+
+# Batman START # TODO: FFNEF Überarbeiten, aktuell wird es nicht verwendet, da role kaputt.
+batman_version: "2022.1"
+
+batman:
+  version: 2022.1
+  # Bandbreite, die Batman annoncieren soll
+  downstream: 1024Mbit
+  # Bandbreite, die Batman annoncieren soll
+  upstream: 1024Mbit
+
+# Batman ENDE
+
+
+# Tunneldigger
+tunneldigger:
+  instance_per_domain: true
+  interface: "ens18"
+  max_tunnels: 1024
+  port_base: 20100
+  pmtu_discovery: false
+  tunnel_timeout: 60
+
+
+# unattended upgrades
+unattended_upgrades:
+  origins_pattern:
+    - "${distro_id}:${distro_codename}-updates"
+    - "${distro_id}:${distro_codename}-proposed"
+    - "${distro_id}:${distro_codename}-backports"
+    - "apt.postgresql.org:*"
+
+# Nameserver Konfiguration START
+
+is_external_nameserver: false
+
+bind:
+  ffnet_zone_type: slave
+  ffnet_zone_masters:
+     - 10.45.67.123
+bind_zonemaster:
+  server: localhost
+  email: kontakt@neanderfunk.de
+
+# Nameserver Konfiguration ENDE
+
+
+# Gluon globale Variablen # TODO: FFNEF Wird nirgends verwendet?
+gluon_global_vars:
+  wifi24channel: 9
+  wifi5channel: 48
+  authorized_admins:
+   - "adorfer"
+   - "plaste"
+   - "alex_fw"
+
+
+
+# TODO: FFNEF Wird nirgends verwendet?
+# Nummer der Routing Tabelle, die auf den Servern verwendet wird
+routing_table: 42
+
+
+# Parameter für das eigene Freifunk-Netzwerk
+ff_network:
+  # Eindeutige AS-Nummer des Netzwerk
+  as_number: 65125
+  # IPv4 Adressraum
+  v4_network: 10.43.0.0/16
+  # IPv6 adressraum
+  v6_network: 2a0f:b507:ff02::/48
+  # IPv6 anycast ::ac1 in decimal
+  v6_anycast: 2753
+
+# Verwendung bei bird6
+ipv6backbone64prefixstr: "2a0f:b507:ff02::"
+
+
+# Logrotate START
+
+logrotate:
+  cycle: daily
+  count: 3
+  setsu: yes
+  updateconfs: no
+  updateglobalconf: no
+  updatebtmpconf: no
+  updatewtmpconf: no
+
+journald:
+  zeitbegrenzung: no
+
+# Logrotate ENDE
+
+
+freifunk:
+  name: "Freifunk im Neanderland"
+  kurzname: "ffnef"
+  motdkurzname: "FFNEF" # WIrd nur für das MotD Logo verwendet
+  search_domain: "ffnef.de" # benutzt bei der kea Konfiguration
+  email: kontakt@neanderfunk.de
+  domain: ffnef.de
+  ffnet_dns_entries_for_internal_tld:
+    "unifi":
+       A: 193.70.47.63
+       AAAA: 2001:41d0:303:d3f:8000:0:a:f21d
+    "unifi-legacy":
+       A: 193.70.47.63
+       AAAA: 2001:41d0:303:d3f:8000:0:a:f21d
+
+domains:
+  "ffnef.de":
+    extern_dns:
+      # -
+      # -
+    email: admin@neanderfunk.de
+
+
+
+check_mk:
+  deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_2.1.0p1-1_all.deb
+
+
+# TODO: FFNEF Deaktiviert, da wir lieber Nutzer mit sudo Rechten nutzen wollen, anstatt Login über dne root Account
+# administratorenteam:
+#   - "adorfer"
+#   - "plaste"
+#   - "alex"
+
+administratorenuser:
+  - "adorfer"
+  - "plaste"
+  - "alex"
+
+
+# TODO:FFNEF  Wird nicht verwendet?
+ntp:
+  intern: "ntp.ffnef"
+  extern: "ntp.ffnef.de"
+
+
+
+domaenenliste:
+   "12":
+      dhcp_start: 10.155.129.0
+      dhcp_ende: 10.155.255.255
+      server_id: 3
+  #  "13":
+  #     dhcp_start: 10.155.1.0
+  #     dhcp_ende: 10.155.127.255
+  #     server_id: 3   
+  #  "14":
+  #     dhcp_start: 10.156.1.0
+  #     dhcp_ende: 10.156.255.255
+  #     server_id: 3
+  #  "15":
+  #     dhcp_start: 10.157.1.0
+  #     dhcp_ende: 10.157.255.255
+  #     server_id: 3
+  #  "16":
+  #     dhcp_start: 10.158.1.0
+  #     dhcp_ende: 10.158.255.255
+  #     server_id: 3
+  #  "17":
+  #     dhcp_start: 10.159.1.0
+  #     dhcp_ende: 10.159.255.255
+  #     server_id: 3
+
+
+
+
+domaenen:
+  "12":
+    name: Düsseldorf-Unterkünfte
+    shortname: dusuk
+    hostname_prefix: dusuk-
+    community: flingern
+    ffv4_network: 10.155.128.0/17
+    ffv6_network: 2a0f:b507:ff02:0100::/64
+    name_adj: "düsseldorfer Unterkunfts-"
+  #   map_scale: 0.9
+  #   map_show_contact: false
+  #   map_max_age: 14
+  #   firmware: mon/
+    lat: 51.2140
+    lon: 6.8255
+    zoom: 11
+    wifi24channel: 9
+    wifi5channel: 48
+    authorized_keys:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEAufGE6eK/iZTeLKCduy4UEyQpkXX+Z/0SAbYCbkJhJjNpYJaAaMhPI9yPWqsSJlQ9NSMVHMWF+3fTYb8uXEMFxEAXLqgYWhc7fs45FwvP7Ki9q5vZlvrKdB0MOPkQsY1sI3AEtcFwoft0uemW9QZUJ9jxBSi82BDbSZnFykv81ds= adorfer"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvMCy/RjnGc/ppzxIqvyv3WnaQ3Tj495MLw8qV4FpTkVndjIuqrY7heW4G1W4AFV97QpwCnBTOVmL6xg8kS+zPWN8/pFbIWF1tDBBocZuIYQhOzyd4KPewgu/GXPhmDTtAqdU/MC1CL9Zmd5P+YTzTTVYvvJmLx8ZNWx1KVU9BTePF1y6ekhLduvzOfGDW4rhPhjGGeEIW15sLpM/JnlLMP0nZvbmTQQH91g3qKsabxmYPH6W/s+rTja2ds+SfrNzj4VrRRNUaNFaUo/2G/m5lr/yYTgF2bDb1D7MijMs/u0Z6cdvlOXzdESII8jgVsa942KdEiskak0cRFEDLhf7Qomjamf/fGfQyrhQeH+XBDVlPbumN5LrHpO68U9kbpRpPxX/IRlsjKG6fYj5LIOQqpfWBqvlCuAFacUcp8EglQVKlB5yuSpEcwhH4vb03z+hLQndmGkzlp2yqcM/+sDpIzeQHK58MyLXXIiNJW7cUoExqmaGSrvXl1duncpBNVEgBfCYaWA9PwnTxWOf5Ywl2Zei5W9p5G8vJSSaEV+SyxrCUl2MGbAQob01KrsgSRQ5lK1Uhjzq62ewVmUWvfu+1dy/NKwTNLofd957pd4f0BpB0wRd4c5EQDtyHyKjGT27EdzoukUdlELWBCXvt7i/W0MBco/spgL+05YqDrJJNbw== stephan@neanderfunk.de',    'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAglrpnR+Rk0XYlStQsT6IipZE6evhO4Hd+zd3yJiClWkqGmomgnGUHafLn8I4lPOZMS3e3QAEcJdqKChXwURBga1Ghi4GrN03nfPzA/fY41zGXIwGnskZNN9c2rt6aCl8XG1OwIOSFj5Zg2PBRtL3vSx0oe3ZxRbNHyg2sHWcqIuPmb5ULd04t7Ehs6QA7lKDIVSeJJFQr+b4zsDGeGJlGSHDYjuVuwbVm5ddelYM8+vYqY3N479pcb0clU+DflW+UnhzYzKwO752uJ2W7jCzxpv8DfCtArjXKlk3uE/9mdxuUQAPrW9h8iuVUIk8HtCdkUjppqkmDFrICzeL3KXmjw== Frankth"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvMCy/RjnGc/ppzxIqvyv3WnaQ3Tj495MLw8qV4FpTkVndjIuqrY7heW4G1W4AFV97QpwCnBTOVmL6xg8kS+zPWN8/pFbIWF1tDBBocZuIYQhOzyd4KPewgu/GXPhmDTtAqdU/MC1CL9Zmd5P+YTzTTVYvvJmLx8ZNWx1KVU9BTePF1y6ekhLduvzOfGDW4rhPhjGGeEIW15sLpM/JnlLMP0nZvbmTQQH91g3qKsabxmYPH6W/s+rTja2ds+SfrNzj4VrRRNUaNFaUo/2G/m5lr/yYTgF2bDb1D7MijMs/u0Z6cdvlOXzdESII8jgVsa942KdEiskak0cRFEDLhf7Qomjamf/fGfQyrhQeH+XBDVlPbumN5LrHpO68U9kbpRpPxX/IRlsjKG6fYj5LIOQqpfWBqvlCuAFacUcp8EglQVKlB5yuSpEcwhH4vb03z+hLQndmGkzlp2yqcM/+sDpIzeQHK58MyLXXIiNJW7cUoExqmaGSrvXl1duncpBNVEgBfCYaWA9PwnTxWOf5Ywl2Zei5W9p5G8vJSSaEV+SyxrCUl2MGbAQob01KrsgSRQ5lK1Uhjzq62ewVmUWvfu+1dy/NKwTNLofd957pd4f0BpB0wRd4c5EQDtyHyKjGT27EdzoukUdlELWBCXvt7i/W0MBco/spgL+05YqDrJJNbw== stephan@neanderfunk.de"
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
+   

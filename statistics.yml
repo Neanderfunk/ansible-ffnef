@@ -13,3 +13,4 @@
     - { role: statistics_grafana, tags: "statistics_grafana", when: "grafana is defined"}
     - { role: statistics_nginx, tags: "statistics_nginx"}
     - { role: collectd, tags: "collectd", when: "collectd is defined"}
+    - { role: check_mk_agent, tags: "check_mk_agent"}

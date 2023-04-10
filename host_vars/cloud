@@ -1,0 +1,10 @@
+server_besitzer: "adorfer"
+hoster: "OVH"
+
+nextcloud_domains:
+  - cloud.neanderfunk.de
+  - cloud.wir-wuelfrath.de
+
+nextcloud_onlyoffice_enable: yes
+nextcloud_onlyoffice_domain:
+  - dokumentserver.neanderfunk.de

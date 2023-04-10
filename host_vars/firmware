@@ -1,4 +1,0 @@
-server_besitzer: "Sven Culley / Sense"
-
-additionaladmins:
-  - "build" #Für rsync vom Build- zum Firmwareserver.

@@ -1,0 +1,96 @@
+server_id: 6
+vm_id: 6
+
+server_besitzer: "FFNEF"
+hoster: "MyLOC_FFNW_DUS"
+
+
+########### warning override group_vars ########
+ff_network:
+  # Eindeutige AS-Nummer des Netzwerk
+  as_number: 206554
+  # IPv4 Adressraum
+  v4_network: 10.43.0.0/16
+  ##### IPv6 prefix for FFNW #####
+  v6_network: 2a0f:b507:ff02::/48
+################################################
+
+#ffnw_v6: 2a0f:b507:ff02::/48 
+ffnw_nat_ip: 185.197.132.143
+
+ffnw_tun:
+
+- name: set1
+  v4_remote: 45.152.125.18
+  v6_remote: 2a0f:5707:aa80:45::18
+  bgp_local_pref: 200
+
+- name: ber_a
+  v4_remote: 45.154.108.1
+  v6_remote: 2a0f:b506:ffee::1
+  bgp_local_pref: 210
+
+
+
+is_external_nameserver: false
+
+domaenenliste:
+   "01":
+      dhcp_start: 10.1.96.0 
+      dhcp_ende: 10.1.127.255
+      server_id: 4
+   "02":
+      dhcp_start: 10.2.96.0  
+      dhcp_ende: 10.2.127.255
+      server_id: 4
+   "03":
+      dhcp_start: 10.3.96.0  
+      dhcp_ende: 10.3.127.255
+      server_id: 4
+   "04":
+      dhcp_start: 10.4.96.0  
+      dhcp_ende: 10.4.127.255
+      server_id: 4
+   "05":
+      dhcp_start: 10.5.96.0  
+      dhcp_ende: 10.5.127.255
+      server_id: 4
+   "06":
+      dhcp_start: 10.6.96.0  
+      dhcp_ende: 10.6.127.255
+      server_id: 4
+   "07":
+      dhcp_start: 10.7.96.0  
+      dhcp_ende: 10.7.127.255
+      server_id: 4
+   "08":
+      dhcp_start: 10.8.96.0  
+      dhcp_ende: 10.8.127.255
+      server_id: 4
+   "09":
+      dhcp_start: 10.9.96.0  
+      dhcp_ende: 10.9.127.255
+      server_id: 4
+   "10":
+      dhcp_start: 10.10.96.0  
+      dhcp_ende: 10.10.127.255
+      server_id: 4
+   "11":
+      dhcp_start: 10.11.96.0  
+      dhcp_ende: 10.11.127.255
+      server_id: 4
+
+dhcp_type: "kea"
+
+tunneldigger:
+  instance_per_domain: true
+  interface: "eth0"
+  max_tunnels: 1024
+  port_base: 20100
+  pmtu_discovery: false
+  tunnel_timeout: 60
+
+use_wlan_slovenija_tunneldigger: true
+
+
+batman_version: "2019.4"

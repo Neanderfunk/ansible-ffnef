@@ -1,0 +1,84 @@
+server_id: 3
+vm_id: 3
+
+server_besitzer: "FFNEF"
+hoster: "hetzner"
+
+
+########### warning override group_vars ########
+ff_network:
+  # Eindeutige AS-Nummer des Netzwerk
+  as_number: 64863
+  # IPv4 Adressraum
+  v4_network: 10.43.0.0/16
+  ##### IPv6 prefix for FFNW #####
+  v6_network: 2a0f:b507:ff02::/48
+################################################
+
+is_external_nameserver: false
+
+domaenenliste:
+   "12":
+      dhcp_start: 10.155.129.0
+      dhcp_ende: 10.155.255.255
+      server_id: 3
+      partner: "himalia"
+   "13":
+      dhcp_start: 10.155.1.0
+      dhcp_ende: 10.155.127.255
+      server_id: 3   
+   "14":
+      dhcp_start: 10.156.1.0
+      dhcp_ende: 10.156.255.255
+      server_id: 3
+   "15":
+      dhcp_start: 10.157.1.0
+      dhcp_ende: 10.157.255.255
+      server_id: 3
+   "16":
+      dhcp_start: 10.158.1.0
+      dhcp_ende: 10.158.255.255
+      server_id: 3
+   "16":
+      dhcp_start: 10.159.1.0
+      dhcp_ende: 10.159.255.255
+      server_id: 3
+
+
+#ffnw Tunnel
+
+
+#ffnw_v6: 2a0f:b507:ff02::/48 
+ffnw_nat_ip: 185.197.132.143
+
+ffnw_tun:
+
+- name: ber_b
+  gre_target: 185.197.132.8
+  v4_remote: 100.100.112.92/31
+  v6_remote: fe80::1/64
+  bgp_local_pref: 200
+
+- name: ber_a
+  gre_target: 185.197.132.7
+  v4_remote: 100.100.96.92/31
+  v6_remote: fe80::1/64
+  bgp_local_pref: 210
+
+
+
+dhcp_type: "kea"
+
+tunneldigger:
+  instance_per_domain: true
+  interface: "eth0"
+  max_tunnels: 1024
+  port_base: 20100
+  pmtu_discovery: false
+  tunnel_timeout: 60
+
+use_wlan_slovenija_tunneldigger: true
+
+
+
+batman_version: "2019.4"

@@ -1,5 +1,5 @@
-server_besitzer: "FFI"
-hoster: "IN-Berlin"
+server_besitzer: "FFNEF"
+hoster: "soyoustart-vm"
 
 grafana: 
   nginx:

@@ -1,0 +1,15 @@
+server_id: 12
+vm_id: 12
+
+server_besitzer: "FFNEF"
+hoster: "soyoustart/neander-pm4"
+
+[ipaserver]
+ipaserver: freeipa.ffnef.de
+ipaserver_domain=ffnef.de
+ipaserver_realm=ffnef.de
+ipaserver_setup_dns=yes
+ipaserver_auto_forwarders=yes
+ipaadmin_password: T2FXmE)U=wskladn9q0e2t
+ipadm_password: T2FXmE!I(pnSZ0!)E64FRvt
+name: freeipa.ffnef.de

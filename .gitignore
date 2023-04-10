@@ -5,3 +5,5 @@ domains.csv
 # ignore files of Jetbrains InteliJ IDEA
 /.idea
 /*.iml 
+passwords.yml
+*~
