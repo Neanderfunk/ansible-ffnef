@@ -2,27 +2,252 @@ server_id: 3
 vm_id: 3
 
 server_besitzer: "FFNEF"
-hoster: "hetzner"
+hoster: "netcup"
+info_produkt: "RS 1000 G9.5 a1 NUE 12M"
 
 
-########### warning override group_vars ########
-ff_network:
-  # Eindeutige AS-Nummer des Netzwerk
-  as_number: 64863
-  # IPv4 Adressraum
-  v4_network: 10.43.0.0/16
-  ##### IPv6 prefix for FFNW #####
-  v6_network: 2a0f:b507:ff02::/48
-################################################
+
+
+# Allgemeine Einstellungen
+use_wlan_slovenija_tunneldigger : true
+
+# TODO: FFNEF Wird aktuell nicht gebraucht. Nutzung gre supernode mesh und mapserver anbindung.
+#       Da wir kein Mesh nutzen und der Mapserver als Client in allen Domänen ist wird es nicht gebraucht.
+#build_tunnels_over_ipv6_if_available: true
+
+
+dhcp_type: "kea"
+
+# Kea Konfiguration START
+kea:
+  database:
+    type: "postgresql"
+    db_host: "127.0.0.1"
+    db_name: "kea_leases"
+    db_user: "kea"
+    db_pass: "{{kea_postgres_pw}}"
+  global:
+    mtu: 1364
+    lease_default: 1200
+    search_domain: "{{freifunk.search_domain}}"
+    unifiinformip: "193.70.47.63" # unifi.ffnef.de
+  dns:
+    all_gateways: true
+    additional:
+      # opendns
+      - "208.67.222.222"
+      # google
+      - "8.8.8.8"
+
+  routers:
+    all_gateways: false
+  loggers:
+    - name: "kea-dhcp4"
+      level: "WARN"
+      file: "/var/log/kea-dhcp4.log"
+  expired_leases:
+    - name: "reclaim-timer-wait-time"
+      value: 4
+    - name: "flush-reclaimed-timer-wait-time"
+      value: 10
+    - name: "hold-reclaimed-time"
+      value: 72000
+    - name: "max-reclaim-leases"
+      value: 15000
+    - name: "max-reclaim-time"
+      value: 3000
+    - name: "unwarned-reclaim-cycles"
+      value: 5
+# Kea Konfiguration ENDE
+
+
+# Uplink Tunnel START
+
+ffrl_nat_ip: 185.66.195.65/31
+
+#ffrl-tunnel neander-3
+
+ffrl_tun:
+# ToDo: Bekommt noch neue Tunnelsätze
+# - name: ber1
+#   gre_target: 185.66.195.0
+#   v4_remote: 100.64.5.78/31
+#   v6_remote: 2a03:2260:0:29b::1/64
+#   bgp_local_pref: 200
+# - name: ber2
+#   gre_target: 185.66.195.1
+#   v4_remote: 100.64.5.84/31
+#   v6_remote: 2a03:2260:0:29e::1/64
+#   bgp_local_pref: 200
+# - name: dus1
+#   gre_target: 185.66.193.0
+#   v4_remote: 100.64.5.82/31
+#   v6_remote: 2a03:2260:0:29d::1/64
+#   bgp_local_pref: 201
+# - name: dus2
+#   gre_target: 185.66.193.1
+#   v4_remote: 100.64.5.88/31
+#   v6_remote: 2a03:2260:0:2a0::1/64
+#   bgp_local_pref: 201
+# - name: fra2a
+#   gre_target: 185.66.194.0
+#   v4_remote: 100.64.5.80/31
+#   v6_remote: 2a03:2260:0:29c::1/64
+# - name: fra2b
+#   gre_target: 185.66.194.1
+#   v4_remote: 100.64.5.86/31
+#   v6_remote: 2a03:2260:0:29f::1/64
+  
+
+# Uplink Tunnel ENDE
+
+
+# Batman START # TODO: FFNEF Überarbeiten, aktuell wird es nicht verwendet, da role kaputt.
+batman_version: "2022.1"
+
+batman:
+  version: 2022.1
+  # Bandbreite, die Batman annoncieren soll
+  downstream: 1024Mbit
+  # Bandbreite, die Batman annoncieren soll
+  upstream: 1024Mbit
+
+# Batman ENDE
+
+
+# Tunneldigger
+tunneldigger:
+  instance_per_domain: true
+  interface: "ens18"
+  max_tunnels: 1024
+  port_base: 20100
+  pmtu_discovery: false
+  tunnel_timeout: 60
+
+
+# unattended upgrades
+unattended_upgrades:
+  origins_pattern:
+    - "${distro_id}:${distro_codename}-updates"
+    - "${distro_id}:${distro_codename}-proposed"
+    - "${distro_id}:${distro_codename}-backports"
+    - "apt.postgresql.org:*"
+
+# Nameserver Konfiguration START
 
 is_external_nameserver: false
+
+bind:
+  ffnet_zone_type: slave
+  ffnet_zone_masters:
+     - 10.45.67.123
+bind_zonemaster:
+  server: localhost
+  email: kontakt@neanderfunk.de
+
+# Nameserver Konfiguration ENDE
+
+
+# Gluon globale Variablen # TODO: FFNEF Wird nirgends verwendet?
+gluon_global_vars:
+  wifi24channel: 9
+  wifi5channel: 48
+  authorized_admins:
+   - "adorfer"
+   - "plaste"
+   - "alex_fw"
+
+
+
+# TODO: FFNEF Wird nirgends verwendet?
+# Nummer der Routing Tabelle, die auf den Servern verwendet wird
+routing_table: 42
+
+
+# Parameter für das eigene Freifunk-Netzwerk
+ff_network:
+  # Eindeutige AS-Nummer des Netzwerk
+  as_number: 65125
+  # IPv4 Adressraum
+  v4_network: 10.43.0.0/16
+  # IPv6 adressraum
+  v6_network: 2a03:2260:122::/48
+  # IPv6 anycast ::ac1 in decimal
+  v6_anycast: 2753
+
+# Verwendung bei bird6
+ipv6backbone64prefixstr: "2a03:2260:122::"
+
+
+# Logrotate START
+
+logrotate:
+  cycle: daily
+  count: 3
+  setsu: yes
+  updateconfs: no
+  updateglobalconf: no
+  updatebtmpconf: no
+  updatewtmpconf: no
+
+journald:
+  zeitbegrenzung: no
+
+# Logrotate ENDE
+
+
+freifunk:
+  name: "Freifunk im Neanderland"
+  kurzname: "ffnef"
+  motdkurzname: "FFNEF" # WIrd nur für das MotD Logo verwendet
+  search_domain: "ffnef.de" # benutzt bei der kea Konfiguration
+  email: kontakt@neanderfunk.de
+  domain: ffnef.de
+  ffnet_dns_entries_for_internal_tld:
+    "unifi":
+       A: 193.70.47.63
+       AAAA: 2001:41d0:303:d3f:8000:0:a:f21d
+    "unifi-legacy":
+       A: 193.70.47.63
+       AAAA: 2001:41d0:303:d3f:8000:0:a:f21d
+
+domains:
+  "ffnef.de":
+    extern_dns:
+      # -
+      # -
+    email: admin@neanderfunk.de
+
+
+
+check_mk:
+  deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_2.1.0p1-1_all.deb
+
+
+# TODO: FFNEF Deaktiviert, da wir lieber Nutzer mit sudo Rechten nutzen wollen, anstatt Login über dne root Account
+# administratorenteam:
+#   - "adorfer"
+#   - "plaste"
+#   - "alex"
+
+administratorenuser:
+  - "adorfer"
+  - "plaste"
+  - "alex"
+
+
+# TODO:FFNEF  Wird nicht verwendet?
+ntp:
+  intern: "ntp.ffnef"
+  extern: "ntp.ffnef.de"
+
+
 
 domaenenliste:
    "12":
       dhcp_start: 10.155.129.0
       dhcp_ende: 10.155.255.255
       server_id: 3
-      partner: "himalia"
    "13":
       dhcp_start: 10.155.1.0
       dhcp_ende: 10.155.127.255
@@ -39,46 +264,12 @@ domaenenliste:
       dhcp_start: 10.158.1.0
       dhcp_ende: 10.158.255.255
       server_id: 3
-   "16":
+   "17":
       dhcp_start: 10.159.1.0
       dhcp_ende: 10.159.255.255
       server_id: 3
 
 
-#ffnw Tunnel
 
 
-#ffnw_v6: 2a0f:b507:ff02::/48 
-ffnw_nat_ip: 185.197.132.143
-
-ffnw_tun:
-
-- name: ber_b
-  gre_target: 185.197.132.8
-  v4_remote: 100.100.112.92/31
-  v6_remote: fe80::1/64
-  bgp_local_pref: 200
-
-- name: ber_a
-  gre_target: 185.197.132.7
-  v4_remote: 100.100.96.92/31
-  v6_remote: fe80::1/64
-  bgp_local_pref: 210
-
-
-
-dhcp_type: "kea"
-
-tunneldigger:
-  instance_per_domain: true
-  interface: "eth0"
-  max_tunnels: 1024
-  port_base: 20100
-  pmtu_discovery: false
-  tunnel_timeout: 60
-
-use_wlan_slovenija_tunneldigger: true
-
-
-
-batman_version: "2019.4"
+domaenen:

@@ -10,14 +10,13 @@
 # 'capacity' im Kommentar gibt die erwünschte relative Auslastung mit Traffic und L2TP-Verbindungen an
 # 'server' im Kommentar muss angegeben werden, wenn mehrere L2TP-VM auf einem Blech laufen. Der Wert kann frei gewählt werden.
 [gateways]
-konz2           ipv4=164.132.62.120 ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954
+ganymed           ipv4=164.132.62.120 ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954
+kallisto           ipv4= ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954
 ##ganymed		ipv4=51.83.29.17	ipv6=2001:41d0:c:6ea::5:246a	ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954	# IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00	server=sn1
 ##kallisto		ipv4=5.9.142.115 ipv6=2a01:4f8:190:216e::2 ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954	# IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00	server=sn2 
 #amalthea		ipv4=46.4.113.218 ipv6=2a01:4f8:141:11e2::2 ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954	# IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00	server=sn4 
 #himalia			ipv4=45.157.178.229 ipv6=2a03:4000:4b:d8a::/64 ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954 # IPv4 -> FFRL	IPv6 -> FFRL	capacity=1.00	server=sn4 
 
-[as_router]
-konz2
 
 # Server für Hoppglas Karten
 #[mapserver]
