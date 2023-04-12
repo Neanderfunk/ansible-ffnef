@@ -61,7 +61,8 @@ kea:
 
 # Uplink Tunnel START
 
-ffrl_nat_ip: 185.66.195.64/31
+# FFNef ToDo: Deaktiviert, bis neuer Tunnelsatz existiert.
+ffrl_nat_ip: 185.66.195.66/31
 
 #ffrl-tunnel neander-3
 
