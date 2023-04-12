@@ -166,7 +166,7 @@ ff_network:
   # Eindeutige AS-Nummer des Netzwerk
   as_number: 65125
   # IPv4 Adressraum
-  v4_network: 10.43.0.0/16
+  v4_network: 10.0.0.0/8
   # IPv6 adressraum
   v6_network: 2a03:2260:122::/48
   # IPv6 anycast ::ac1 in decimal
@@ -241,53 +241,547 @@ ntp:
 
 
 domaenenliste:
-  "19":
-    dhcp_start: 10.19.1.0
-    dhcp_ende: 10.19.255.255
+  "01":
+    dhcp_start: 10.60.1.0
+    dhcp_ende: 10.60.15.255
     server_id: 6
-  #  "13":
-  #     dhcp_start: 10.155.1.0
-  #     dhcp_ende: 10.155.127.255
-  #     server_id: 3   
-  #  "14":
-  #     dhcp_start: 10.156.1.0
-  #     dhcp_ende: 10.156.255.255
-  #     server_id: 3
-  #  "15":
-  #     dhcp_start: 10.157.1.0
-  #     dhcp_ende: 10.157.255.255
-  #     server_id: 3
-  #  "16":
-  #     dhcp_start: 10.158.1.0
-  #     dhcp_ende: 10.158.255.255
-  #     server_id: 3
-  #  "17":
-  #     dhcp_start: 10.159.1.0
-  #     dhcp_ende: 10.159.255.255
-  #     server_id: 3
+
+  # Temporär kallisto auf ganymed
+  # "12":
+  #   dhcp_start: 10.155.129.0
+  #   dhcp_ende: 10.155.255.255
+  #   server_id: 6
+  # "13":
+  #   dhcp_start: 10.155.1.0
+  #   dhcp_ende: 10.155.127.255
+  #   server_id: 6   
+  # "14":
+  #   dhcp_start: 10.156.1.0
+  #   dhcp_ende: 10.156.255.255
+  #   server_id: 6
+  # "15":
+  #   dhcp_start: 10.157.1.0
+  #   dhcp_ende: 10.157.255.255
+  #   server_id: 6
+  # "16":
+  #   dhcp_start: 10.158.1.0
+  #   dhcp_ende: 10.158.255.255
+  #   server_id: 6
+  # "17":
+  #   dhcp_start: 10.159.1.0
+  #   dhcp_ende: 10.159.255.255
+  #   server_id: 6
+
+
+  # Temporär himalia auf ganymed
+
+  # "18":
+  #   dhcp_start: 10.18.1.0
+  #   dhcp_ende: 10.18.255.255
+  #   server_id: 6
+  # "19":
+  #   dhcp_start: 10.19.1.0
+  #   dhcp_ende: 10.19.255.255
+  #   server_id: 6
+  # "20":
+  #   dhcp_start: 10.20.1.0
+  #   dhcp_ende: 10.20.255.255
+  #   server_id: 6
+  # "21":
+  #   dhcp_start: 10.21.1.0
+  #   dhcp_ende: 10.21.255.255
+  #   server_id: 6
+  # "22":
+  #   dhcp_start: 10.22.1.0
+  #   dhcp_ende: 10.22.255.255
+  #   server_id: 6
+  # "23":
+  #   dhcp_start: 10.23.1.0
+  #   dhcp_ende: 10.23.255.255
+  #   server_id: 6
+  # "24":
+  #   dhcp_start: 10.24.1.0
+  #   dhcp_ende: 10.24.255.255
+  #   server_id: 6
+  # "25":
+  #   dhcp_start: 10.25.1.0
+  #   dhcp_ende: 10.25.255.255
+  #   server_id: 6
+  # "26":
+  #   dhcp_start: 10.26.1.0
+  #   dhcp_ende: 10.26.255.255
+  #   server_id: 6
+  # "27":
+  #   dhcp_start: 10.27.1.0
+  #   dhcp_ende: 10.27.255.255
+  #   server_id: 6
+  # "28":
+  #   dhcp_start: 10.28.1.0
+  #   dhcp_ende: 10.28.255.255
+  #   server_id: 6
+  # "29":
+  #   dhcp_start: 10.29.1.0
+  #   dhcp_ende: 10.29.255.255
+  #   server_id: 6
+  # "30":
+  #   dhcp_start: 10.30.1.0
+  #   dhcp_ende: 10.30.255.255
+  #   server_id: 6
+  # #LVR-Nordost
+  # "31":
+  #   dhcp_start: 10.31.1.0
+  #   dhcp_ende: 10.31.255.255
+  #   server_id: 6
+  # #LVR-NordWest 
+  # "32":
+  #   dhcp_start: 10.32.1.0
+  #   dhcp_ende: 10.32.255.255
+  #   server_id: 6
+  # #LVR-MitteOst
+  # "33":
+  #   dhcp_start: 10.33.1.0
+  #   dhcp_ende: 10.33.255.255
+  #   server_id: 6
+  # #LVR-MitteWest
+  # "34":
+  #   dhcp_start: 10.34.1.0
+  #   dhcp_ende: 10.34.255.255
+  #   server_id: 6
+  # #LVR-Suedost
+  # "35":
+  #   dhcp_start: 10.35.1.0
+  #   dhcp_ende: 10.35.255.255
+  #   server_id: 6
+  # #LVR-Suedwest
+  # "36":
+  #   dhcp_start: 10.36.1.0
+  #   dhcp_ende: 10.36.255.255
+  #   server_id: 6
 
 
 
 
 domaenen:
-  "19":
-    name: Agios
-    shortname: agios
-    hostname_prefix: agios-
-    community: neanderfunk
-    ffv4_network: 10.19.0.0/16
-    # Domäne 19 in Hex entspricht 13
-    ffv6_network: 2a03:2260:122:0613::/64
-    name_adj: "Agios-"
+
+  # Temporäre 
+  "01":
+    name: Pseudo, damit Liste nicht leer
+    shortname: pseudo
+    hostname_prefix: pseudo-
+    community: pseudo
+    ffv4_network: 10.60.0.0/20
+    # Domäne 12 in Hex entspricht 0c
+    ffv6_network: 2a03:2260:122:0600::/64
+    name_adj: "pseudo -"
+    disable: true
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: mon/
     lat: 51.2140
     lon: 6.8255
     zoom: 11
     wifi24channel: 9
     wifi5channel: 48
     authorized_keys:
-      - "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEAufGE6eK/iZTeLKCduy4UEyQpkXX+Z/0SAbYCbkJhJjNpYJaAaMhPI9yPWqsSJlQ9NSMVHMWF+3fTYb8uXEMFxEAXLqgYWhc7fs45FwvP7Ki9q5vZlvrKdB0MOPkQsY1sI3AEtcFwoft0uemW9QZUJ9jxBSi82BDbSZnFykv81ds= adorfer"
-      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCvMCy/RjnGc/ppzxIqvyv3WnaQ3Tj495MLw8qV4FpTkVndjIuqrY7heW4G1W4AFV97QpwCnBTOVmL6xg8kS+zPWN8/pFbIWF1tDBBocZuIYQhOzyd4KPewgu/GXPhmDTtAqdU/MC1CL9Zmd5P+YTzTTVYvvJmLx8ZNWx1KVU9BTePF1y6ekhLduvzOfGDW4rhPhjGGeEIW15sLpM/JnlLMP0nZvbmTQQH91g3qKsabxmYPH6W/s+rTja2ds+SfrNzj4VrRRNUaNFaUo/2G/m5lr/yYTgF2bDb1D7MijMs/u0Z6cdvlOXzdESII8jgVsa942KdEiskak0cRFEDLhf7Qomjamf/fGfQyrhQeH+XBDVlPbumN5LrHpO68U9kbpRpPxX/IRlsjKG6fYj5LIOQqpfWBqvlCuAFacUcp8EglQVKlB5yuSpEcwhH4vb03z+hLQndmGkzlp2yqcM/+sDpIzeQHK58MyLXXIiNJW7cUoExqmaGSrvXl1duncpBNVEgBfCYaWA9PwnTxWOf5Ywl2Zei5W9p5G8vJSSaEV+SyxrCUl2MGbAQob01KrsgSRQ5lK1Uhjzq62ewVmUWvfu+1dy/NKwTNLofd957pd4f0BpB0wRd4c5EQDtyHyKjGT27EdzoukUdlELWBCXvt7i/W0MBco/spgL+05YqDrJJNbw== stephan@neanderfunk.de"
-      - "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAglrpnR+Rk0XYlStQsT6IipZE6evhO4Hd+zd3yJiClWkqGmomgnGUHafLn8I4lPOZMS3e3QAEcJdqKChXwURBga1Ghi4GrN03nfPzA/fY41zGXIwGnskZNN9c2rt6aCl8XG1OwIOSFj5Zg2PBRtL3vSx0oe3ZxRbNHyg2sHWcqIuPmb5ULd04t7Ehs6QA7lKDIVSeJJFQr+b4zsDGeGJlGSHDYjuVuwbVm5ddelYM8+vYqY3N479pcb0clU+DflW+UnhzYzKwO752uJ2W7jCzxpv8DfCtArjXKlk3uE/9mdxuUQAPrW9h8iuVUIk8HtCdkUjppqkmDFrICzeL3KXmjw== Frankth"
-      - "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyGzk43wy0HNJ7+qQYtesTbMMSkgTbzmFRVvvtn95Cl2LFC5R/ykcdnYiBgrHIDdDBRQohF6Q6peh9zhiI0e+x6tsw5sduVIdpLTKKn/Q3VrH4/QgF6hhhL9WNEQThim7WobNj8JybhnnZKcUdYV6ywXSkfh+Q68eoJKstdrKbtU95c2d6aHfsQCJJG39KWfHugaPmo5yNYRH033Rsf6IIKoYskSZbUcNfB03cqy+kA/2TcjpV2amPhbYXdrzwlC8C3w8Ps+1bInosaomPMdpkkDkLG9vBOh+PLkQJo+5JCNsfqK+D+QmCvSKSCl609lb8jRFWo+46K1T3KWJWmPVnQ== wisejoe@froeckel"
-      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCm9rr9PM9q2W6u1L7FmZYhBBsy9QzZI6vRm5GOSkKsp+wdEMJwK6MDmndv765kOd9dtBlREddtzee2zzNAb+Lcci5GiOUGd5vIzWHB4YtIH01exn+RjtTy5SG/SxtH91YuMpC8WJNUoYa3ON+TS+jD/S+lzg9yPwFzOzonyLx81Q1ANS7gcBNUzxYOlqzr/yOdyDti7DEnqQWHf0jjYv3AACx/fdYDFyRBQMJ0oUmWUiQDb7y7PXR+MGuX1J7NKlItFs3OjePjNL4SToYKphVdhl9ZhNbWEaPKnrKZHvrqBrtqDTQD2ajh956jrj0ZzfT2bsVzEj1PMNeAhbPSgjOygMtnqN49bNflDWbwrBNyZnbtFXFxpxmVcFQ6bjWnbqy3vYur2LUNQpL0D0lffXu7zDJJWNfDqVLDjIMG1IKvCaCthrBMiaaV2RW2XgI5f3fcDjrLTjDIwLxSzMfMgNUzmbuce236/um6UmOauGYaN5qjb/VLHw2QhooY/dHkkYH+Hq4HqAokJrajRu8wxo0OOJhWqbdq7QsKWXXx7W9yrTfgGvEDMUp4jIzltVUmeF+yd3IYm9GxRrBBNybL9FGRmhLHLzSGJ99vHFUFPlkiJGRtXiaajUlJz6ZOfh6RO+H/LLmw4pDIvilvq5+EjQuH79q4RScD3TXkIDbb0ls4+w== jonathanneu@Jonathans-MBP"
-      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDX07jn28SLFNVN9tSMGBbgbWixX+PSVrxVBHt8pkHiseGIXB2LGXRK54O7IT+kcmasZX5AKu4J0oRRgisf/S1vZgVSC45Ri7w9Q3NYvG2yYTsvP3a3NmmH0fvi26QC1I7r2od+eivMjve/DJf0q/R2uUZMad4giyGy+NFBJaFULWnDe9L8Dkqw545WtSmYzNaP95LmW72Zz+Ohrgag/Y0ixEtqlFccAiDdgszK7AWLDfxPwgvsyP4LYOS9RKRzaNw6/Snda7x1WYeTgfJ/5npvVJ0Ovlh9sPVAKnHVmGxlTdPoSN9mgYgjSawFieZ5wBlfmqoQd+BI+wKlYVFZHxE3 alex@neanderfunk"
+
+  # Temporär kallisto auf ganymed
+#   "12":
+#     name: Düsseldorf-Unterkünfte
+#     shortname: dusuk
+#     hostname_prefix: dusuk-
+#     community: flingern
+#     ffv4_network: 10.155.128.0/17
+#     # Domäne 12 in Hex entspricht 0c
+#     ffv6_network: 2a03:2260:122:060c::/64
+#     name_adj: "düsseldorfer Unterkunfts-"
+#     disable: true
+# #   map_scale: 0.9
+# #   map_show_contact: false
+# #   map_max_age: 14
+# #   firmware: mon/
+#     lat: 51.2140
+#     lon: 6.8255
+#     zoom: 11
+#     wifi24channel: 9
+#     wifi5channel: 48
+#     authorized_keys:
+      
+#   "13":
+#     name: Düsseldorf-Flingern
+#     shortname: dusfl
+#     hostname_prefix: dusfl-
+#     community: flingern
+#     ffv4_network: 10.155.0.0/17
+#     # Domäne 13 in Hex entspricht 0d
+#     ffv6_network: 2a03:2260:122:060d::/64
+#     disable: true
+# #   map_scale: 0.9
+# #   map_show_contact: false
+# #   map_max_age: 14
+# #   firmware: dusfl/
+#     lat: 51.2236
+#     lon: 6.8228
+#     zoom: 14
+#     wifi24channel: 9
+#     wifi5channel: 48
+#     authorized_keys:
+      
+#   "14":
+#     name: Wuppertal-Barmen
+#     shortname: bar
+#     hostname_prefix: bar-
+#     community: Wuppertal-Hilfsdomain
+#     ffv4_network: 10.156.0.0/16
+#     # Domäne 14 in Hex entspricht 0e
+#     ffv6_network: 2a03:2260:122:060e::/64
+#     disable: true
+#     name_adj: "wuppertaler"
+# #   map_scale: 0.9
+# #   map_show_contact: false
+# #   map_max_age: 14
+# #   firmware: bar/
+#     lat: 51.2645
+#     lon: 7.1835
+#     zoom: 12
+#     wifi24channel: 9
+#     wifi5channel: 44
+#     authorized_keys:
+      
+#   "15":
+#     name: Marienheide
+#     shortname: mrh
+#     hostname_prefix: mrh-
+#     community: ffnrw
+#     ffv4_network: 10.157.0.0/16
+#     # Domäne 15 in Hex entspricht 0f
+#     ffv6_network: 2a03:2260:122:060f::/64
+#     disable: true
+#     name_adj: "marienheider"
+# #   map_scale: 0.9
+# #   map_show_contact: false
+# #   map_max_age: 14
+# #   firmware: mrh/
+#     lat: 51.0832
+#     lon: 7.5330
+#     zoom: 14
+#     wifi24channel: 9
+#     wifi5channel: 48
+#     authorized_keys:
+      
+#   "16":
+#     name: Gummersbach
+#     shortname: gmb
+#     hostname_prefix: gmb-
+#     community: ffnrw
+#     ffv4_network: 10.158.0.0/16
+#     # Domäne 16 in Hex entspricht 10
+#     ffv6_network: 2a03:2260:122:0610::/64
+#     disable: true
+# #   map_scale: 0.9
+# #   map_show_contact: false
+# #   map_max_age: 14
+# #   firmware: mon/
+#     lat: 51.0227
+#     lon: 7.5627
+#     zoom: 14
+#     wifi24channel: 9
+#     wifi5channel: 44
+#     authorized_keys:
+      
+#   "17":
+#     name: Wipperfürth
+#     shortname: wip
+#     hostname_prefix: wip-
+#     community: ffnrw
+#     ffv4_network: 10.159.0.0/16
+#     # Domäne 17 in Hex entspricht 11
+#     ffv6_network: 2a03:2260:122:0611::/64
+#     disable: true
+# #   map_scale: 0.9
+# #   map_show_contact: false
+# #   map_max_age: 14
+# #   firmware: mon/
+#     lat: 51.1173
+#     lon: 7.3940
+#     zoom: 13
+#     wifi24channel: 9
+#     wifi5channel: 44
+#     authorized_keys:
+  
+
+
+  # Temporär himalia auf ganymed
+
+  # "18":
+  #   name: Neander-Unterkünfte
+  #   shortname: NeanderUK
+  #   hostname_prefix: ffnefuk-
+  #   community: neanderfunk
+  #   ffv4_network: 10.18.0.0/16
+  #   # Domäne 18 in Hex entspricht 12
+  #   ffv6_network: 2a03:2260:122:0612::/64
+  #   name_adj: "Freifunk im Neanderlands Unterkunfts-"
+  #   disable: false
+  #   lat: 51.2140
+  #   lon: 6.8255
+  #   zoom: 11
+  #   wifi24channel: 9
+  #   wifi5channel: 48
+  #   authorized_keys:
+      
+  
+  # "19":
+  #   name: Agios
+  #   shortname: agios
+  #   hostname_prefix: agios-
+  #   community: neanderfunk
+  #   ffv4_network: 10.19.0.0/16
+  #   # Domäne 19 in Hex entspricht 13
+  #   ffv6_network: 2a03:2260:122:0613::/64
+  #   disable: false
+  #   name_adj: "Agios-"
+  #   lat: 51.2140
+  #   lon: 6.8255
+  #   zoom: 11
+  #   wifi24channel: 9
+  #   wifi5channel: 48
+  #   authorized_keys:
+      
+  
+  # "20":
+  #   name: Gertis
+  #   shortname: gertis
+  #   hostname_prefix: gertis-
+  #   community: neanderfunk
+  #   ffv4_network: 10.20.0.0/16
+  #   # Domäne 20 in Hex entspricht 14
+  #   ffv6_network: 2a03:2260:122:0614::/64
+  #   disable: false
+  #   name_adj: "Gertis-"
+  #   lat: 51.2140
+  #   lon: 6.8255
+  #   zoom: 11
+  #   wifi24channel: 9
+  #   wifi5channel: 48
+  #   authorized_keys:
+      
+  # "21":
+  #   name: Glastria
+  #   shortname: glastria
+  #   hostname_prefix: glastria-
+  #   community: neanderfunk
+  #   ffv4_network: 10.21.0.0/16
+  #   ffv6_network: 2a03:2260:122:0615::/64
+  #   disable: false
+  #   name_adj: "Glastria"
+  #   lat: 51.2140
+  #   lon: 6.8255
+  #   zoom: 11
+  #   wifi24channel: 9
+  #   wifi5channel: 48
+  #   authorized_keys:
+      
+  # "22":
+  #   name: Panagia
+  #   shortname: panagia
+  #   hostname_prefix: panagia-
+  #   community: neanderfunk
+  #   ffv4_network: 10.22.0.0/16
+  #   ffv6_network: 2a03:2260:122:0616::/64
+  #   disable: false
+  #   name_adj: "Panagia"
+  #   lat: 51.2140
+  #   lon: 6.8255
+  #   zoom: 11
+  #   wifi24channel: 9
+  #   wifi5channel: 48
+  #   authorized_keys:
+      
+  # "23":
+  #   name: Atokos
+  #   shortname: atokos
+  #   hostname_prefix: atokos-
+  #   community: neanderfunk
+  #   ffv4_network: 10.23.0.0/16
+  #   ffv6_network: 2a03:2260:122:0617::/64
+  #   disable: false
+  #   name_adj: "Atokos"
+  #   lat: 51.2140
+  #   lon: 6.8255
+  #   zoom: 11
+  #   wifi24channel: 9
+  #   wifi5channel: 48
+  #   authorized_keys:
+      
+  # "24":
+  #   name: Kravia
+  #   shortname: kravia
+  #   hostname_prefix: kravia-
+  #   community: neanderfunk
+  #   ffv4_network: 10.24.0.0/16
+  #   ffv6_network: 2a03:2260:122:0618::/64
+  #   disable: false
+  #   name_adj: "Kravia"
+  #   lat: 51.2140
+  #   lon: 6.8255
+  #   zoom: 11
+  #   wifi24channel: 9
+  #   wifi5channel: 48
+  #   authorized_keys:
+      
+  # "25":
+  #   name: Pasas
+  #   shortname: pasas
+  #   hostname_prefix: pasas-
+  #   community: neanderfunk
+  #   ffv4_network: 10.25.0.0/16
+  #   ffv6_network: 2a03:2260:122:0619::/64
+  #   disable: false
+  #   name_adj: "Pasas"
+  #   lat: 51.2140
+  #   lon: 6.8255
+  #   zoom: 11
+  #   wifi24channel: 9
+  #   wifi5channel: 48
+  #   authorized_keys:
+      
+  # "26":
+  #   name: Vatos
+  #   shortname: vatos
+  #   hostname_prefix: vatos-
+  #   community: neanderfunk
+  #   ffv4_network: 10.26.0.0/16
+  #   ffv6_network: 2a03:2260:122:061a::/64
+  #   disable: false
+  #   name_adj: "Vatos"
+  #   lat: 51.2140
+  #   lon: 6.8255
+  #   zoom: 11
+  #   wifi24channel: 9
+  #   wifi5channel: 48
+  #   authorized_keys:
+      
+  # "27":
+  #   name: Gordi
+  #   shortname: gordi
+  #   hostname_prefix: gordi-
+  #   community: neanderfunk
+  #   ffv4_network: 10.27.0.0/16
+  #   ffv6_network: 2a03:2260:122:061b::/64
+  #   disable: false
+  #   name_adj: "Gordi"
+  #   lat: 51.2140
+  #   lon: 6.8255
+  #   zoom: 11
+  #   wifi24channel: 9
+  #   wifi5channel: 48
+  #   authorized_keys:
+      
+  # "28":
+  #   name: Platia
+  #   shortname: platia
+  #   hostname_prefix: platia-
+  #   community: neanderfunk
+  #   ffv4_network: 10.28.0.0/16
+  #   ffv6_network: 2a03:2260:122:061c::/64
+  #   disable: false
+  #   name_adj: "Platia"
+  #   lat: 51.2140
+  #   lon: 6.8255
+  #   zoom: 11
+  #   wifi24channel: 9
+  #   wifi5channel: 48
+  #   authorized_keys:
+      
+  # "29":
+  #   name: Gavados
+  #   shortname: gavados
+  #   hostname_prefix: gavados-
+  #   community: neanderfunk
+  #   ffv4_network: 10.29.0.0/16
+  #   ffv6_network: 2a03:2260:122:061d::/64
+  #   disable: false
+  #   name_adj: "Gavados"
+  #   lat: 51.2140
+  #   lon: 6.8255
+  #   zoom: 11
+  #   wifi24channel: 9
+  #   wifi5channel: 48
+  #   authorized_keys:
+      
+  # "30":
+  #   name: Arisida
+  #   shortname: arisida
+  #   hostname_prefix: arisida-
+  #   community: neanderfunk
+  #   ffv4_network: 10.30.0.0/16
+  #   ffv6_network: 2a03:2260:122:061d::/64
+  #   disable: false
+  #   name_adj: "Arisida"
+  #   lat: 51.2140
+  #   lon: 6.8255
+  #   zoom: 11
+  #   wifi24channel: 9
+  #   wifi5channel: 48
+  #   authorized_keys:
+  # "31":
+  #   name: LVR-nordost
+  #   shortname: lvr-no
+  #   hostname_prefix: LVR-NO
+  #   community: Freifunk im Neanderland
+  #   metacommunity: Neanderfunk
+  #   metacom: ffnef
+  #   ffv4_network: 10.31.0.0/16
+  #   ffv6_network: 2a03:2260:122:061e::/64
+  #   disable: false
+  # "32":
+  #   name: LVR-nordwest
+  #   shortname: lvr-nw
+  #   hostname_prefix: LVR-nw
+  #   community: Freifunk im Neanderland
+  #   metacommunity: Neanderfunk
+  #   metacom: ffnef
+  #   ffv4_network: 10.32.0.0/16
+  #   ffv6_network: 2a03:2260:122:061f::/64
+  #   disable: false
+  # "33":
+  #   name: LVR-mitteost
+  #   shortname: lvr-mo
+  #   hostname_prefix: LVR-mo
+  #   community: Freifunk im Neanderland
+  #   metacommunity: Neanderfunk
+  #   metacom: ffnef
+  #   ffv4_network: 10.33.0.0/16
+  #   ffv6_network: 2a03:2260:122:0620::/64
+  #   disable: false
+  # "34":
+  #   name: LVR-mittewest
+  #   shortname: lvr-mw
+  #   hostname_prefix: LVR-MW
+  #   community: Freifunk im Neanderland
+  #   metacommunity: Neanderfunk
+  #   metacom: ffnef
+  #   ffv4_network: 10.34.0.0/16
+  #   ffv6_network: 2a03:2260:122:0621::/64
+  #   disable: false
+  # "35":
+  #   name: LVR-suedost
+  #   shortname: lvr-so
+  #   hostname_prefix: LVR-SO
+  #   community: Freifunk im Neanderland
+  #   metacommunity: Neanderfunk
+  #   metacom: ffnef
+  #   ffv4_network: 10.35.0.0/16
+  #   ffv6_network: 2a03:2260:122:0622::/64
+  #   disable: false
+  # "36":
+  #   name: LVR-suedwest
+  #   shortname: lvr-sw
+  #   hostname_prefix: LVR-Sw
+  #   community: Freifunk im Neanderland
+  #   metacommunity: Neanderfunk
+  #   metacom: ffnef
+  #   ffv4_network: 10.36.0.0/16
+  #   ffv6_network: 2a03:2260:122:0623::/64
+  #   disable: false

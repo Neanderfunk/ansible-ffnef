@@ -169,7 +169,7 @@ ff_network:
   # Eindeutige AS-Nummer des Netzwerk
   as_number: 65125
   # IPv4 Adressraum
-  v4_network: 10.43.0.0/16
+  v4_network: 10.0.0.0/8
   # IPv6 adressraum
   v6_network: 2a03:2260:122::/48
   # IPv6 anycast ::ac1 in decimal
@@ -244,32 +244,197 @@ ntp:
 
 
 domaenenliste:
-   "12":
-      dhcp_start: 10.155.129.0
-      dhcp_ende: 10.155.255.255
+   "12": # Netz 0.176.0 - 0.191.255 /20 für die Clients
+      dhcp_start: 10.30.177.0
+      dhcp_ende: 10.30.191.254
       server_id: 3
-   "13":
-      dhcp_start: 10.155.1.0
-      dhcp_ende: 10.155.127.255
+   "13": # Netz 0.192.0 - 0.207.255 /20 für die Clients
+      dhcp_start: 10.30.193.0
+      dhcp_ende: 10.30.207.254
       server_id: 3   
-   "14":
-      dhcp_start: 10.156.1.0
-      dhcp_ende: 10.156.255.255
+   "14": # Netz 0.208.0 - 0.223.255 /20 für die Clients
+      dhcp_start: 10.30.209.0
+      dhcp_ende: 10.30.223.254
       server_id: 3
-   "15":
-      dhcp_start: 10.157.1.0
-      dhcp_ende: 10.157.255.255
+   "15": # Netz 0.224.0 - 0.239.255 /20 für die Clients
+      dhcp_start: 10.30.225.0
+      dhcp_ende: 10.30.239.254
       server_id: 3
-   "16":
-      dhcp_start: 10.158.1.0
-      dhcp_ende: 10.158.255.255
+   "16": # Netz 0.240.0 - 0.255.255 /20 für die Clients
+      dhcp_start: 10.30.241.0
+      dhcp_ende: 10.30.255.254
       server_id: 3
-   "17":
-      dhcp_start: 10.159.1.0
-      dhcp_ende: 10.159.255.255
+   "17": # Netz 1.0.0 - 1.15.255 /20 für die Clients
+      dhcp_start: 10.31.1.0
+      dhcp_ende: 10.31.15.254
       server_id: 3
+
+   # Weitere mögliche Blöcke
+
+   # Netz .96.0 - 111.255 /20 für die Clients
+   # Netz .112.0 - 127.255 /20 für die Clients
+   # Netz .128.0 - 143.255 /20 für die Clients
+   # Netz .144.0 - 159.255 /20 für die Clients
+   # Netz .160.0 - 175.255 /20 für die Clients
+   # Netz .176.0 - 191.255 /20 für die Clients
+   # Netz .192.0 - 207.255 /20 für die Clients
+   # Netz .208.0 - 223.255 /20 für die Clients
+   # Netz .224.0 - 239.255 /20 für die Clients
+   # Netz .240.0 - 254.255 /20 für die Clients
+
+   # Weitere Netze sind bis zum nächsten 10er Block im 2ten Oktet möglich:
+   # 10.31.xxx.xxx - 10.39.xxx.xxx
+
+   # Alte Netze: FFNef ToDo: Aufräumen @alex
+
+   # "12":
+   #    dhcp_start: 10.155.129.0
+   #    dhcp_ende: 10.155.255.255
+   #    server_id: 3
+   # "13":
+   #    dhcp_start: 10.155.1.0
+   #    dhcp_ende: 10.155.127.255
+   #    server_id: 3   
+   # "14":
+   #    dhcp_start: 10.156.1.0
+   #    dhcp_ende: 10.156.255.255
+   #    server_id: 3
+   # "15":
+   #    dhcp_start: 10.157.1.0
+   #    dhcp_ende: 10.157.255.255
+   #    server_id: 3
+   # "16":
+   #    dhcp_start: 10.158.1.0
+   #    dhcp_ende: 10.158.255.255
+   #    server_id: 3
+   # "17":
+   #    dhcp_start: 10.159.1.0
+   #    dhcp_ende: 10.159.255.255
+   #    server_id: 3
 
 
 
 
 domaenen:
+  "12":
+    name: Düsseldorf-Unterkünfte
+    shortname: dusuk
+    hostname_prefix: dusuk-
+    community: flingern
+    ffv4_network: 10.30.176.0/20
+    # Domäne 12 in Hex entspricht 0c
+    ffv6_network: 2a03:2260:122:030c::/64
+    name_adj: "düsseldorfer Unterkunfts-"
+    disable: false
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: mon/
+    lat: 51.2140
+    lon: 6.8255
+    zoom: 11
+    wifi24channel: 9
+    wifi5channel: 48
+    authorized_keys:
+      
+  "13":
+    name: Düsseldorf-Flingern
+    shortname: dusfl
+    hostname_prefix: dusfl-
+    community: flingern
+    ffv4_network: 10.30.192.0/20
+    # Domäne 13 in Hex entspricht 0d
+    ffv6_network: 2a03:2260:122:030d::/64
+    disable: false
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: dusfl/
+    lat: 51.2236
+    lon: 6.8228
+    zoom: 14
+    wifi24channel: 9
+    wifi5channel: 48
+    authorized_keys:
+      
+  "14":
+    name: Wuppertal-Barmen
+    shortname: bar
+    hostname_prefix: bar-
+    community: Wuppertal-Hilfsdomain
+    ffv4_network: 10.30.208.0/20
+    # Domäne 14 in Hex entspricht 0e
+    ffv6_network: 2a03:2260:122:030e::/64
+    disable: false
+    name_adj: "wuppertaler"
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: bar/
+    lat: 51.2645
+    lon: 7.1835
+    zoom: 12
+    wifi24channel: 9
+    wifi5channel: 44
+    authorized_keys:
+      
+  "15":
+    name: Marienheide
+    shortname: mrh
+    hostname_prefix: mrh-
+    community: ffnrw
+    ffv4_network: 10.30.224.0/20
+    # Domäne 15 in Hex entspricht 0f
+    ffv6_network: 2a03:2260:122:030f::/64
+    disable: false
+    name_adj: "marienheider"
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: mrh/
+    lat: 51.0832
+    lon: 7.5330
+    zoom: 14
+    wifi24channel: 9
+    wifi5channel: 48
+    authorized_keys:
+      
+  "16":
+    name: Gummersbach
+    shortname: gmb
+    hostname_prefix: gmb-
+    community: ffnrw
+    ffv4_network: 10.30.240.0/20
+    # Domäne 16 in Hex entspricht 10
+    ffv6_network: 2a03:2260:122:0310::/64
+    disable: false
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: mon/
+    lat: 51.0227
+    lon: 7.5627
+    zoom: 14
+    wifi24channel: 9
+    wifi5channel: 44
+    authorized_keys:
+      
+  "17":
+    name: Wipperfürth
+    shortname: wip
+    hostname_prefix: wip-
+    community: ffnrw
+    ffv4_network: 10.31.0.0/20
+    # Domäne 17 in Hex entspricht 11
+    ffv6_network: 2a03:2260:122:0311::/64
+    disable: false
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: mon/
+    lat: 51.1173
+    lon: 7.3940
+    zoom: 13
+    wifi24channel: 9
+    wifi5channel: 44
+    authorized_keys:
