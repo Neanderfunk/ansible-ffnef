@@ -568,7 +568,7 @@ domaenen:
     community: neanderfunk
     #ffv4_network: 10.51.208.0/20
     ffv4_network: 10.30.0.0/16
-    ffv6_network: 2a03:2260:122:051d::/64
+    ffv6_network: 2a03:2260:122:051e::/64
     disable: false
     name_adj: "Arisida"
     lat: 51.2140
@@ -586,7 +586,7 @@ domaenen:
     metacom: ffnef
     #ffv4_network: 10.51.224.0/20
     ffv4_network: 10.31.0.0/16
-    ffv6_network: 2a03:2260:122:051e::/64
+    ffv6_network: 2a03:2260:122:051f::/64
     disable: false
   "32":
     name: LVR-nordwest
@@ -597,7 +597,7 @@ domaenen:
     metacom: ffnef
     #ffv4_network: 10.51.240.0/20
     ffv4_network: 10.32.0.0/16
-    ffv6_network: 2a03:2260:122:051f::/64
+    ffv6_network: 2a03:2260:122:0520::/64
     disable: false
   "33":
     name: LVR-mitteost
@@ -608,7 +608,7 @@ domaenen:
     metacom: ffnef
     #ffv4_network: 10.52.0.0/20
     ffv4_network: 10.33.0.0/16
-    ffv6_network: 2a03:2260:122:0520::/64
+    ffv6_network: 2a03:2260:122:0521::/64
     disable: false
   "34":
     name: LVR-mittewest
@@ -619,7 +619,7 @@ domaenen:
     metacom: ffnef
     #ffv4_network: 10.52.16.0/20
     ffv4_network: 10.34.0.0/16
-    ffv6_network: 2a03:2260:122:0521::/64
+    ffv6_network: 2a03:2260:122:0522::/64
     disable: false
   "35":
     name: LVR-suedost
@@ -630,7 +630,7 @@ domaenen:
     metacom: ffnef
     #ffv4_network: 10.52.32.0/20
     ffv4_network: 10.35.0.0/16
-    ffv6_network: 2a03:2260:122:0522::/64
+    ffv6_network: 2a03:2260:122:0523::/64
     disable: false
   "36":
     name: LVR-suedwest
@@ -641,5 +641,5 @@ domaenen:
     metacom: ffnef
     #ffv4_network: 10.52.48.0/20
     ffv4_network: 10.36.0.0/16
-    ffv6_network: 2a03:2260:122:0523::/64
+    ffv6_network: 2a03:2260:122:0524::/64
     disable: false
