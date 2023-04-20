@@ -224,7 +224,7 @@ ntp:
 
 
 domaenenliste:
-  # Temporär himalia auf ganymed
+  # himalia 
 
   "18": # Netz 1.16.0 - 1.31.255 /20 für die Clients
     #dhcp_start: 10.51.17.0
@@ -298,6 +298,7 @@ domaenenliste:
     dhcp_start: 10.29.1.0
     dhcp_ende: 10.29.255.255
     server_id: 5
+  #Solingen
   "30": # Netz 1.208.0 - 1.223.255 /20 für die Clients
     #dhcp_start: 10.51.209.0
     #dhcp_ende: 10.51.223.254
@@ -562,15 +563,17 @@ domaenen:
     authorized_keys:
       
   "30":
-    name: Arisida
-    shortname: arisida
-    hostname_prefix: arisida-
+    name: Solingen
+    shortname: Solingen
+    hostname_prefix: sol-
     community: neanderfunk
+    metacommunity: Neanderfunk
+    metacom: ffnef
     #ffv4_network: 10.51.208.0/20
     ffv4_network: 10.30.0.0/16
     ffv6_network: 2a03:2260:122:051e::/64
     disable: false
-    name_adj: "Arisida"
+    name_adj: "Solingen"
     lat: 51.2140
     lon: 6.8255
     zoom: 11
