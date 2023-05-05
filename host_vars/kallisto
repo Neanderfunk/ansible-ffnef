@@ -223,33 +223,42 @@ ntp:
 
 
 domaenenliste:
-  #  "12": # Netz 0.176.0 - 0.191.255 /20 für die Clients
-  #     dhcp_start: 10.30.177.0
-  #     dhcp_ende: 10.30.191.254
-  #     server_id: 3
-  #  "13": # Netz 0.192.0 - 0.207.255 /20 für die Clients
-  #     dhcp_start: 10.30.193.0
-  #     dhcp_ende: 10.30.207.254
-  #     server_id: 3   
-  #  "14": # Netz 0.208.0 - 0.223.255 /20 für die Clients
-  #     dhcp_start: 10.30.209.0
-  #     dhcp_ende: 10.30.223.254
-  #     server_id: 3
-  #  "15": # Netz 0.224.0 - 0.239.255 /20 für die Clients
-  #     dhcp_start: 10.30.225.0
-  #     dhcp_ende: 10.30.239.254
-  #     server_id: 3
+   "12": # Netz 0.176.0 - 0.191.255 /20 für die Clients
+      # dhcp_start: 10.30.177.0
+      # dhcp_ende: 10.30.191.254
+      # Temporärer falscher IP Bereich, bis neue Firmware gebaut wurde
+      dhcp_start: 10.0.177.0
+      dhcp_ende: 10.0.191.254
+      server_id: 3
+   "13": # Netz 0.192.0 - 0.207.255 /20 für die Clients
+      dhcp_start: 10.30.193.0
+      dhcp_ende: 10.30.207.254
+      server_id: 3   
+   "14": # Netz 0.208.0 - 0.223.255 /20 für die Clients
+      dhcp_start: 10.30.209.0
+      dhcp_ende: 10.30.223.254
+      server_id: 3
+   "15": # Netz 0.224.0 - 0.239.255 /20 für die Clients
+      dhcp_start: 10.30.225.0
+      dhcp_ende: 10.30.239.254
+      server_id: 3
   #  "16": # Netz 0.240.0 - 0.255.255 /20 für die Clients
   #     dhcp_start: 10.30.241.0
   #     dhcp_ende: 10.30.255.254
   #     server_id: 3
-  #  "17": # Netz 1.0.0 - 1.15.255 /20 für die Clients
-  #     dhcp_start: 10.31.1.0
-  #     dhcp_ende: 10.31.15.254
-  #     server_id: 3
+   "17": # Netz 1.0.0 - 1.15.255 /20 für die Clients
+      dhcp_start: 10.31.1.0
+      dhcp_ende: 10.31.15.254
+      server_id: 3
 
    # Weitere mögliche Blöcke
 
+   # Netz .0.0   - 15.255 /20 für die Clients
+   # Netz .16.0  - 31.255 /20 für die Clients
+   # Netz .32.0  - 47.255 /20 für die Clients
+   # Netz .48.0  - 63.255 /20 für die Clients
+   # Netz .64.0  - 79.255 /20 für die Clients
+   # Netz .80.0  - 95.255 /20 für die Clients
    # Netz .96.0 - 111.255 /20 für die Clients
    # Netz .112.0 - 127.255 /20 für die Clients
    # Netz .128.0 - 143.255 /20 für die Clients
@@ -266,30 +275,30 @@ domaenenliste:
 
    # Alte Netze: FFNef ToDo: Aufräumen @alex
 
-   "12":
-      dhcp_start: 10.155.129.0
-      dhcp_ende: 10.155.255.255
-      server_id: 3
-   "13":
-      dhcp_start: 10.155.1.0
-      dhcp_ende: 10.155.127.255
-      server_id: 3   
-   "14":
-      dhcp_start: 10.156.1.0
-      dhcp_ende: 10.156.255.255
-      server_id: 3
-   "15":
-      dhcp_start: 10.157.1.0
-      dhcp_ende: 10.157.255.255
-      server_id: 3
-   "16":
-      dhcp_start: 10.158.1.0
-      dhcp_ende: 10.158.255.255
-      server_id: 3
-   "17":
-      dhcp_start: 10.159.1.0
-      dhcp_ende: 10.159.255.255
-      server_id: 3
+  #  "12":
+  #     dhcp_start: 10.155.129.0
+  #     dhcp_ende: 10.155.255.255
+  #     server_id: 3
+  #  "13":
+  #     dhcp_start: 10.155.1.0
+  #     dhcp_ende: 10.155.127.255
+  #     server_id: 3   
+  #  "14":
+  #     dhcp_start: 10.156.1.0
+  #     dhcp_ende: 10.156.255.255
+  #     server_id: 3
+  #  "15":
+  #     dhcp_start: 10.157.1.0
+  #     dhcp_ende: 10.157.255.255
+  #     server_id: 3
+  #  "16":
+  #     dhcp_start: 10.158.1.0
+  #     dhcp_ende: 10.158.255.255
+  #     server_id: 3
+  #  "17":
+  #     dhcp_start: 10.159.1.0
+  #     dhcp_ende: 10.159.255.255
+  #     server_id: 3
 
 
 
@@ -301,7 +310,9 @@ domaenen:
     hostname_prefix: dusuk-
     community: flingern
     #ffv4_network: 10.30.176.0/20
-    ffv4_network: 10.155.128.0/17
+    # Temporärer falscher IP Bereich, bis neue Firmware gebaut wurde
+    ffv4_network: 10.0.176.0/20
+    # ffv4_network: 10.155.128.0/17
     # Domäne 12 in Hex entspricht 0c
     ffv6_network: 2a03:2260:122:030c::/64
     name_adj: "düsseldorfer Unterkunfts-"
@@ -322,8 +333,8 @@ domaenen:
     shortname: dusfl
     hostname_prefix: dusfl-
     community: flingern
-    #ffv4_network: 10.30.192.0/20
-    ffv4_network: 10.155.0.0/17
+    ffv4_network: 10.30.192.0/20
+    # ffv4_network: 10.155.0.0/17
     # Domäne 13 in Hex entspricht 0d
     ffv6_network: 2a03:2260:122:030d::/64
     disable: false
@@ -343,8 +354,8 @@ domaenen:
     shortname: bar
     hostname_prefix: bar-
     community: Wuppertal-Hilfsdomain
-    #ffv4_network: 10.30.208.0/20
-    ffv4_network: 10.156.0.0/16
+    ffv4_network: 10.30.208.0/20
+    # ffv4_network: 10.156.0.0/16
     # Domäne 14 in Hex entspricht 0e
     ffv6_network: 2a03:2260:122:030e::/64
     disable: false
@@ -365,8 +376,8 @@ domaenen:
     shortname: mrh
     hostname_prefix: mrh-
     community: ffnrw
-    #ffv4_network: 10.30.224.0/20
-    ffv4_network: 10.157.0.0/16
+    ffv4_network: 10.30.224.0/20
+    # ffv4_network: 10.157.0.0/16
     # Domäne 15 in Hex entspricht 0f
     ffv6_network: 2a03:2260:122:030f::/64
     disable: false
@@ -382,34 +393,34 @@ domaenen:
     wifi5channel: 48
     authorized_keys:
       
-  "16":
-    name: Gummersbach
-    shortname: gmb
-    hostname_prefix: gmb-
-    community: ffnrw
-    #ffv4_network: 10.30.240.0/20
-    ffv4_network: 10.158.0.0/16
-    # Domäne 16 in Hex entspricht 10
-    ffv6_network: 2a03:2260:122:0310::/64
-    disable: false
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
-    lat: 51.0227
-    lon: 7.5627
-    zoom: 14
-    wifi24channel: 9
-    wifi5channel: 44
-    authorized_keys:
+#   "16":
+#     name: Gummersbach
+#     shortname: gmb
+#     hostname_prefix: gmb-
+#     community: ffnrw
+#     ffv4_network: 10.30.240.0/20
+#     # ffv4_network: 10.158.0.0/16
+#     # Domäne 16 in Hex entspricht 10
+#     ffv6_network: 2a03:2260:122:0310::/64
+#     disable: false
+# #   map_scale: 0.9
+# #   map_show_contact: false
+# #   map_max_age: 14
+# #   firmware: mon/
+#     lat: 51.0227
+#     lon: 7.5627
+#     zoom: 14
+#     wifi24channel: 9
+#     wifi5channel: 44
+#     authorized_keys:
       
   "17":
     name: Wipperfürth
     shortname: wip
     hostname_prefix: wip-
     community: ffnrw
-    #ffv4_network: 10.31.0.0/20
-    ffv4_network: 10.159.0.0/16
+    ffv4_network: 10.31.0.0/20
+    # ffv4_network: 10.159.0.0/16
     # Domäne 17 in Hex entspricht 11
     ffv6_network: 2a03:2260:122:0311::/64
     disable: false

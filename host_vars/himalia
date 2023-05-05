@@ -224,25 +224,30 @@ ntp:
 
 
 domaenenliste:
-  # himalia 
+
+  # Temporär auf diesen Supernode zum fixen
+  "16": # Netz 0.225.0 - 0.239.255 /20 für die Clients
+    dhcp_start: 10.30.225.0
+    dhcp_ende: 10.30.239.254
+    server_id: 3
 
   "18": # Netz 1.16.0 - 1.31.255 /20 für die Clients
-    #dhcp_start: 10.51.17.0
-    #dhcp_ende: 10.51.31.254
-    dhcp_start: 10.18.1.0
-    dhcp_ende: 10.18.255.255
+    dhcp_start: 10.51.17.0
+    dhcp_ende: 10.51.31.254
+    # dhcp_start: 10.18.1.0
+    # dhcp_ende: 10.18.255.255
     server_id: 5
   "19": # Netz 1.32.0 - 1.47.255 /20 für die Clients
-    #dhcp_start: 10.51.33.0
-    #dhcp_ende: 10.51.47.254
-    dhcp_start: 10.19.1.0
-    dhcp_ende: 10.19.255.255
+    dhcp_start: 10.51.33.0
+    dhcp_ende: 10.51.47.254
+    # dhcp_start: 10.19.1.0
+    # dhcp_ende: 10.19.255.255
     server_id: 5
   "20": # Netz 1.48.0 - 1.63.255 /20 für die Clients
-    #dhcp_start: 10.51.49.0
-    #dhcp_ende: 10.51.63.254
-    dhcp_start: 10.20.1.0
-    dhcp_ende: 10.20.255.255
+    dhcp_start: 10.51.49.0
+    dhcp_ende: 10.51.63.254
+    # dhcp_start: 10.20.1.0
+    # dhcp_ende: 10.20.255.255
     server_id: 5
   "21": # Netz 1.64.0 - 1.79.255 /20 für die Clients
     #dhcp_start: 10.51.65.0
@@ -300,10 +305,10 @@ domaenenliste:
     server_id: 5
   #Solingen
   "30": # Netz 1.208.0 - 1.223.255 /20 für die Clients
-    #dhcp_start: 10.51.209.0
-    #dhcp_ende: 10.51.223.254
-    dhcp_start: 10.30.1.0
-    dhcp_ende: 10.30.255.255
+    dhcp_start: 10.51.209.0
+    dhcp_ende: 10.51.223.254
+    # dhcp_start: 10.30.1.0
+    # dhcp_ende: 10.30.255.255
     server_id: 5
   #LVR-Nordost
   "31": # Netz 1.224.0 - 1.239.255 /20 für die Clients
@@ -353,13 +358,36 @@ domaenenliste:
 
 domaenen:
 
+  # Temporär auf diesen Supernode zum fixen
+  "16":
+    name: Gummersbach
+    shortname: gmb
+    hostname_prefix: gmb-
+    community: ffnrw
+    ffv4_network: 10.30.224.0/20
+    # ffv4_network: 10.158.0.0/16
+    # Domäne 16 in Hex entspricht 10
+    ffv6_network: 2a03:2260:122:0310::/64
+    disable: false
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: mon/
+    lat: 51.0227
+    lon: 7.5627
+    zoom: 14
+    wifi24channel: 9
+    wifi5channel: 44
+    authorized_keys:
+
+
   "18":
     name: Neander-Unterkünfte
     shortname: NeanderUK
     hostname_prefix: ffnefuk-
     community: neanderfunk
-    #ffv4_network: 10.51.16.0/20
-    ffv4_network: 10.18.0.0/16
+    ffv4_network: 10.51.16.0/20
+    # ffv4_network: 10.18.0.0/16
     # Domäne 18 in Hex entspricht 12
     ffv6_network: 2a03:2260:122:0512::/64
     name_adj: "Freifunk im Neanderlands Unterkunfts-"
@@ -377,8 +405,8 @@ domaenen:
     shortname: agios
     hostname_prefix: agios-
     community: neanderfunk
-    #ffv4_network: 10.51.32.0/20
-    ffv4_network: 10.19.0.0/16
+    ffv4_network: 10.51.32.0/20
+    # ffv4_network: 10.19.0.0/16
     # Domäne 19 in Hex entspricht 13
     ffv6_network: 2a03:2260:122:0513::/64
     disable: false
@@ -396,8 +424,8 @@ domaenen:
     shortname: gertis
     hostname_prefix: gertis-
     community: neanderfunk
-    #ffv4_network: 10.51.48.0/20
-    ffv4_network: 10.20.0.0/16
+    ffv4_network: 10.51.48.0/20
+    # ffv4_network: 10.20.0.0/16
     # Domäne 20 in Hex entspricht 14
     ffv6_network: 2a03:2260:122:0514::/64
     disable: false
@@ -569,8 +597,8 @@ domaenen:
     community: neanderfunk
     metacommunity: Neanderfunk
     metacom: ffnef
-    #ffv4_network: 10.51.208.0/20
-    ffv4_network: 10.30.0.0/16
+    ffv4_network: 10.51.208.0/20
+    #ffv4_network: 10.30.0.0/16
     ffv6_network: 2a03:2260:122:051e::/64
     disable: false
     name_adj: "Solingen"

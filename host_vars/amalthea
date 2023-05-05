@@ -1,12 +1,69 @@
 server_id: 4
 vm_id: 4
 
-
 server_besitzer: "FFNEF"
 hoster: "hetzner"
+info_produkt: "SB"
+
+
+
+
+# Allgemeine Einstellungen
+use_wlan_slovenija_tunneldigger : true
+
+# TODO: FFNEF Wird aktuell nicht gebraucht. Nutzung gre supernode mesh und mapserver anbindung.
+#       Da wir kein Mesh nutzen und der Mapserver als Client in allen Domänen ist wird es nicht gebraucht.
+#build_tunnels_over_ipv6_if_available: true
+
+
+dhcp_type: "kea"
+
+# Kea Konfiguration START
+kea:
+  database:
+    type: "postgresql"
+    db_host: "127.0.0.1"
+    db_name: "kea_leases"
+    db_user: "kea"
+    db_pass: "{{kea_postgres_pw}}"
+  global:
+    mtu: 1364
+    lease_default: 1200
+    search_domain: "{{freifunk.search_domain}}"
+    unifiinformip: "193.70.47.63" # unifi.ffnef.de
+  dns:
+    all_gateways: true
+    additional:
+      # opendns
+      - "208.67.222.222"
+      # google
+      - "8.8.8.8"
+
+  routers:
+    all_gateways: false
+  loggers:
+    - name: "kea-dhcp4"
+      level: "WARN"
+      file: "/var/log/kea-dhcp4.log"
+  expired_leases:
+    - name: "reclaim-timer-wait-time"
+      value: 4
+    - name: "flush-reclaimed-timer-wait-time"
+      value: 10
+    - name: "hold-reclaimed-time"
+      value: 72000
+    - name: "max-reclaim-leases"
+      value: 15000
+    - name: "max-reclaim-time"
+      value: 3000
+    - name: "unwarned-reclaim-cycles"
+      value: 5
+# Kea Konfiguration ENDE
+
+
+# Uplink Tunnel START
 
 ffrl_nat_ip: 185.66.195.90/31
-#ffrl_nat_ip: 185.66.193.79/31 
 
 #ffrl-tunnel neander-3
 
@@ -41,71 +98,527 @@ ffrl_tun:
   v6_remote: 2a03:2260:0:42d::1/64
   
 
-
-is_external_nameserver: false
-
-domaenenliste:
-   "01":
-      dhcp_start: 10.1.96.0 
-      dhcp_ende: 10.1.127.255
-      server_id: 4
-      #partner: "himalia"
-   "02":
-      dhcp_start: 10.2.96.0  
-      dhcp_ende: 10.2.127.255
-      server_id: 4
-      #partner: "himalia"
-   "03":
-      dhcp_start: 10.3.96.0  
-      dhcp_ende: 10.3.127.255
-      server_id: 4
-      #partner: "himalia"
-   "04":
-      dhcp_start: 10.4.96.0  
-      dhcp_ende: 10.4.127.255
-      server_id: 4
-      #partner: "himalia"
-   "05":
-      dhcp_start: 10.5.96.0  
-      dhcp_ende: 10.5.127.255
-      server_id: 4
-   "06":
-      dhcp_start: 10.6.96.0  
-      dhcp_ende: 10.6.127.255
-      server_id: 4
-   "07":
-      dhcp_start: 10.7.96.0  
-      dhcp_ende: 10.7.127.255
-      server_id: 4
-   "08":
-      dhcp_start: 10.8.96.0  
-      dhcp_ende: 10.8.127.255
-      server_id: 4
-   "09":
-      dhcp_start: 10.9.96.0  
-      dhcp_ende: 10.9.127.255
-      server_id: 4
-   "10":
-      dhcp_start: 10.10.96.0  
-      dhcp_ende: 10.10.127.255
-      server_id: 4
-   "11":
-      dhcp_start: 10.11.96.0  
-      dhcp_ende: 10.11.127.255
-      server_id: 4
+# Uplink Tunnel ENDE
 
 
-dhcp_type: "kea"
+# Batman START # TODO: FFNEF Überarbeiten, aktuell wird es nicht verwendet, da role kaputt.
+batman_version: "2022.1"
 
+batman:
+  version: 2022.1
+  # Bandbreite, die Batman annoncieren soll
+  downstream: 1024Mbit
+  # Bandbreite, die Batman annoncieren soll
+  upstream: 1024Mbit
+
+# Batman ENDE
+
+
+# Tunneldigger
 tunneldigger:
   instance_per_domain: true
-  interface: "eth0"
+  interface: "ens18"
   max_tunnels: 1024
   port_base: 20100
   pmtu_discovery: false
   tunnel_timeout: 60
 
-use_wlan_slovenija_tunneldigger: true
+
+# unattended upgrades
+unattended_upgrades:
+  origins_pattern:
+    - "${distro_id}:${distro_codename}-updates"
+    - "${distro_id}:${distro_codename}-proposed"
+    - "${distro_id}:${distro_codename}-backports"
+    - "apt.postgresql.org:*"
+
+# Nameserver Konfiguration START
+
+is_external_nameserver: false
+
+bind:
+  ffnet_zone_type: slave
+  ffnet_zone_masters:
+     - 10.45.67.123
+bind_zonemaster:
+  server: localhost
+  email: kontakt@neanderfunk.de
+
+# Nameserver Konfiguration ENDE
 
 
-batman_version: "2019.4"
+# Gluon globale Variablen # TODO: FFNEF Wird nirgends verwendet?
+gluon_global_vars:
+  wifi24channel: 9
+  wifi5channel: 48
+  authorized_admins:
+   - "adorfer"
+   - "plaste"
+   - "alex_fw"
+
+
+
+# TODO: FFNEF Wird nirgends verwendet?
+# Nummer der Routing Tabelle, die auf den Servern verwendet wird
+routing_table: 42
+
+
+# Parameter für das eigene Freifunk-Netzwerk
+ff_network:
+  # Eindeutige AS-Nummer des Netzwerk
+  as_number: 64863
+  # IPv4 Adressraum
+  v4_network: 10.0.0.0/8
+  # IPv6 adressraum
+  v6_network: 2a03:2260:300e::/48
+  # IPv6 anycast ::ac1 in decimal
+  v6_anycast: 2753
+
+# Verwendung bei bird6
+ipv6backbone64prefixstr: "2a03:2260:300e::"
+
+
+# Logrotate START
+
+logrotate:
+  cycle: daily
+  count: 3
+  setsu: yes
+  updateconfs: no
+  updateglobalconf: no
+  updatebtmpconf: no
+  updatewtmpconf: no
+
+journald:
+  zeitbegrenzung: no
+
+# Logrotate ENDE
+
+
+freifunk:
+  name: "Freifunk im Neanderland"
+  kurzname: "ffnef"
+  motdkurzname: "FFNEF" # WIrd nur für das MotD Logo verwendet
+  search_domain: "ffnef.de" # benutzt bei der kea Konfiguration
+  email: kontakt@neanderfunk.de
+  domain: ffnef.de
+  ffnet_dns_entries_for_internal_tld:
+    "unifi":
+       A: 193.70.47.63
+       AAAA: 2001:41d0:303:d3f:8000:0:a:f21d
+    "unifi-legacy":
+       A: 193.70.47.63
+       AAAA: 2001:41d0:303:d3f:8000:0:a:f21d
+
+domains:
+  "ffnef.de":
+    extern_dns:
+      # -
+      # -
+    email: admin@neanderfunk.de
+
+
+
+check_mk:
+  deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_2.1.0p1-1_all.deb
+
+
+# TODO: FFNEF Deaktiviert, da wir lieber Nutzer mit sudo Rechten nutzen wollen, anstatt Login über dne root Account
+# administratorenteam:
+#   - "adorfer"
+#   - "plaste"
+#   - "alex"
+
+administratorenuser:
+  - "adorfer"
+  - "plaste"
+  - "alex"
+
+
+# TODO:FFNEF  Wird nicht verwendet?
+ntp:
+  intern: "ntp.ffnef"
+  extern: "ntp.ffnef.de"
+
+
+
+domaenenliste:
+   "01": # Netz 0.0.0 - 0.15.255 /20 für die Clients
+      dhcp_start: 10.40.1.0
+      dhcp_ende: 10.40.15.254
+      server_id: 4
+   "02": # Netz 0.16.0 - 0.31.255 /20 für die Clients
+      dhcp_start: 10.40.17.0
+      dhcp_ende: 10.40.31.254
+      server_id: 4   
+   "03": # Netz 0.32.0 - 0.47.255 /20 für die Clients
+      dhcp_start: 10.40.33.0
+      dhcp_ende: 10.40.47.254
+      server_id: 4
+   "04": # Netz 0.48.0 - 0.63.255 /20 für die Clients
+      dhcp_start: 10.40.49.0
+      dhcp_ende: 10.40.63.254
+      server_id: 4
+   "05": # Netz 0.64.0 - 0.79.255 /20 für die Clients
+      dhcp_start: 10.40.65.0
+      dhcp_ende: 10.40.79.254
+      server_id: 4
+   "06": # Netz 0.80.0 - 0.95.255 /20 für die Clients
+      dhcp_start: 10.40.81.0
+      dhcp_ende: 10.40.95.254
+      server_id: 4
+   "07": # Netz 0.96.0 - 0.111.255 /20 für die Clients
+      dhcp_start: 10.40.97.0
+      dhcp_ende: 10.40.111.254
+      server_id: 4
+   "08": # Netz 0.112.0 - 0.127.255 /20 für die Clients
+      dhcp_start: 10.40.113.0
+      dhcp_ende: 10.40.127.254
+      server_id: 4
+   "09": # Netz 0.128.0 - 0.143.255 /20 für die Clients
+      dhcp_start: 10.40.129.0
+      dhcp_ende: 10.40.143.254
+      server_id: 4
+   "10": # Netz 0.144.0 - 0.159.255 /20 für die Clients
+      dhcp_start: 10.40.145.0
+      dhcp_ende: 10.40.159.254
+      server_id: 4
+   "11": # Netz 0.160.0 - 0.175.255 /20 für die Clients
+      dhcp_start: 10.40.161.0
+      dhcp_ende: 10.40.175.254
+      server_id: 4
+
+   # Weitere mögliche Blöcke
+
+   # Netz .0.0   - 15.255 /20 für die Clients
+   # Netz .16.0  - 31.255 /20 für die Clients
+   # Netz .32.0  - 47.255 /20 für die Clients
+   # Netz .48.0  - 63.255 /20 für die Clients
+   # Netz .64.0  - 79.255 /20 für die Clients
+   # Netz .80.0  - 95.255 /20 für die Clients
+   # Netz .96.0  - 111.255 /20 für die Clients
+   # Netz .112.0 - 127.255 /20 für die Clients
+   # Netz .128.0 - 143.255 /20 für die Clients
+   # Netz .144.0 - 159.255 /20 für die Clients
+   # Netz .160.0 - 175.255 /20 für die Clients
+   # Netz .176.0 - 191.255 /20 für die Clients
+   # Netz .192.0 - 207.255 /20 für die Clients
+   # Netz .208.0 - 223.255 /20 für die Clients
+   # Netz .224.0 - 239.255 /20 für die Clients
+   # Netz .240.0 - 254.255 /20 für die Clients
+
+   # Weitere Netze sind bis zum nächsten 10er Block im 2ten Oktet möglich:
+   # 10.31.xxx.xxx - 10.39.xxx.xxx
+
+
+
+
+
+domaenen:
+  "01":
+    name: Velbert
+    shortname: vel
+    hostname_prefix: VEL-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.40.0.0/20
+    # Domäne 01 in Hex entspricht 01
+    ffv6_network: 2a03:2260:300e:0401::/64
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: vel/
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.330611638
+    lon: 7.084465027
+    zoom: 12
+    wifi24channel: 9
+    wifi5channel: 44
+    url_website:
+    nextnode4:
+    nextnode6:
+    authorized_admins:
+    dhcp:
+     reservations:
+       - ip: "10.1.96.142" # tasmota SP112 Finanzamt Velbert
+         id: "e8:68:e7:42:32:87"
+       - ip: "10.1.97.6" # tasmota SP112 Finanzamt Velbert
+         id: "70:03:9f:69:3f:14"
+       - ip: "10.1.97.33" # tasmota SP112 Finanzamt Velbert
+         id: "c4:dd:57:36:7d:b0"
+
+
+  "02":
+    name: Mettmann
+    name_adj: "mettmanner "
+    shortname: met
+    hostname_prefix: ME-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.40.16.0/20
+    # Domäne 02 in Hex entspricht 02
+    ffv6_network: 2a03:2260:300e:0402::/64
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: met/
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.2506
+    lon: 6.9746
+    zoom: 14
+    authorized_admins:
+
+
+
+  "03":
+    name: Ratingen
+    name_adj: "ratinger "
+    shortname: rat
+    hostname_prefix: RAT-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.40.32.0/20
+    # Domäne 03 in Hex entspricht 03
+    ffv6_network: 2a03:2260:300e:0403::/64
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: met/
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.2968
+    lon: 6.8480
+    zoom: 13
+    authorized_admins:
+
+  "04":
+    name: Hilden
+    name_adj: "hildener "
+    shortname: hld
+    hostname_prefix: HLD-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.40.48.0/20
+    # Domäne 04 in Hex entspricht 04
+    ffv6_network: 2a03:2260:300e:0404::/64
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: hld/
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.1687
+    lon: 6.9331
+    zoom: 13
+    authorized_admins:
+
+
+
+  "05":
+    name: Monheim
+    name_adj: "monheimer "
+    shortname: mon
+    hostname_prefix: MON-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.40.64.0/20
+    # Domäne 05 in Hex entspricht 05
+    ffv6_network: 2a03:2260:300e:0405::/64
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: mon/
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.0893
+    lon: 6.8900
+    zoom: 14
+    authorized_admins:
+      - "adorfer"
+      - "plaste"
+      - "alex"
+
+
+  "06":
+    name: Haan
+    name_adj: "haaner "
+    shortname: han
+    hostname_prefix: HAAN-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.40.80.0/20
+    # Domäne 06 in Hex entspricht 06
+    ffv6_network: 2a03:2260:300e:0406::/64
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: han/
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.2006
+    lon: 7.0056
+    zoom: 13
+    authorized_admins:
+
+  "07":
+    name: Erkrath
+    name_adj: "erkrather "
+    shortname: erk
+    hostname_prefix: ERK-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.40.96.0/20
+    # Domäne 07 in Hex entspricht 07
+    ffv6_network: 2a03:2260:300e:0407::/64
+    #   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: erk/
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.2145
+    lon: 6.9318
+    zoom: 13
+    authorized_admins:
+
+  "08":
+    name: Heiligenhaus
+    name_adj: "heiligenhauser "
+    shortname: hlg
+    hostname_prefix: HLG-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.40.112.0/20
+    # Domäne 08 in Hex entspricht 08
+    ffv6_network: 2a03:2260:300e:0408::/64
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: hlg/
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.3250
+    lon: 6.9707
+    zoom: 13
+    authorized_admins:
+
+
+  "09":
+    name: Langenfeld
+    name_adj: "langenfelder "
+    shortname: lgf
+    hostname_prefix: LGF-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.40.128.0/20
+    # Domäne 09 in Hex entspricht 09
+    ffv6_network: 2a03:2260:300e:0409::/64
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: lgf/
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.1051
+    lon: 6.9519
+    zoom: 13
+    authorized_admins:
+
+  "10":
+    name: Wülfrath
+    name_adj: "wülfrather "
+    shortname: wlf
+    hostname_prefix: WLF-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.40.144.0/20
+    # Domäne 10 in Hex entspricht 0a
+    ffv6_network: 2a03:2260:300e:040a::/64
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: wlf/
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.2863
+    lon: 7.0367
+    zoom: 13
+    authorized_admins:
+
+  "11":
+    name: LVR-HPH
+    name_adj: "LVR-Unterkunfts-"
+    shortname: lvr
+    hostname_prefix: LVR-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.40.160.0/20
+    # Domäne 11 in Hex entspricht 0b
+    ffv6_network: 2a03:2260:300e:040b::/64
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: lvr/
+    fwpubdir: firmware
+    firmware_pub_fqdn: "firmware.ffnef.de"
+    firmware_backup_fqdn: "ffnef.de"
+    firmware_int_fqdn: "ffnef"
+    firmware_ip6: "2a03:2260:300e:1300::733"
+    maplink: "https://karte.neanderfunk.de"
+    lat: 51.1388
+    lon: 7.2056
+    zoom: 9
+    authorized_admins:
