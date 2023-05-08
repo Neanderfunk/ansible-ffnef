@@ -224,11 +224,8 @@ ntp:
 
 domaenenliste:
    "12": # Netz 0.176.0 - 0.191.255 /20 für die Clients
-      # dhcp_start: 10.30.177.0
-      # dhcp_ende: 10.30.191.254
-      # Temporärer falscher IP Bereich, bis neue Firmware gebaut wurde
-      dhcp_start: 10.0.177.0
-      dhcp_ende: 10.0.191.254
+      dhcp_start: 10.30.177.0
+      dhcp_ende: 10.30.191.254
       server_id: 3
    "13": # Netz 0.192.0 - 0.207.255 /20 für die Clients
       dhcp_start: 10.30.193.0
@@ -242,10 +239,10 @@ domaenenliste:
       dhcp_start: 10.30.225.0
       dhcp_ende: 10.30.239.254
       server_id: 3
-  #  "16": # Netz 0.240.0 - 0.255.255 /20 für die Clients
-  #     dhcp_start: 10.30.241.0
-  #     dhcp_ende: 10.30.255.254
-  #     server_id: 3
+   "16": # Netz 0.240.0 - 0.255.255 /20 für die Clients
+      dhcp_start: 10.30.241.0
+      dhcp_ende: 10.30.255.254
+      server_id: 3
    "17": # Netz 1.0.0 - 1.15.255 /20 für die Clients
       dhcp_start: 10.31.1.0
       dhcp_ende: 10.31.15.254
@@ -309,9 +306,7 @@ domaenen:
     shortname: dusuk
     hostname_prefix: dusuk-
     community: flingern
-    #ffv4_network: 10.30.176.0/20
-    # Temporärer falscher IP Bereich, bis neue Firmware gebaut wurde
-    ffv4_network: 10.0.176.0/20
+    ffv4_network: 10.30.176.0/20
     # ffv4_network: 10.155.128.0/17
     # Domäne 12 in Hex entspricht 0c
     ffv6_network: 2a03:2260:122:030c::/64
@@ -393,26 +388,26 @@ domaenen:
     wifi5channel: 48
     authorized_keys:
       
-#   "16":
-#     name: Gummersbach
-#     shortname: gmb
-#     hostname_prefix: gmb-
-#     community: ffnrw
-#     ffv4_network: 10.30.240.0/20
-#     # ffv4_network: 10.158.0.0/16
-#     # Domäne 16 in Hex entspricht 10
-#     ffv6_network: 2a03:2260:122:0310::/64
-#     disable: false
-# #   map_scale: 0.9
-# #   map_show_contact: false
-# #   map_max_age: 14
-# #   firmware: mon/
-#     lat: 51.0227
-#     lon: 7.5627
-#     zoom: 14
-#     wifi24channel: 9
-#     wifi5channel: 44
-#     authorized_keys:
+  "16":
+    name: Gummersbach
+    shortname: gmb
+    hostname_prefix: gmb-
+    community: ffnrw
+    ffv4_network: 10.30.240.0/20
+    # ffv4_network: 10.158.0.0/16
+    # Domäne 16 in Hex entspricht 10
+    ffv6_network: 2a03:2260:122:0310::/64
+    disable: false
+#   map_scale: 0.9
+#   map_show_contact: false
+#   map_max_age: 14
+#   firmware: mon/
+    lat: 51.0227
+    lon: 7.5627
+    zoom: 14
+    wifi24channel: 9
+    wifi5channel: 44
+    authorized_keys:
       
   "17":
     name: Wipperfürth

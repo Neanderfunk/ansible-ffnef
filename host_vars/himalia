@@ -225,12 +225,6 @@ ntp:
 
 domaenenliste:
 
-  # Temporär auf diesen Supernode zum fixen
-  "16": # Netz 0.225.0 - 0.239.255 /20 für die Clients
-    dhcp_start: 10.30.225.0
-    dhcp_ende: 10.30.239.254
-    server_id: 3
-
   "18": # Netz 1.16.0 - 1.31.255 /20 für die Clients
     dhcp_start: 10.51.17.0
     dhcp_ende: 10.51.31.254
@@ -250,58 +244,58 @@ domaenenliste:
     # dhcp_ende: 10.20.255.255
     server_id: 5
   "21": # Netz 1.64.0 - 1.79.255 /20 für die Clients
-    #dhcp_start: 10.51.65.0
-    #dhcp_ende: 10.51.79.254
-    dhcp_start: 10.21.1.0
-    dhcp_ende: 10.21.255.255
+    dhcp_start: 10.51.65.0
+    dhcp_ende: 10.51.79.254
+    # dhcp_start: 10.21.1.0
+    # dhcp_ende: 10.21.255.255
     server_id: 5
   "22": # Netz 1.80.0 - 1.95.255 /20 für die Clients
-    #dhcp_start: 10.51.81.0
-    #dhcp_ende: 10.51.95.254
-    dhcp_start: 10.22.1.0
-    dhcp_ende: 10.22.255.255
+    dhcp_start: 10.51.81.0
+    dhcp_ende: 10.51.95.254
+    # dhcp_start: 10.22.1.0
+    # dhcp_ende: 10.22.255.255
     server_id: 5
   "23": # Netz 1.96.0 - 1.111.255 /20 für die Clients
-    #dhcp_start: 10.51.97.0
-    #dhcp_ende: 10.51.111.254
-    dhcp_start: 10.23.1.0
-    dhcp_ende: 10.23.255.255
+    dhcp_start: 10.51.97.0
+    dhcp_ende: 10.51.111.254
+    # dhcp_start: 10.23.1.0
+    # dhcp_ende: 10.23.255.255
     server_id: 5
   "24": # Netz 1.112.0 - 1.127.255 /20 für die Clients
-    #dhcp_start: 10.51.113.0
-    #dhcp_ende: 10.51.127.254
-    dhcp_start: 10.24.1.0
-    dhcp_ende: 10.24.255.255
+    dhcp_start: 10.51.113.0
+    dhcp_ende: 10.51.127.254
+    # dhcp_start: 10.24.1.0
+    # dhcp_ende: 10.24.255.255
     server_id: 5
   "25": # Netz 1.128.0 - 1.143.255 /20 für die Clients
-    #dhcp_start: 10.51.129.0
-    #dhcp_ende: 10.51.143.254
-    dhcp_start: 10.25.1.0
-    dhcp_ende: 10.25.255.255
+    dhcp_start: 10.51.129.0
+    dhcp_ende: 10.51.143.254
+    # dhcp_start: 10.25.1.0
+    # dhcp_ende: 10.25.255.255
     server_id: 5
   "26": # Netz 1.144.0 - 1.159.255 /20 für die Clients
-    #dhcp_start: 10.51.145.0
-    #dhcp_ende: 10.51.159.254
-    dhcp_start: 10.26.1.0
-    dhcp_ende: 10.26.255.255
+    dhcp_start: 10.51.145.0
+    dhcp_ende: 10.51.159.254
+    # dhcp_start: 10.26.1.0
+    # dhcp_ende: 10.26.255.255
     server_id: 5
   "27": # Netz 1.160.0 - 1.175.255 /20 für die Clients
-    #dhcp_start: 10.51.161.0
-    #dhcp_ende: 10.51.175.254
-    dhcp_start: 10.27.1.0
-    dhcp_ende: 10.27.255.255
+    dhcp_start: 10.51.161.0
+    dhcp_ende: 10.51.175.254
+    # dhcp_start: 10.27.1.0
+    # dhcp_ende: 10.27.255.255
     server_id: 5
   "28": # Netz 1.176.0 - 1.191.255 /20 für die Clients
-    #dhcp_start: 10.51.177.0
-    #dhcp_ende: 10.51.191.254
-    dhcp_start: 10.28.1.0
-    dhcp_ende: 10.28.255.255
+    dhcp_start: 10.51.177.0
+    dhcp_ende: 10.51.191.254
+    # dhcp_start: 10.28.1.0
+    # dhcp_ende: 10.28.255.255
     server_id: 5
   "29": # Netz 1.192.0 - 1.207.255 /20 für die Clients
-    #dhcp_start: 10.51.193.0
-    #dhcp_ende: 10.51.207.254
-    dhcp_start: 10.29.1.0
-    dhcp_ende: 10.29.255.255
+    dhcp_start: 10.51.193.0
+    dhcp_ende: 10.51.207.254
+    # dhcp_start: 10.29.1.0
+    # dhcp_ende: 10.29.255.255
     server_id: 5
   #Solingen
   "30": # Netz 1.208.0 - 1.223.255 /20 für die Clients
@@ -312,73 +306,51 @@ domaenenliste:
     server_id: 5
   #LVR-Nordost
   "31": # Netz 1.224.0 - 1.239.255 /20 für die Clients
-    #dhcp_start: 10.51.225.0
-    #dhcp_ende: 10.51.239.254
-    dhcp_start: 10.31.1.0
-    dhcp_ende: 10.31.255.255
+    dhcp_start: 10.51.225.0
+    dhcp_ende: 10.51.239.254
+    # dhcp_start: 10.31.1.0
+    # dhcp_ende: 10.31.255.255
     server_id: 5
   #LVR-NordWest 
   "32": # Netz 1.240.0 - 1.255.255 /20 für die Clients
-    #dhcp_start: 10.51.241.0
-    #dhcp_ende: 10.51.255.254
-    dhcp_start: 10.32.1.0
-    dhcp_ende: 10.32.255.255
+    dhcp_start: 10.51.241.0
+    dhcp_ende: 10.51.255.254
+    # dhcp_start: 10.32.1.0
+    # dhcp_ende: 10.32.255.255
     server_id: 5
   #LVR-MitteOst
   "33": # Netz 2.0.0 - 2.15.255 /20 für die Clients
-    #dhcp_start: 10.52.1.0
-    #dhcp_ende: 10.52.15.254
-    dhcp_start: 10.33.1.0
-    dhcp_ende: 10.33.255.255
+    dhcp_start: 10.52.1.0
+    dhcp_ende: 10.52.15.254
+    # dhcp_start: 10.33.1.0
+    # dhcp_ende: 10.33.255.255
     server_id: 5
   #LVR-MitteWest
   "34": # Netz 2.16.0 - 2.31.255 /20 für die Clients
-    #dhcp_start: 10.52.17.0
-    #dhcp_ende: 10.52.31.254
-    dhcp_start: 10.34.1.0
-    dhcp_ende: 10.34.255.255
+    dhcp_start: 10.52.17.0
+    dhcp_ende: 10.52.31.254
+    # dhcp_start: 10.34.1.0
+    # dhcp_ende: 10.34.255.255
     server_id: 5
   #LVR-Suedost
   "35": # Netz 2.32.0 - 2.47.255 /20 für die Clients
-    #dhcp_start: 10.52.33.0
-    #dhcp_ende: 10.52.47.254
-    dhcp_start: 10.35.1.0
-    dhcp_ende: 10.35.255.255
+    dhcp_start: 10.52.33.0
+    dhcp_ende: 10.52.47.254
+    # dhcp_start: 10.35.1.0
+    # dhcp_ende: 10.35.255.255
     server_id: 5
   #LVR-Suedwest
   "36": # Netz 2.48.0 - 2.63.255 /20 für die Clients
-    #dhcp_start: 10.52.49.0
-    #dhcp_ende: 10.52.63.254
-    dhcp_start: 10.36.1.0
-    dhcp_ende: 10.36.255.255
+    dhcp_start: 10.52.49.0
+    dhcp_ende: 10.52.63.254
+    # dhcp_start: 10.36.1.0
+    # dhcp_ende: 10.36.255.255
     server_id: 5
 
 
 
 
 domaenen:
-
-  # Temporär auf diesen Supernode zum fixen
-  "16":
-    name: Gummersbach
-    shortname: gmb
-    hostname_prefix: gmb-
-    community: ffnrw
-    ffv4_network: 10.30.224.0/20
-    # ffv4_network: 10.158.0.0/16
-    # Domäne 16 in Hex entspricht 10
-    ffv6_network: 2a03:2260:122:0310::/64
-    disable: false
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
-    lat: 51.0227
-    lon: 7.5627
-    zoom: 14
-    wifi24channel: 9
-    wifi5channel: 44
-    authorized_keys:
 
 
   "18":
@@ -442,8 +414,8 @@ domaenen:
     shortname: glastria
     hostname_prefix: glastria-
     community: neanderfunk
-    #ffv4_network: 10.51.64.0/20
-    ffv4_network: 10.21.0.0/16
+    ffv4_network: 10.51.64.0/20
+    # ffv4_network: 10.21.0.0/16
     ffv6_network: 2a03:2260:122:0515::/64
     disable: false
     name_adj: "Glastria"
@@ -459,8 +431,8 @@ domaenen:
     shortname: panagia
     hostname_prefix: panagia-
     community: neanderfunk
-    #ffv4_network: 10.51.80.0/20
-    ffv4_network: 10.22.0.0/16
+    ffv4_network: 10.51.80.0/20
+    # ffv4_network: 10.22.0.0/16
     ffv6_network: 2a03:2260:122:0516::/64
     disable: false
     name_adj: "Panagia"
@@ -476,8 +448,8 @@ domaenen:
     shortname: atokos
     hostname_prefix: atokos-
     community: neanderfunk
-    #ffv4_network: 10.51.96.0/20
-    ffv4_network: 10.23.0.0/16
+    ffv4_network: 10.51.96.0/20
+    # ffv4_network: 10.23.0.0/16
     ffv6_network: 2a03:2260:122:0517::/64
     disable: false
     name_adj: "Atokos"
@@ -493,8 +465,8 @@ domaenen:
     shortname: kravia
     hostname_prefix: kravia-
     community: neanderfunk
-    #ffv4_network: 10.51.112.0/20
-    ffv4_network: 10.24.0.0/16
+    ffv4_network: 10.51.112.0/20
+    # ffv4_network: 10.24.0.0/16
     ffv6_network: 2a03:2260:122:0518::/64
     disable: false
     name_adj: "Kravia"
@@ -510,8 +482,8 @@ domaenen:
     shortname: pasas
     hostname_prefix: pasas-
     community: neanderfunk
-    #ffv4_network: 10.51.128.0/20
-    ffv4_network: 10.25.0.0/16
+    ffv4_network: 10.51.128.0/20
+    # ffv4_network: 10.25.0.0/16
     ffv6_network: 2a03:2260:122:0519::/64
     disable: false
     name_adj: "Pasas"
@@ -527,8 +499,8 @@ domaenen:
     shortname: vatos
     hostname_prefix: vatos-
     community: neanderfunk
-    #ffv4_network: 10.51.144.0/20
-    ffv4_network: 10.26.0.0/16
+    ffv4_network: 10.51.144.0/20
+    # ffv4_network: 10.26.0.0/16
     ffv6_network: 2a03:2260:122:051a::/64
     disable: false
     name_adj: "Vatos"
@@ -544,8 +516,8 @@ domaenen:
     shortname: gordi
     hostname_prefix: gordi-
     community: neanderfunk
-    #ffv4_network: 10.51.160.0/20
-    ffv4_network: 10.27.0.0/16
+    ffv4_network: 10.51.160.0/20
+    # ffv4_network: 10.27.0.0/16
     ffv6_network: 2a03:2260:122:051b::/64
     disable: false
     name_adj: "Gordi"
@@ -561,8 +533,8 @@ domaenen:
     shortname: platia
     hostname_prefix: platia-
     community: neanderfunk
-    #ffv4_network: 10.51.176.0/20
-    ffv4_network: 10.28.0.0/16
+    ffv4_network: 10.51.176.0/20
+    # ffv4_network: 10.28.0.0/16
     ffv6_network: 2a03:2260:122:051c::/64
     disable: false
     name_adj: "Platia"
@@ -578,8 +550,8 @@ domaenen:
     shortname: gavados
     hostname_prefix: gavados-
     community: neanderfunk
-    #ffv4_network: 10.51.192.0/20
-    ffv4_network: 10.29.0.0/16
+    ffv4_network: 10.51.192.0/20
+    # ffv4_network: 10.29.0.0/16
     ffv6_network: 2a03:2260:122:051d::/64
     disable: false
     name_adj: "Gavados"
@@ -615,8 +587,8 @@ domaenen:
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
     metacom: ffnef
-    #ffv4_network: 10.51.224.0/20
-    ffv4_network: 10.31.0.0/16
+    ffv4_network: 10.51.224.0/20
+    # ffv4_network: 10.31.0.0/16
     ffv6_network: 2a03:2260:122:051f::/64
     disable: false
   "32":
@@ -626,8 +598,8 @@ domaenen:
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
     metacom: ffnef
-    #ffv4_network: 10.51.240.0/20
-    ffv4_network: 10.32.0.0/16
+    ffv4_network: 10.51.240.0/20
+    # ffv4_network: 10.32.0.0/16
     ffv6_network: 2a03:2260:122:0520::/64
     disable: false
   "33":
@@ -637,8 +609,8 @@ domaenen:
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
     metacom: ffnef
-    #ffv4_network: 10.52.0.0/20
-    ffv4_network: 10.33.0.0/16
+    ffv4_network: 10.52.0.0/20
+    # ffv4_network: 10.33.0.0/16
     ffv6_network: 2a03:2260:122:0521::/64
     disable: false
   "34":
@@ -648,8 +620,8 @@ domaenen:
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
     metacom: ffnef
-    #ffv4_network: 10.52.16.0/20
-    ffv4_network: 10.34.0.0/16
+    ffv4_network: 10.52.16.0/20
+    # ffv4_network: 10.34.0.0/16
     ffv6_network: 2a03:2260:122:0522::/64
     disable: false
   "35":
@@ -659,8 +631,8 @@ domaenen:
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
     metacom: ffnef
-    #ffv4_network: 10.52.32.0/20
-    ffv4_network: 10.35.0.0/16
+    ffv4_network: 10.52.32.0/20
+    # ffv4_network: 10.35.0.0/16
     ffv6_network: 2a03:2260:122:0523::/64
     disable: false
   "36":
@@ -670,7 +642,7 @@ domaenen:
     community: Freifunk im Neanderland
     metacommunity: Neanderfunk
     metacom: ffnef
-    #ffv4_network: 10.52.48.0/20
-    ffv4_network: 10.36.0.0/16
+    ffv4_network: 10.52.48.0/20
+    # ffv4_network: 10.36.0.0/16
     ffv6_network: 2a03:2260:122:0524::/64
     disable: false
