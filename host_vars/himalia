@@ -346,32 +346,32 @@ domaenenliste:
     # dhcp_start: 10.36.1.0
     # dhcp_ende: 10.36.255.255
     server_id: 5
-  #Sig 1
+  #Siegen-Wittgenstein_Nord
   "37": # Netz 2.64.0 - 2.79.255 /20 für die Clients
     dhcp_start: 10.52.65.0
     dhcp_ende: 10.52.79.254
     server_id: 5
-  #Sig 2
+  #Siegen-Wittgenstein_West
   "38": # Netz 2.80.0 - 2.95.255 /20 für die Clients
     dhcp_start: 10.52.81.0
     dhcp_ende: 10.52.95.254
     server_id: 5
-  #Sig 3
+  #Siegen_Nord
   "39": # Netz 2.96.0 - 2.111.255 /20 für die Clients
     dhcp_start: 10.52.97.0
     dhcp_ende: 10.52.111.254
     server_id: 5
-  #Sig 4
+  #Siegen_Mitte
   "40": # Netz 2.112.0 - 2.127.255 /20 für die Clients
     dhcp_start: 10.52.113.0
     dhcp_ende: 10.52.127.254
     server_id: 5
-  #Sig 5
+  #Siegen_Süd
   "41": # Netz 2.128.0 - 2.143.255 /20 für die Clients
     dhcp_start: 10.52.129.0
     dhcp_ende: 10.52.143.254
     server_id: 5
-  #Sig 6
+  #Siegen-Wittgenstein_Land
   "42": # Netz 2.144.0 - 2.159.255 /20 für die Clients
     dhcp_start: 10.52.145.0
     dhcp_ende: 10.52.159.254
@@ -677,60 +677,60 @@ domaenen:
     ffv6_network: 2a03:2260:122:0524::/64
     disable: false
   "37":
-    name: sig-1
-    shortname: lvr-sw
-    hostname_prefix: LVR-Sw
-    community: Freifunk im Neanderland
+    name: Siegen-Wittgenstein_Nord
+    shortname: siwin
+    hostname_prefix: SIWIN-
+    community: Freifunk im Siegerland
     metacommunity: Neanderfunk
     metacom: ffnef
     ffv4_network: 10.52.64.0/20
     ffv6_network: 2a03:2260:122:0525::/64
     disable: false
   "38":
-    name: sig-2
-    shortname: lvr-sw
-    hostname_prefix: LVR-Sw
-    community: Freifunk im Neanderland
+    name: Siegen-Wittgenstein_West
+    shortname: siwiw
+    hostname_prefix: SIWIW-
+    community: Freifunk im Siegerland
     metacommunity: Neanderfunk
     metacom: ffnef
     ffv4_network: 10.52.80.0/20
     ffv6_network: 2a03:2260:122:0526::/64
     disable: false
   "39":
-    name: sig-3
-    shortname: lvr-sw
-    hostname_prefix: LVR-Sw
-    community: Freifunk im Neanderland
+    name: Siegen_Nord
+    shortname: sin
+    hostname_prefix: SIN-
+    community: Freifunk im Siegerland
     metacommunity: Neanderfunk
     metacom: ffnef
     ffv4_network: 10.52.96.0/20
     ffv6_network: 2a03:2260:122:0527::/64
     disable: false
   "40":
-    name: sig-4
-    shortname: lvr-sw
-    hostname_prefix: LVR-Sw
-    community: Freifunk im Neanderland
+    name: Siegen_Mitte
+    shortname: sim
+    hostname_prefix: SIM-
+    community: Freifunk im Siegerland
     metacommunity: Neanderfunk
     metacom: ffnef
     ffv4_network: 10.52.112.0/20
     ffv6_network: 2a03:2260:122:0528::/64
     disable: false
   "41":
-    name: sig-5
-    shortname: lvr-sw
-    hostname_prefix: LVR-Sw
-    community: Freifunk im Neanderland
+    name: Siegen_Süd
+    shortname: sis
+    hostname_prefix: SIS-
+    community: Freifunk im Siegerland
     metacommunity: Neanderfunk
     metacom: ffnef
     ffv4_network: 10.52.128.0/20
     ffv6_network: 2a03:2260:122:0529::/64
     disable: false
   "42":
-    name: sig-6
-    shortname: lvr-sw
-    hostname_prefix: LVR-Sw
-    community: Freifunk im Neanderland
+    name: Siegen-Wittgenstein_Land
+    shortname: siwil
+    hostname_prefix: SIWIL-
+    community: Freifunk im Siegerland
     metacommunity: Neanderfunk
     metacom: ffnef
     ffv4_network: 10.52.144.0/20
