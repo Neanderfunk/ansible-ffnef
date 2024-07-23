@@ -242,9 +242,30 @@ ntp:
 
 
 domaenenliste:
-  "01":
-    dhcp_start: 10.60.1.0
-    dhcp_ende: 10.60.15.255
+  #Bergisch-Gladbach - BGL
+  "43": # Netz 2.160.0 - 2.175.255 /20 für die Clients
+    dhcp_start: 10.62.161.0
+    dhcp_ende: 10.60.175.255
+    server_id: 6
+  #Bergisch-Gladbach - Leichlingen
+  "44": # Netz 2.176.0 - 2.191.255 /20 für die Clients
+    dhcp_start: 10.62.177.0
+    dhcp_ende: 10.60.191.255
+    server_id: 6
+  #Bergisch-Gladbach - Burscheid
+  "45": # Netz 2.192.0 - 2.207.255 /20 für die Clients
+    dhcp_start: 10.62.193.0
+    dhcp_ende: 10.60.207.255
+    server_id: 6
+  #Bergisch-Gladbach - Odenthal
+  "46": # Netz 2.208.0 - 2.223.255 /20 für die Clients
+    dhcp_start: 10.62.209.0
+    dhcp_ende: 10.60.223.255
+    server_id: 6
+  #Bergisch-Gladbach - Rösratth
+  "47": # Netz 2.224.0 - 2.239.255 /20 für die Clients
+    dhcp_start: 10.62.225.0
+    dhcp_ende: 10.60.239.255
     server_id: 6
 
   # Temporär kallisto auf ganymed
@@ -365,26 +386,81 @@ domaenenliste:
 domaenen:
 
   # Temporäre 
-  "01":
-    name: Pseudo, damit Liste nicht leer
-    shortname: pseudo
-    hostname_prefix: pseudo-
-    community: pseudo
-    ffv4_network: 10.60.0.0/20
-    # Domäne 12 in Hex entspricht 0c
-    ffv6_network: 2a03:2260:122:0600::/64
-    name_adj: "pseudo -"
-    disable: true
-#   map_scale: 0.9
-#   map_show_contact: false
-#   map_max_age: 14
-#   firmware: mon/
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
+#   "01":
+#     name: Pseudo, damit Liste nicht leer
+#     shortname: pseudo
+#     hostname_prefix: pseudo-
+#     community: pseudo
+#     ffv4_network: 10.60.0.0/20
+#     # Domäne 12 in Hex entspricht 0c
+#     ffv6_network: 2a03:2260:122:0600::/64
+#     name_adj: "pseudo -"
+#     disable: true
+# #   map_scale: 0.9
+# #   map_show_contact: false
+# #   map_max_age: 14
+# #   firmware: mon/
+#     lat: 51.2140
+#     lon: 6.8255
+#     zoom: 11
+#     wifi24channel: 9
+#     wifi5channel: 48
+#     authorized_keys:
+
+  "43":
+    name: Bergisch-Gladbach
+    shortname: bgbgl
+    hostname_prefix: BGBGL-
+    community: Freifunk Bergisch Gladbach
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.62.160.0/20
+    ffv6_network: 2a03:2260:122:052b::/64
+    disable: false
+
+  "44":
+    name: Bergisch-Gladbach_Leichlingen
+    shortname: bglln
+    hostname_prefix: BGLLN-
+    community: Freifunk Bergisch Gladbach
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.62.176.0/20
+    ffv6_network: 2a03:2260:122:052c::/64
+    disable: false
+
+  "45":
+    name: Bergisch-Gladbach_Burscheid
+    shortname: bgbcd
+    hostname_prefix: BGBCD-
+    community: Freifunk Bergisch Gladbach
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.62.192.0/20
+    ffv6_network: 2a03:2260:122:052d::/64
+    disable: false
+
+  "46":
+    name: Bergisch-Gladbach_Odenthal
+    shortname: bgode
+    hostname_prefix: BGODE-
+    community: Freifunk Bergisch Gladbach
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.62.208.0/20
+    ffv6_network: 2a03:2260:122:052e::/64
+    disable: false
+
+  "47":
+    name: Bergisch-Gladbach_Rösratth
+    shortname: bgrrh
+    hostname_prefix: BGRRH-
+    community: Freifunk Bergisch Gladbach
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.62.224.0/20
+    ffv6_network: 2a03:2260:122:052f::/64
+    disable: false
 
   # Temporär kallisto auf ganymed
 #   "12":
