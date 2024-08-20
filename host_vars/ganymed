@@ -1,9 +1,9 @@
 vm_id: 6
 server_id: 6
 
-server_besitzer: "FFNEF"
-hoster: "ovh"
-info_produkt: "twin2 proxmox kvm VM"
+server_besitzer: "adorfer"
+hoster: "netcup"
+info_produkt: "netcup VM adorfer"
 
 
 # Allgemeine Einstellungen
@@ -62,39 +62,61 @@ kea:
 # Uplink Tunnel START
 
 # FFNef ToDo: Deaktiviert, bis neuer Tunnelsatz existiert.
-ffrl_nat_ip: 185.66.195.66/31
+ffrl_nat_ip: 185.66.194.16/31
+
 
 #ffrl-tunnel neander-3
 
 ffrl_tun:
-- name: ber1
+- name: ber1a
   gre_target: 185.66.195.0
-  v4_remote: 100.64.5.78/31
-  v6_remote: 2a03:2260:0:29b::1/64
+  v4_remote: 100.64.4.124/31
+  v6_remote: 2a03:2260:0:244::/64
   bgp_local_pref: 200
-- name: ber2
+- name: ber2a
   gre_target: 185.66.195.1
-  v4_remote: 100.64.5.84/31
-  v6_remote: 2a03:2260:0:29e::1/64
+  v4_remote: 100.64.4.132/31
+  v6_remote: 2a03:2260:0:248::/64
   bgp_local_pref: 200
-- name: dus1
+# - name: ber1b
+#   gre_target: 185.66.195.0
+#   v4_remote: 100.64.4.128/31
+#   v6_remote: 2a03:2260:0:246::/64
+#   bgp_local_pref: 200
+# - name: ber2b
+#   gre_target: 185.66.195.1
+#   v4_remote: 100.64.4.136/31
+#   v6_remote: 2a03:2260:0:24a::/64
+#   bgp_local_pref: 200
+- name: dus1a
   gre_target: 185.66.193.0
-  v4_remote: 100.64.5.82/31
-  v6_remote: 2a03:2260:0:29d::1/64
+  v4_remote: 100.64.4.126/31
+  v6_remote: 2a03:2260:0:245::/64
   bgp_local_pref: 201
-- name: dus2
+- name: dus2a
   gre_target: 185.66.193.1
-  v4_remote: 100.64.5.88/31
-  v6_remote: 2a03:2260:0:2a0::1/64
+  v4_remote: 100.64.4.134/31
+  v6_remote: 2a03:2260:0:249::/64
   bgp_local_pref: 201
-- name: fra2a
-  gre_target: 185.66.194.0
-  v4_remote: 100.64.5.80/31
-  v6_remote: 2a03:2260:0:29c::1/64
-- name: fra2b
-  gre_target: 185.66.194.1
-  v4_remote: 100.64.5.86/31
-  v6_remote: 2a03:2260:0:29f::1/64
+# - name: dus1b
+#   gre_target: 185.66.193.0
+#   v4_remote: 100.64.4.130/31
+#   v6_remote: 2a03:2260:0:247::/64
+#   bgp_local_pref: 201
+# - name: dus2b
+#   gre_target: 185.66.193.1
+#   v4_remote: 100.64.4.138/31
+#   v6_remote: 2a03:2260:0:24b::/64
+#   bgp_local_pref: 201
+# fra folgt noch
+# - name: fra2a
+#   gre_target: 185.66.194.0
+#   v4_remote: 100.64.5.80/31
+#   v6_remote: 2a03:2260:0:29c::1/64
+# - name: fra2b
+#   gre_target: 185.66.194.1
+#   v4_remote: 100.64.5.86/31
+#   v6_remote: 2a03:2260:0:29f::1/64
   
 
 # Uplink Tunnel ENDE
@@ -169,12 +191,12 @@ ff_network:
   # IPv4 Adressraum
   v4_network: 10.0.0.0/8
   # IPv6 adressraum
-  v6_network: 2a03:2260:122::/48
+  v6_network: 2a03:2260:100c::/48
   # IPv6 anycast ::ac1 in decimal
   v6_anycast: 2753
 
 # Verwendung bei bird6
-ipv6backbone64prefixstr: "2a03:2260:122::"
+ipv6backbone64prefixstr: "2a03:2260:100c::"
 
 
 # Logrotate START
@@ -393,7 +415,7 @@ domaenen:
 #     community: pseudo
 #     ffv4_network: 10.60.0.0/20
 #     # Domäne 12 in Hex entspricht 0c
-#     ffv6_network: 2a03:2260:122:0600::/64
+#     ffv6_network: 2a03:2260:100c:0600::/64
 #     name_adj: "pseudo -"
 #     disable: true
 # #   map_scale: 0.9
@@ -415,7 +437,7 @@ domaenen:
     metacommunity: Neanderfunk
     metacom: ffnef
     ffv4_network: 10.62.160.0/20
-    ffv6_network: 2a03:2260:122:052b::/64
+    ffv6_network: 2a03:2260:100c:062b::/64
     disable: false
 
   "44":
@@ -426,7 +448,7 @@ domaenen:
     metacommunity: Neanderfunk
     metacom: ffnef
     ffv4_network: 10.62.176.0/20
-    ffv6_network: 2a03:2260:122:052c::/64
+    ffv6_network: 2a03:2260:100c:062c::/64
     disable: false
 
   "45":
@@ -437,7 +459,7 @@ domaenen:
     metacommunity: Neanderfunk
     metacom: ffnef
     ffv4_network: 10.62.192.0/20
-    ffv6_network: 2a03:2260:122:052d::/64
+    ffv6_network: 2a03:2260:100c:062d::/64
     disable: false
 
   "46":
@@ -448,7 +470,7 @@ domaenen:
     metacommunity: Neanderfunk
     metacom: ffnef
     ffv4_network: 10.62.208.0/20
-    ffv6_network: 2a03:2260:122:052e::/64
+    ffv6_network: 2a03:2260:100c:062e::/64
     disable: false
 
   "47":
@@ -459,7 +481,7 @@ domaenen:
     metacommunity: Neanderfunk
     metacom: ffnef
     ffv4_network: 10.62.224.0/20
-    ffv6_network: 2a03:2260:122:052f::/64
+    ffv6_network: 2a03:2260:100c:062f::/64
     disable: false
 
   # Temporär kallisto auf ganymed
@@ -470,7 +492,7 @@ domaenen:
 #     community: flingern
 #     ffv4_network: 10.155.128.0/17
 #     # Domäne 12 in Hex entspricht 0c
-#     ffv6_network: 2a03:2260:122:060c::/64
+#     ffv6_network: 2a03:2260:100c:060c::/64
 #     name_adj: "düsseldorfer Unterkunfts-"
 #     disable: true
 # #   map_scale: 0.9
@@ -491,7 +513,7 @@ domaenen:
 #     community: flingern
 #     ffv4_network: 10.155.0.0/17
 #     # Domäne 13 in Hex entspricht 0d
-#     ffv6_network: 2a03:2260:122:060d::/64
+#     ffv6_network: 2a03:2260:100c:060d::/64
 #     disable: true
 # #   map_scale: 0.9
 # #   map_show_contact: false
@@ -511,7 +533,7 @@ domaenen:
 #     community: Wuppertal-Hilfsdomain
 #     ffv4_network: 10.156.0.0/16
 #     # Domäne 14 in Hex entspricht 0e
-#     ffv6_network: 2a03:2260:122:060e::/64
+#     ffv6_network: 2a03:2260:100c:060e::/64
 #     disable: true
 #     name_adj: "wuppertaler"
 # #   map_scale: 0.9
@@ -532,7 +554,7 @@ domaenen:
 #     community: ffnrw
 #     ffv4_network: 10.157.0.0/16
 #     # Domäne 15 in Hex entspricht 0f
-#     ffv6_network: 2a03:2260:122:060f::/64
+#     ffv6_network: 2a03:2260:100c:060f::/64
 #     disable: true
 #     name_adj: "marienheider"
 # #   map_scale: 0.9
@@ -553,7 +575,7 @@ domaenen:
 #     community: ffnrw
 #     ffv4_network: 10.158.0.0/16
 #     # Domäne 16 in Hex entspricht 10
-#     ffv6_network: 2a03:2260:122:0610::/64
+#     ffv6_network: 2a03:2260:100c:0610::/64
 #     disable: true
 # #   map_scale: 0.9
 # #   map_show_contact: false
@@ -573,7 +595,7 @@ domaenen:
 #     community: ffnrw
 #     ffv4_network: 10.159.0.0/16
 #     # Domäne 17 in Hex entspricht 11
-#     ffv6_network: 2a03:2260:122:0611::/64
+#     ffv6_network: 2a03:2260:100c:0611::/64
 #     disable: true
 # #   map_scale: 0.9
 # #   map_show_contact: false
@@ -597,7 +619,7 @@ domaenen:
   #   community: neanderfunk
   #   ffv4_network: 10.18.0.0/16
   #   # Domäne 18 in Hex entspricht 12
-  #   ffv6_network: 2a03:2260:122:0612::/64
+  #   ffv6_network: 2a03:2260:100c:0612::/64
   #   name_adj: "Freifunk im Neanderlands Unterkunfts-"
   #   disable: false
   #   lat: 51.2140
@@ -615,7 +637,7 @@ domaenen:
   #   community: neanderfunk
   #   ffv4_network: 10.19.0.0/16
   #   # Domäne 19 in Hex entspricht 13
-  #   ffv6_network: 2a03:2260:122:0613::/64
+  #   ffv6_network: 2a03:2260:100c:0613::/64
   #   disable: false
   #   name_adj: "Agios-"
   #   lat: 51.2140
@@ -633,7 +655,7 @@ domaenen:
   #   community: neanderfunk
   #   ffv4_network: 10.20.0.0/16
   #   # Domäne 20 in Hex entspricht 14
-  #   ffv6_network: 2a03:2260:122:0614::/64
+  #   ffv6_network: 2a03:2260:100c:0614::/64
   #   disable: false
   #   name_adj: "Gertis-"
   #   lat: 51.2140
@@ -649,7 +671,7 @@ domaenen:
   #   hostname_prefix: glastria-
   #   community: neanderfunk
   #   ffv4_network: 10.21.0.0/16
-  #   ffv6_network: 2a03:2260:122:0615::/64
+  #   ffv6_network: 2a03:2260:100c:0615::/64
   #   disable: false
   #   name_adj: "Glastria"
   #   lat: 51.2140
@@ -665,7 +687,7 @@ domaenen:
   #   hostname_prefix: panagia-
   #   community: neanderfunk
   #   ffv4_network: 10.22.0.0/16
-  #   ffv6_network: 2a03:2260:122:0616::/64
+  #   ffv6_network: 2a03:2260:100c:0616::/64
   #   disable: false
   #   name_adj: "Panagia"
   #   lat: 51.2140
@@ -681,7 +703,7 @@ domaenen:
   #   hostname_prefix: atokos-
   #   community: neanderfunk
   #   ffv4_network: 10.23.0.0/16
-  #   ffv6_network: 2a03:2260:122:0617::/64
+  #   ffv6_network: 2a03:2260:100c:0617::/64
   #   disable: false
   #   name_adj: "Atokos"
   #   lat: 51.2140
@@ -697,7 +719,7 @@ domaenen:
   #   hostname_prefix: kravia-
   #   community: neanderfunk
   #   ffv4_network: 10.24.0.0/16
-  #   ffv6_network: 2a03:2260:122:0618::/64
+  #   ffv6_network: 2a03:2260:100c:0618::/64
   #   disable: false
   #   name_adj: "Kravia"
   #   lat: 51.2140
@@ -713,7 +735,7 @@ domaenen:
   #   hostname_prefix: pasas-
   #   community: neanderfunk
   #   ffv4_network: 10.25.0.0/16
-  #   ffv6_network: 2a03:2260:122:0619::/64
+  #   ffv6_network: 2a03:2260:100c:0619::/64
   #   disable: false
   #   name_adj: "Pasas"
   #   lat: 51.2140
@@ -729,7 +751,7 @@ domaenen:
   #   hostname_prefix: vatos-
   #   community: neanderfunk
   #   ffv4_network: 10.26.0.0/16
-  #   ffv6_network: 2a03:2260:122:061a::/64
+  #   ffv6_network: 2a03:2260:100c:061a::/64
   #   disable: false
   #   name_adj: "Vatos"
   #   lat: 51.2140
@@ -745,7 +767,7 @@ domaenen:
   #   hostname_prefix: gordi-
   #   community: neanderfunk
   #   ffv4_network: 10.27.0.0/16
-  #   ffv6_network: 2a03:2260:122:061b::/64
+  #   ffv6_network: 2a03:2260:100c:061b::/64
   #   disable: false
   #   name_adj: "Gordi"
   #   lat: 51.2140
@@ -761,7 +783,7 @@ domaenen:
   #   hostname_prefix: platia-
   #   community: neanderfunk
   #   ffv4_network: 10.28.0.0/16
-  #   ffv6_network: 2a03:2260:122:061c::/64
+  #   ffv6_network: 2a03:2260:100c:061c::/64
   #   disable: false
   #   name_adj: "Platia"
   #   lat: 51.2140
@@ -777,7 +799,7 @@ domaenen:
   #   hostname_prefix: gavados-
   #   community: neanderfunk
   #   ffv4_network: 10.29.0.0/16
-  #   ffv6_network: 2a03:2260:122:061d::/64
+  #   ffv6_network: 2a03:2260:100c:061d::/64
   #   disable: false
   #   name_adj: "Gavados"
   #   lat: 51.2140
@@ -793,7 +815,7 @@ domaenen:
   #   hostname_prefix: arisida-
   #   community: neanderfunk
   #   ffv4_network: 10.30.0.0/16
-  #   ffv6_network: 2a03:2260:122:061d::/64
+  #   ffv6_network: 2a03:2260:100c:061d::/64
   #   disable: false
   #   name_adj: "Arisida"
   #   lat: 51.2140
@@ -810,7 +832,7 @@ domaenen:
   #   metacommunity: Neanderfunk
   #   metacom: ffnef
   #   ffv4_network: 10.31.0.0/16
-  #   ffv6_network: 2a03:2260:122:061e::/64
+  #   ffv6_network: 2a03:2260:100c:061e::/64
   #   disable: false
   # "32":
   #   name: LVR-nordwest
@@ -820,7 +842,7 @@ domaenen:
   #   metacommunity: Neanderfunk
   #   metacom: ffnef
   #   ffv4_network: 10.32.0.0/16
-  #   ffv6_network: 2a03:2260:122:061f::/64
+  #   ffv6_network: 2a03:2260:100c:061f::/64
   #   disable: false
   # "33":
   #   name: LVR-mitteost
@@ -830,7 +852,7 @@ domaenen:
   #   metacommunity: Neanderfunk
   #   metacom: ffnef
   #   ffv4_network: 10.33.0.0/16
-  #   ffv6_network: 2a03:2260:122:0620::/64
+  #   ffv6_network: 2a03:2260:100c:0620::/64
   #   disable: false
   # "34":
   #   name: LVR-mittewest
@@ -840,7 +862,7 @@ domaenen:
   #   metacommunity: Neanderfunk
   #   metacom: ffnef
   #   ffv4_network: 10.34.0.0/16
-  #   ffv6_network: 2a03:2260:122:0621::/64
+  #   ffv6_network: 2a03:2260:100c:0621::/64
   #   disable: false
   # "35":
   #   name: LVR-suedost
@@ -850,7 +872,7 @@ domaenen:
   #   metacommunity: Neanderfunk
   #   metacom: ffnef
   #   ffv4_network: 10.35.0.0/16
-  #   ffv6_network: 2a03:2260:122:0622::/64
+  #   ffv6_network: 2a03:2260:100c:0622::/64
   #   disable: false
   # "36":
   #   name: LVR-suedwest
@@ -860,5 +882,5 @@ domaenen:
   #   metacommunity: Neanderfunk
   #   metacom: ffnef
   #   ffv4_network: 10.36.0.0/16
-  #   ffv6_network: 2a03:2260:122:0623::/64
+  #   ffv6_network: 2a03:2260:100c:0623::/64
   #   disable: false
