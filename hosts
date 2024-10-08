@@ -10,6 +10,7 @@
 # 'capacity' im Kommentar gibt die erwünschte relative Auslastung mit Traffic und L2TP-Verbindungen an
 # 'server' im Kommentar muss angegeben werden, wenn mehrere L2TP-VM auf einem Blech laufen. Der Wert kann frei gewählt werden.
 [gateways]
+elara             ipv4=45.157.178.233  ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954
 ganymed           ipv4=185.216.177.69  ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954
 kallisto		  ipv4=5.9.142.115     ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954
 #kallisto23          ipv4=185.162.250.109 ansible_ssh_host="{{ipv4}}" ansible_ssh_port=62954 # FFNef ToDo: Ersetzt den alten Kallisto bei Hetzner demnächst

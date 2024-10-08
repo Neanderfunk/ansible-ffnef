@@ -97,7 +97,7 @@ batman:
 # Tunneldigger
 tunneldigger:
   instance_per_domain: true
-  interface: "ens18"
+  interface: "enp0s31f6"
   max_tunnels: 1024
   port_base: 20100
   pmtu_discovery: false

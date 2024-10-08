@@ -73,15 +73,15 @@ ffrl_tun:
   v4_remote: 100.64.4.124/31
   v6_remote: 2a03:2260:0:244::/64
   bgp_local_pref: 200
-- name: ber2a
+- name: ber1b
   gre_target: 185.66.195.1
-  v4_remote: 100.64.4.132/31
-  v6_remote: 2a03:2260:0:248::/64
+  v4_remote: 100.64.4.128/31
+  v6_remote: 2a03:2260:0:246::/64
   bgp_local_pref: 200
-# - name: ber1b
+# - name: ber2a
 #   gre_target: 185.66.195.0
-#   v4_remote: 100.64.4.128/31
-#   v6_remote: 2a03:2260:0:246::/64
+#   v4_remote: 100.64.4.132/31
+#   v6_remote: 2a03:2260:0:248::/64
 #   bgp_local_pref: 200
 # - name: ber2b
 #   gre_target: 185.66.195.1
@@ -93,21 +93,22 @@ ffrl_tun:
   v4_remote: 100.64.4.126/31
   v6_remote: 2a03:2260:0:245::/64
   bgp_local_pref: 201
-- name: dus2a
+- name: dus1b
   gre_target: 185.66.193.1
-  v4_remote: 100.64.4.134/31
-  v6_remote: 2a03:2260:0:249::/64
+  v4_remote: 100.64.4.130/31
+  v6_remote: 2a03:2260:0:247::/64
   bgp_local_pref: 201
-# - name: dus1b
+# - name: dus2a
 #   gre_target: 185.66.193.0
-#   v4_remote: 100.64.4.130/31
-#   v6_remote: 2a03:2260:0:247::/64
+#   v4_remote: 100.64.4.134/31
+#   v6_remote: 2a03:2260:0:249::/64
 #   bgp_local_pref: 201
 # - name: dus2b
 #   gre_target: 185.66.193.1
 #   v4_remote: 100.64.4.138/31
 #   v6_remote: 2a03:2260:0:24b::/64
 #   bgp_local_pref: 201
+
 # fra folgt noch
 # - name: fra2a
 #   gre_target: 185.66.194.0
@@ -138,7 +139,7 @@ batman:
 # Tunneldigger
 tunneldigger:
   instance_per_domain: true
-  interface: "ens18"
+  interface: "ens3"
   max_tunnels: 1024
   port_base: 20100
   pmtu_discovery: false
@@ -187,7 +188,7 @@ routing_table: 42
 # Parameter für das eigene Freifunk-Netzwerk
 ff_network:
   # Eindeutige AS-Nummer des Netzwerk
-  as_number: 65125
+  as_number: 65411
   # IPv4 Adressraum
   v4_network: 10.0.0.0/8
   # IPv6 adressraum
@@ -241,7 +242,11 @@ domains:
 
 
 check_mk:
-  deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_2.1.0p1-1_all.deb
+  # deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_2.1.0p1-1_all.deb
+  deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_2.3.0-1_all.deb
+
+checkmk_checks_supernode: true
+checkmk_checks_supernodeinfra: true
 
 
 # TODO: FFNEF Deaktiviert, da wir lieber Nutzer mit sudo Rechten nutzen wollen, anstatt Login über dne root Account
@@ -267,27 +272,32 @@ domaenenliste:
   #Bergisch-Gladbach - BGL
   "43": # Netz 2.160.0 - 2.175.255 /20 für die Clients
     dhcp_start: 10.62.161.0
-    dhcp_ende: 10.60.175.255
+    dhcp_ende: 10.62.175.255
     server_id: 6
   #Bergisch-Gladbach - Leichlingen
   "44": # Netz 2.176.0 - 2.191.255 /20 für die Clients
     dhcp_start: 10.62.177.0
-    dhcp_ende: 10.60.191.255
+    dhcp_ende: 10.62.191.255
     server_id: 6
   #Bergisch-Gladbach - Burscheid
   "45": # Netz 2.192.0 - 2.207.255 /20 für die Clients
     dhcp_start: 10.62.193.0
-    dhcp_ende: 10.60.207.255
+    dhcp_ende: 10.62.207.255
     server_id: 6
   #Bergisch-Gladbach - Odenthal
   "46": # Netz 2.208.0 - 2.223.255 /20 für die Clients
     dhcp_start: 10.62.209.0
-    dhcp_ende: 10.60.223.255
+    dhcp_ende: 10.62.223.255
     server_id: 6
   #Bergisch-Gladbach - Rösratth
   "47": # Netz 2.224.0 - 2.239.255 /20 für die Clients
     dhcp_start: 10.62.225.0
-    dhcp_ende: 10.60.239.255
+    dhcp_ende: 10.62.239.255
+    server_id: 6
+  #Radevormwald
+  "48": # Netz 2.240.0 - 2.255.255 /20 für die Clients
+    dhcp_start: 10.62.241.0
+    dhcp_ende: 10.62.255.255
     server_id: 6
 
   # Temporär kallisto auf ganymed
@@ -474,7 +484,7 @@ domaenen:
     disable: false
 
   "47":
-    name: Bergisch-Gladbach_Rösratth
+    name: Bergisch-Gladbach_Rösrath
     shortname: bgrrh
     hostname_prefix: BGRRH-
     community: Freifunk Bergisch Gladbach
@@ -482,6 +492,16 @@ domaenen:
     metacom: ffnef
     ffv4_network: 10.62.224.0/20
     ffv6_network: 2a03:2260:100c:062f::/64
+    disable: false
+  "48":
+    name: 
+    shortname: Radevormwald
+    hostname_prefix: RVW-
+    community: Freifunk Radevormwald
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.62.240.0/20
+    ffv6_network: 2a03:2260:100c:0630::/64
     disable: false
 
   # Temporär kallisto auf ganymed
