@@ -249,24 +249,7 @@ domaenenliste:
     # dhcp_start: 10.21.1.0
     # dhcp_ende: 10.21.255.255
     server_id: 5
-  "22": # Netz 1.80.0 - 1.95.255 /20 für die Clients
-    dhcp_start: 10.51.81.0
-    dhcp_ende: 10.51.95.254
-    # dhcp_start: 10.22.1.0
-    # dhcp_ende: 10.22.255.255
-    server_id: 5
-  "23": # Netz 1.96.0 - 1.111.255 /20 für die Clients
-    dhcp_start: 10.51.97.0
-    dhcp_ende: 10.51.111.254
-    # dhcp_start: 10.23.1.0
-    # dhcp_ende: 10.23.255.255
-    server_id: 5
-  "24": # Netz 1.112.0 - 1.127.255 /20 für die Clients
-    dhcp_start: 10.51.113.0
-    dhcp_ende: 10.51.127.254
-    # dhcp_start: 10.24.1.0
-    # dhcp_ende: 10.24.255.255
-    server_id: 5
+
   "25": # Netz 1.128.0 - 1.143.255 /20 für die Clients
     dhcp_start: 10.51.129.0
     dhcp_ende: 10.51.143.254
@@ -455,57 +438,7 @@ domaenen:
     wifi24channel: 9
     wifi5channel: 48
     authorized_keys:
-      
-  "22":
-    name: Panagia
-    shortname: panagia
-    hostname_prefix: panagia-
-    community: neanderfunk
-    ffv4_network: 10.51.80.0/20
-    # ffv4_network: 10.22.0.0/16
-    ffv6_network: 2a03:2260:122:0516::/64
-    disable: false
-    name_adj: "Panagia"
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
-      
-  "23":
-    name: Atokos
-    shortname: atokos
-    hostname_prefix: atokos-
-    community: neanderfunk
-    ffv4_network: 10.51.96.0/20
-    # ffv4_network: 10.23.0.0/16
-    ffv6_network: 2a03:2260:122:0517::/64
-    disable: false
-    name_adj: "Atokos"
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
-      
-  "24":
-    name: Kravia
-    shortname: kravia
-    hostname_prefix: kravia-
-    community: neanderfunk
-    ffv4_network: 10.51.112.0/20
-    # ffv4_network: 10.24.0.0/16
-    ffv6_network: 2a03:2260:122:0518::/64
-    disable: false
-    name_adj: "Kravia"
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
+
       
   "25":
     name: Pasas

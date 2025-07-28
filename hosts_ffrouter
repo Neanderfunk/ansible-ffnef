@@ -1,0 +1,46 @@
+
+[ffrouter]
+
+; 28ee527c3c24 ansible_host=2a03:2260:122:51f:2aee:52ff:fe7c:3c24
+; 3c846aaa9fed ansible_host=2a03:2260:122:51f:3e84:6aff:feaa:9fed
+; 909a4a1aebfe ansible_host=2a03:2260:122:51f:929a:4aff:fe1a:ebfe
+; 403f8c997b01 ansible_host=2a03:2260:122:51f:423f:8cff:fe99:7b01
+; 403f8c9975e8 ansible_host=2a03:2260:122:51f:423f:8cff:fe99:75e8
+; 909a4a1aee2c ansible_host=2a03:2260:122:51f:929a:4aff:fe1a:ee2c
+; d847323cf42e ansible_host=2a03:2260:122:51f:da47:32ff:fe3c:f42e
+; d84732ada6df ansible_host=2a03:2260:122:51f:da47:32ff:fead:a6df
+; 403f8c999c58 ansible_host=2a03:2260:122:51f:423f:8cff:fe99:9c58
+; e4c32a474cc1 ansible_host=2a03:2260:122:51f:e6c3:2aff:fe47:4cc1
+; 909a4a1acedf ansible_host=2a03:2260:122:51f:929a:4aff:fe1a:cedf
+; e848b8e16bae ansible_host=2a03:2260:122:51f:ea48:b8ff:fee1:6bae
+; 909a4a1adaf7 ansible_host=2a03:2260:122:51f:929a:4aff:fe1a:daf7
+; e848b8e16149 ansible_host=2a03:2260:122:51f:ea48:b8ff:fee1:6149
+; 909a4a1ad017 ansible_host=2a03:2260:122:51f:929a:4aff:fe1a:d017
+; e848b8c1a089 ansible_host=2a03:2260:122:51f:ea48:b8ff:fec1:a089
+; 909a4a1af23a ansible_host=2a03:2260:122:51f:929a:4aff:fe1a:f23a
+; 28ee526285ed ansible_host=2a03:2260:122:51f:2aee:52ff:fe62:85ed
+; 909a4a1aff09 ansible_host=2a03:2260:122:51f:929a:4aff:fe1a:ff09
+; e848b8e17e7a ansible_host=2a03:2260:122:51f:ea48:b8ff:fee1:7e7a
+; 9483c42643fe ansible_host=2a03:2260:122:51f:9683:c4ff:fe26:43fe
+; e848b8e16c26 ansible_host=2a03:2260:122:51f:ea48:b8ff:fee1:6c26
+; 28ee5259ec66 ansible_host=2a03:2260:122:51f:2aee:52ff:fe59:ec66
+
+; 18d6c751b39c ansible_host=2a03:2260:122:521:1ad6:c7ff:fe51:b39c
+; d84732037599 ansible_host=2a03:2260:122:521:da47:32ff:fe03:7599
+; 909a4a1ad9ef ansible_host=2a03:2260:122:521:929a:4aff:fe1a:d9ef
+; 403f8c9962dd ansible_host=2a03:2260:122:521:423f:8cff:fe99:62dd
+; ac84c6a38866 ansible_host=2a03:2260:122:521:ae84:c6ff:fea3:8866
+; e848b8e18216 ansible_host=2a03:2260:122:521:ea48:b8ff:fee1:8216
+; e848b8e15d17 ansible_host=2a03:2260:122:521:ea48:b8ff:fee1:5d17
+
+
+e4c32a474c0a ansible_host=2a03:2260:122:522:e6c3:2aff:fe47:4c0a
+003192b1387e ansible_host=2a03:2260:122:522:231:92ff:feb1:387e
+c0c9e3e63b46 ansible_host=2a03:2260:122:522:c2c9:e3ff:fee6:3b46
+28ee5262ac90 ansible_host=2a03:2260:122:522:2aee:52ff:fe62:ac90
+d84732034fec ansible_host=2a03:2260:122:522:da47:32ff:fe03:4fec
+d847323ced35 ansible_host=2a03:2260:122:522:da47:32ff:fe3c:ed35
+e848b8c19db6 ansible_host=2a03:2260:122:522:ea48:b8ff:fec1:9db6
+e848b8e16dd0 ansible_host=2a03:2260:122:522:ea48:b8ff:fee1:6dd0
+e848b8e1597e ansible_host=2a03:2260:122:522:ea48:b8ff:fee1:597e
+9483c4263f92 ansible_host=2a03:2260:122:522:9683:c4ff:fe26:3f92
