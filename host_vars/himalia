@@ -1,12 +1,11 @@
 server_id: 5
 vm_id: 5
 
-server_besitzer: "FFNEF"
-hoster: "netcup"
-info_produkt: "RS 1000 G9 a1"
+server_besitzer: "ffnef"
+hoster: "hetzner"
+info_produkt: "Hetzner serverbörse E3-1275v5 64GB RAM 2xSSD(NVMe) 512gb"
 
-
-
+#inventory_hostname_short: "himalia"
 
 
 # Allgemeine Einstellungen
@@ -15,6 +14,11 @@ use_wlan_slovenija_tunneldigger : true
 # TODO: FFNEF Wird aktuell nicht gebraucht. Nutzung gre supernode mesh und mapserver anbindung.
 #       Da wir kein Mesh nutzen und der Mapserver als Client in allen Domänen ist wird es nicht gebraucht.
 #build_tunnels_over_ipv6_if_available: true
+
+checkmk_checks_serverstatus: true
+checkmk_checks_supernode: true
+checkmk_checks_supernodeinfra: true
+checkmk_checks_updatestatus: true
 
 
 dhcp_type: "kea"
@@ -98,7 +102,7 @@ batman:
 # Tunneldigger
 tunneldigger:
   instance_per_domain: true
-  interface: "ens18"
+  interface: "enp0s31f6"
   max_tunnels: 1024
   port_base: 20100
   pmtu_discovery: false
@@ -201,7 +205,7 @@ domains:
 
 
 check_mk:
-  deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_2.1.0p1-1_all.deb
+  deb: https://monitoring.ffnef.de/freifunk/check_mk/agents/check-mk-agent_2.3.0p20-1_all.deb
 
 
 # TODO: FFNEF Deaktiviert, da wir lieber Nutzer mit sudo Rechten nutzen wollen, anstatt Login über dne root Account
@@ -225,6 +229,79 @@ ntp:
 
 domaenenliste:
 
+  # Domänen von amalthea
+  "01": # Netz 0.0.0 - 0.15.255 /20 für die Clients
+    dhcp_start: 10.50.1.0
+    dhcp_ende: 10.50.15.254
+    server_id: 5
+  "02": # Netz 0.16.0 - 0.31.255 /20 für die Clients
+    dhcp_start: 10.50.17.0
+    dhcp_ende: 10.50.31.254
+    server_id: 5   
+  "03": # Netz 0.32.0 - 0.47.255 /20 für die Clients
+    dhcp_start: 10.50.33.0
+    dhcp_ende: 10.50.47.254
+    server_id: 5
+  "04": # Netz 0.48.0 - 0.63.255 /20 für die Clients
+    dhcp_start: 10.50.49.0
+    dhcp_ende: 10.50.63.254
+    server_id: 5
+  "05": # Netz 0.64.0 - 0.79.255 /20 für die Clients
+    dhcp_start: 10.50.65.0
+    dhcp_ende: 10.50.79.254
+    server_id: 5
+  "06": # Netz 0.80.0 - 0.95.255 /20 für die Clients
+    dhcp_start: 10.50.81.0
+    dhcp_ende: 10.50.95.254
+    server_id: 5
+  "07": # Netz 0.96.0 - 0.111.255 /20 für die Clients
+    dhcp_start: 10.50.97.0
+    dhcp_ende: 10.50.111.254
+    server_id: 5
+  "08": # Netz 0.112.0 - 0.127.255 /20 für die Clients
+    dhcp_start: 10.50.113.0
+    dhcp_ende: 10.50.127.254
+    server_id: 5
+  "09": # Netz 0.128.0 - 0.143.255 /20 für die Clients
+    dhcp_start: 10.50.129.0
+    dhcp_ende: 10.50.143.254
+    server_id: 5
+  "10": # Netz 0.144.0 - 0.159.255 /20 für die Clients
+    dhcp_start: 10.50.145.0
+    dhcp_ende: 10.50.159.254
+    server_id: 5
+  "11": # Netz 0.160.0 - 0.175.255 /20 für die Clients
+    dhcp_start: 10.50.161.0
+    dhcp_ende: 10.50.175.254
+    server_id: 5
+
+  # Domänen von kallisto
+  "12": # Netz 0.176.0 - 0.191.255 /20 für die Clients
+    dhcp_start: 10.50.177.0
+    dhcp_ende: 10.50.191.254
+    server_id: 5
+  "13": # Netz 0.192.0 - 0.207.255 /20 für die Clients
+    dhcp_start: 10.50.193.0
+    dhcp_ende: 10.50.207.254
+    server_id: 5   
+  "14": # Netz 0.208.0 - 0.223.255 /20 für die Clients
+    dhcp_start: 10.50.209.0
+    dhcp_ende: 10.50.223.254
+    server_id: 5
+  "15": # Netz 0.224.0 - 0.239.255 /20 für die Clients
+    dhcp_start: 10.50.225.0
+    dhcp_ende: 10.50.239.254
+    server_id: 5
+  "16": # Netz 0.240.0 - 0.255.255 /20 für die Clients
+    dhcp_start: 10.50.241.0
+    dhcp_ende: 10.50.255.254
+    server_id: 5
+  "17": # Netz 1.0.0 - 1.15.255 /20 für die Clients
+    dhcp_start: 10.51.1.0
+    dhcp_ende: 10.51.15.254
+    server_id: 5
+
+  # Domänen von himalia
   "18": # Netz 1.16.0 - 1.31.255 /20 für die Clients
     dhcp_start: 10.51.17.0
     dhcp_ende: 10.51.31.254
@@ -346,6 +423,7 @@ domaenenliste:
     # dhcp_start: 10.36.1.0
     # dhcp_ende: 10.36.255.255
     server_id: 5
+
   #Siegen-Wittgenstein_Nord
   "37": # Netz 2.64.0 - 2.79.255 /20 für die Clients
     dhcp_start: 10.52.65.0
@@ -376,13 +454,274 @@ domaenenliste:
     dhcp_start: 10.52.145.0
     dhcp_ende: 10.52.159.254
     server_id: 5
+  
+  #Bergisch-Gladbach - BGL
+  "43": # Netz 2.160.0 - 2.175.255 /20 für die Clients
+    dhcp_start: 10.52.161.0
+    dhcp_ende: 10.52.175.255
+    server_id: 5
+  #Bergisch-Gladbach - Leichlingen
+  "44": # Netz 2.176.0 - 2.191.255 /20 für die Clients
+    dhcp_start: 10.52.177.0
+    dhcp_ende: 10.52.191.255
+    server_id: 5
+  #Bergisch-Gladbach - Burscheid
+  "45": # Netz 2.192.0 - 2.207.255 /20 für die Clients
+    dhcp_start: 10.52.193.0
+    dhcp_ende: 10.52.207.255
+    server_id: 5
+  #Bergisch-Gladbach - Odenthal
+  "46": # Netz 2.208.0 - 2.223.255 /20 für die Clients
+    dhcp_start: 10.52.209.0
+    dhcp_ende: 10.52.223.255
+    server_id: 5
+  #Bergisch-Gladbach - Rösratth
+  "47": # Netz 2.224.0 - 2.239.255 /20 für die Clients
+    dhcp_start: 10.52.225.0
+    dhcp_ende: 10.52.239.255
+    server_id: 5
+  #Radevormwald
+  "48": # Netz 2.240.0 - 2.255.255 /20 für die Clients
+    dhcp_start: 10.52.241.0
+    dhcp_ende: 10.52.255.255
+    server_id: 5
 
 
 
 
 domaenen:
+  # Temporäre 
+#   "01":
+#     name: Pseudo, damit Liste nicht leer
+#     shortname: pseudo
+#     hostname_prefix: pseudo-
+#     community: pseudo
+#     ffv4_network: 10.50.0.0/20
+#     # Domäne 12 in Hex entspricht 0c
+#     ffv6_network: 2a03:2260:122:0500::/64
+#     name_adj: "pseudo -"
+#     disable: true
+
+  # Domänen von amalthea
+  "01":
+    name: Velbert
+    shortname: vel
+    hostname_prefix: VEL-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.0.0/20
+    # Domäne 01 in Hex entspricht 01
+    ffv6_network: 2a03:2260:122:0501::/64
+    disable: true
+
+  "02":
+    name: Mettmann
+    name_adj: "mettmanner "
+    shortname: met
+    hostname_prefix: ME-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.16.0/20
+    # Domäne 02 in Hex entspricht 02
+    ffv6_network: 2a03:2260:122:0502::/64
+    disable: true
+
+  "03":
+    name: Ratingen
+    name_adj: "ratinger "
+    shortname: rat
+    hostname_prefix: RAT-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.32.0/20
+    # Domäne 03 in Hex entspricht 03
+    ffv6_network: 2a03:2260:122:0503::/64
+    disable: true
+
+  "04":
+    name: Hilden
+    name_adj: "hildener "
+    shortname: hld
+    hostname_prefix: HLD-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.48.0/20
+    # Domäne 04 in Hex entspricht 04
+    ffv6_network: 2a03:2260:122:0504::/64
+    disable: true
+
+  "05":
+    name: Monheim
+    name_adj: "monheimer "
+    shortname: mon
+    hostname_prefix: MON-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.64.0/20
+    # Domäne 05 in Hex entspricht 05
+    ffv6_network: 2a03:2260:122:0505::/64
+    disable: true
+
+  "06":
+    name: Haan
+    name_adj: "haaner "
+    shortname: han
+    hostname_prefix: HAAN-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.80.0/20
+    # Domäne 06 in Hex entspricht 06
+    ffv6_network: 2a03:2260:122:0506::/64
+    disable: true
+
+  "07":
+    name: Erkrath
+    name_adj: "erkrather "
+    shortname: erk
+    hostname_prefix: ERK-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.96.0/20
+    # Domäne 07 in Hex entspricht 07
+    ffv6_network: 2a03:2260:122:0507::/64
+    disable: true
+
+  "08":
+    name: Heiligenhaus
+    name_adj: "heiligenhauser "
+    shortname: hlg
+    hostname_prefix: HLG-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.112.0/20
+    # Domäne 08 in Hex entspricht 08
+    ffv6_network: 2a03:2260:122:0508::/64
+    disable: true
 
 
+  "09":
+    name: Langenfeld
+    name_adj: "langenfelder "
+    shortname: lgf
+    hostname_prefix: LGF-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.128.0/20
+    # Domäne 09 in Hex entspricht 09
+    ffv6_network: 2a03:2260:122:0509::/64
+    disable: true
+
+  "10":
+    name: Wülfrath
+    name_adj: "wülfrather "
+    shortname: wlf
+    hostname_prefix: WLF-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.144.0/20
+    # Domäne 10 in Hex entspricht 0a
+    ffv6_network: 2a03:2260:122:050a::/64
+    disable: true
+
+  "11":
+    name: LVR-HPH
+    name_adj: "LVR-Unterkunfts-"
+    shortname: lvr
+    hostname_prefix: LVR-
+    community: Freifunk im Neanderland
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.160.0/20
+    # Domäne 11 in Hex entspricht 0b
+    ffv6_network: 2a03:2260:122:050b::/64
+    disable: true
+
+  # Domänen auf kallisto
+  "12":
+    name: Düsseldorf-Unterkünfte
+    shortname: dusuk
+    hostname_prefix: dusuk-
+    community: flingern
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.176.0/20
+    # Domäne 12 in Hex entspricht 0c
+    ffv6_network: 2a03:2260:122:050c::/64
+    name_adj: "düsseldorfer Unterkunfts-"
+    disable: true
+  
+  # Domänen auf ganymed
+  "13":
+    name: Düsseldorf-Flingern
+    shortname: dusfl
+    hostname_prefix: dusfl-
+    community: flingern
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.192.0/20
+    # Domäne 13 in Hex entspricht 0d
+    ffv6_network: 2a03:2260:122:050d::/64
+    disable: true
+      
+  "14":
+    name: Wuppertal-Barmen
+    shortname: bar
+    hostname_prefix: bar-
+    community: Wuppertal-Hilfsdomain
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.208.0/20
+    # Domäne 14 in Hex entspricht 0e
+    ffv6_network: 2a03:2260:122:050e::/64
+    disable: true
+      
+  "15":
+    name: Marienheide
+    shortname: mrh
+    hostname_prefix: mrh-
+    community: ffnrw
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.224.0/20
+    # Domäne 15 in Hex entspricht 0f
+    ffv6_network: 2a03:2260:122:050f::/64
+    disable: true
+      
+  "16":
+    name: Gummersbach
+    shortname: gmb
+    hostname_prefix: gmb-
+    community: ffnrw
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.50.240.0/20
+    # Domäne 16 in Hex entspricht 10
+    ffv6_network: 2a03:2260:122:0510::/64
+    disable: true
+      
+  "17":
+    name: Wipperfürth
+    shortname: wip
+    hostname_prefix: wip-
+    community: ffnrw
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.51.0.0/20
+    # Domäne 17 in Hex entspricht 11
+    ffv6_network: 2a03:2260:122:0511::/64
+    disable: true
+
+  # DOmänen auf himalia
   "18":
     name: Neander-Unterkünfte
     shortname: NeanderUK
@@ -394,14 +733,8 @@ domaenen:
     ffv6_network: 2a03:2260:122:0512::/64
     name_adj: "Freifunk im Neanderlands Unterkunfts-"
     disable: false
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
       
-  
+  # Domänen auf elara
   "19":
     name: Agios
     shortname: agios
@@ -411,15 +744,8 @@ domaenen:
     # ffv4_network: 10.19.0.0/16
     # Domäne 19 in Hex entspricht 13
     ffv6_network: 2a03:2260:122:0513::/64
-    disable: false
     name_adj: "Agios-"
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
-      
+    disable: true
   
   "20":
     name: Gertis
@@ -430,15 +756,10 @@ domaenen:
     # ffv4_network: 10.20.0.0/16
     # Domäne 20 in Hex entspricht 14
     ffv6_network: 2a03:2260:122:0514::/64
-    disable: false
     name_adj: "Gertis-"
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
+    disable: true
       
+  # Domänen auf himalia
   "21":
     name: Glastria
     shortname: glastria
@@ -447,66 +768,38 @@ domaenen:
     ffv4_network: 10.51.64.0/20
     # ffv4_network: 10.21.0.0/16
     ffv6_network: 2a03:2260:122:0515::/64
-    disable: false
     name_adj: "Glastria"
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
-      
+    disable: false
+    
+  # Domänen auf Ganymed
   "22":
-    name: Panagia
-    shortname: panagia
-    hostname_prefix: panagia-
+    name: DUS-Unterkünfte-Nord
+    shortname: dusukn
+    hostname_prefix: dusukn-
     community: neanderfunk
     ffv4_network: 10.51.80.0/20
-    # ffv4_network: 10.22.0.0/16
     ffv6_network: 2a03:2260:122:0516::/64
-    disable: false
-    name_adj: "Panagia"
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
+    disable: true
       
   "23":
-    name: Atokos
-    shortname: atokos
-    hostname_prefix: atokos-
+    name: DUS-Unterkünfte-Süd
+    shortname: dusuks
+    hostname_prefix: dusuks-
     community: neanderfunk
     ffv4_network: 10.51.96.0/20
-    # ffv4_network: 10.23.0.0/16
     ffv6_network: 2a03:2260:122:0517::/64
-    disable: false
-    name_adj: "Atokos"
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
+    disable: true
       
   "24":
-    name: Kravia
-    shortname: kravia
-    hostname_prefix: kravia-
+    name: DUS-Unterkünfte-West
+    shortname: dusukw
+    hostname_prefix: dusukw-
     community: neanderfunk
     ffv4_network: 10.51.112.0/20
-    # ffv4_network: 10.24.0.0/16
     ffv6_network: 2a03:2260:122:0518::/64
-    disable: false
-    name_adj: "Kravia"
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
-      
+    disable: true
+    
+  # Domänen auf himalia
   "25":
     name: Pasas
     shortname: pasas
@@ -515,15 +808,9 @@ domaenen:
     ffv4_network: 10.51.128.0/20
     # ffv4_network: 10.25.0.0/16
     ffv6_network: 2a03:2260:122:0519::/64
-    disable: false
     name_adj: "Pasas"
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
-      
+    disable: false
+    
   "26":
     name: Vatos
     shortname: vatos
@@ -532,14 +819,8 @@ domaenen:
     ffv4_network: 10.51.144.0/20
     # ffv4_network: 10.26.0.0/16
     ffv6_network: 2a03:2260:122:051a::/64
-    disable: false
     name_adj: "Vatos"
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
+    disable: false
       
   "27":
     name: Gordi
@@ -549,15 +830,9 @@ domaenen:
     ffv4_network: 10.51.160.0/20
     # ffv4_network: 10.27.0.0/16
     ffv6_network: 2a03:2260:122:051b::/64
-    disable: false
     name_adj: "Gordi"
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
-      
+    disable: false
+    
   "28":
     name: Platia
     shortname: platia
@@ -566,14 +841,8 @@ domaenen:
     ffv4_network: 10.51.176.0/20
     # ffv4_network: 10.28.0.0/16
     ffv6_network: 2a03:2260:122:051c::/64
-    disable: false
     name_adj: "Platia"
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
+    disable: false
       
   "29":
     name: Gavados
@@ -583,14 +852,8 @@ domaenen:
     ffv4_network: 10.51.192.0/20
     # ffv4_network: 10.29.0.0/16
     ffv6_network: 2a03:2260:122:051d::/64
-    disable: false
     name_adj: "Gavados"
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
+    disable: false
       
   "30":
     name: Solingen
@@ -602,14 +865,9 @@ domaenen:
     ffv4_network: 10.51.208.0/20
     #ffv4_network: 10.30.0.0/16
     ffv6_network: 2a03:2260:122:051e::/64
-    disable: false
     name_adj: "Solingen"
-    lat: 51.2140
-    lon: 6.8255
-    zoom: 11
-    wifi24channel: 9
-    wifi5channel: 48
-    authorized_keys:
+    disable: false
+
   "31":
     name: LVR-nordost
     shortname: lvr-no
@@ -621,6 +879,7 @@ domaenen:
     # ffv4_network: 10.31.0.0/16
     ffv6_network: 2a03:2260:122:051f::/64
     disable: false
+
   "32":
     name: LVR-nordwest
     shortname: lvr-nw
@@ -632,6 +891,7 @@ domaenen:
     # ffv4_network: 10.32.0.0/16
     ffv6_network: 2a03:2260:122:0520::/64
     disable: false
+
   "33":
     name: LVR-mitteost
     shortname: lvr-mo
@@ -643,6 +903,7 @@ domaenen:
     # ffv4_network: 10.33.0.0/16
     ffv6_network: 2a03:2260:122:0521::/64
     disable: false
+
   "34":
     name: LVR-mittewest
     shortname: lvr-mw
@@ -654,6 +915,7 @@ domaenen:
     # ffv4_network: 10.34.0.0/16
     ffv6_network: 2a03:2260:122:0522::/64
     disable: false
+
   "35":
     name: LVR-suedost
     shortname: lvr-so
@@ -665,6 +927,7 @@ domaenen:
     # ffv4_network: 10.35.0.0/16
     ffv6_network: 2a03:2260:122:0523::/64
     disable: false
+
   "36":
     name: LVR-suedwest
     shortname: lvr-sw
@@ -676,6 +939,7 @@ domaenen:
     # ffv4_network: 10.36.0.0/16
     ffv6_network: 2a03:2260:122:0524::/64
     disable: false
+
   "37":
     name: Siegen-Wittgenstein_Nord
     shortname: siwin
@@ -686,6 +950,7 @@ domaenen:
     ffv4_network: 10.52.64.0/20
     ffv6_network: 2a03:2260:122:0525::/64
     disable: false
+
   "38":
     name: Siegen-Wittgenstein_West
     shortname: siwiw
@@ -696,6 +961,7 @@ domaenen:
     ffv4_network: 10.52.80.0/20
     ffv6_network: 2a03:2260:122:0526::/64
     disable: false
+
   "39":
     name: Siegen_Nord
     shortname: sin
@@ -706,6 +972,7 @@ domaenen:
     ffv4_network: 10.52.96.0/20
     ffv6_network: 2a03:2260:122:0527::/64
     disable: false
+
   "40":
     name: Siegen_Mitte
     shortname: sim
@@ -716,6 +983,7 @@ domaenen:
     ffv4_network: 10.52.112.0/20
     ffv6_network: 2a03:2260:122:0528::/64
     disable: false
+
   "41":
     name: Siegen_Süd
     shortname: sis
@@ -726,6 +994,7 @@ domaenen:
     ffv4_network: 10.52.128.0/20
     ffv6_network: 2a03:2260:122:0529::/64
     disable: false
+
   "42":
     name: Siegen-Wittgenstein_Land
     shortname: siwil
@@ -736,3 +1005,69 @@ domaenen:
     ffv4_network: 10.52.144.0/20
     ffv6_network: 2a03:2260:122:052a::/64
     disable: false
+
+  "43":
+    name: Bergisch-Gladbach
+    shortname: bgbgl
+    hostname_prefix: BGBGL-
+    community: Freifunk Bergisch Gladbach
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.52.160.0/20
+    ffv6_network: 2a03:2260:122:052b::/64
+    disable: true
+
+  "44":
+    name: Bergisch-Gladbach_Leichlingen
+    shortname: bglln
+    hostname_prefix: BGLLN-
+    community: Freifunk Bergisch Gladbach
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.52.176.0/20
+    ffv6_network: 2a03:2260:122:052c::/64
+    disable: true
+
+  "45":
+    name: Bergisch-Gladbach_Burscheid
+    shortname: bgbcd
+    hostname_prefix: BGBCD-
+    community: Freifunk Bergisch Gladbach
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.52.192.0/20
+    ffv6_network: 2a03:2260:122:052d::/64
+    disable: true
+
+  "46":
+    name: Bergisch-Gladbach_Odenthal
+    shortname: bgode
+    hostname_prefix: BGODE-
+    community: Freifunk Bergisch Gladbach
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.52.208.0/20
+    ffv6_network: 2a03:2260:122:052e::/64
+    disable: true
+
+  "47":
+    name: Bergisch-Gladbach_Rösrath
+    shortname: bgrrh
+    hostname_prefix: BGRRH-
+    community: Freifunk Bergisch Gladbach
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.52.224.0/20
+    ffv6_network: 2a03:2260:122:052f::/64
+    disable: true
+
+  "48":
+    name: 
+    shortname: Radevormwald
+    hostname_prefix: RVW-
+    community: Freifunk Radevormwald
+    metacommunity: Neanderfunk
+    metacom: ffnef
+    ffv4_network: 10.52.240.0/20
+    ffv6_network: 2a03:2260:122:0530::/64
+    disable: true

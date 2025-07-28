@@ -71,42 +71,42 @@ ffrl_tun:
 - name: ber1a
   gre_target: 185.66.195.0
   v4_remote: 100.64.4.124/31
-  v6_remote: 2a03:2260:0:244::/64
+  v6_remote: 2a03:2260:0:244::1/64
   bgp_local_pref: 200
 - name: ber1b
   gre_target: 185.66.195.1
   v4_remote: 100.64.4.128/31
-  v6_remote: 2a03:2260:0:246::/64
+  v6_remote: 2a03:2260:0:246::1/64
   bgp_local_pref: 200
 # - name: ber2a
 #   gre_target: 185.66.195.0
 #   v4_remote: 100.64.4.132/31
-#   v6_remote: 2a03:2260:0:248::/64
+#   v6_remote: 2a03:2260:0:248::1/64
 #   bgp_local_pref: 200
 # - name: ber2b
 #   gre_target: 185.66.195.1
 #   v4_remote: 100.64.4.136/31
-#   v6_remote: 2a03:2260:0:24a::/64
+#   v6_remote: 2a03:2260:0:24a::1/64
 #   bgp_local_pref: 200
 - name: dus1a
   gre_target: 185.66.193.0
   v4_remote: 100.64.4.126/31
-  v6_remote: 2a03:2260:0:245::/64
+  v6_remote: 2a03:2260:0:245::1/64
   bgp_local_pref: 201
 - name: dus1b
   gre_target: 185.66.193.1
   v4_remote: 100.64.4.130/31
-  v6_remote: 2a03:2260:0:247::/64
+  v6_remote: 2a03:2260:0:247::1/64
   bgp_local_pref: 201
 # - name: dus2a
 #   gre_target: 185.66.193.0
 #   v4_remote: 100.64.4.134/31
-#   v6_remote: 2a03:2260:0:249::/64
+#   v6_remote: 2a03:2260:0:249::1/64
 #   bgp_local_pref: 201
 # - name: dus2b
 #   gre_target: 185.66.193.1
 #   v4_remote: 100.64.4.138/31
-#   v6_remote: 2a03:2260:0:24b::/64
+#   v6_remote: 2a03:2260:0:24b::1/64
 #   bgp_local_pref: 201
 
 # fra folgt noch
