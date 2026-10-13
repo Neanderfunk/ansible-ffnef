@@ -123,10 +123,10 @@ ffrl_tun:
 
 
 # Batman START # TODO: FFNEF Überarbeiten, aktuell wird es nicht verwendet, da role kaputt.
-batman_version: "2025.3"
+batman_version: "2026.3"
 
 batman:
-  version: 2025.3
+  version: 2026.3
   # Bandbreite, die Batman annoncieren soll
   downstream: 1024Mbit
   # Bandbreite, die Batman annoncieren soll
